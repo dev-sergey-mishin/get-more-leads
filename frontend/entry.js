@@ -1,1 +1,1 @@
-require('./less/palette.less');
+require('./less/import.less');

@@ -6,7 +6,6 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var extractLESS = new ExtractTextPlugin('bundle.css');
 
 module.exports = {
-    cache: true,
     entry: [
         './frontend/entry.js'
     ],
@@ -18,7 +17,7 @@ module.exports = {
         loaders: [
             {test: /\.less$/i, loader: extractLESS.extract(['css','less'])},
             {
-                test: /\.(png|jpg|gif|svg)$/,
+                test: /\.(png|jpg|gif|svg|otf)$/,
                 loader: 'url-loader',
                 include: includeLocations()
             }
