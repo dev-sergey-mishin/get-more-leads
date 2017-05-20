@@ -1,0 +1,28 @@
+.container {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto;
+  border-radius: 3px;
+  width: @desc-max;
+  max-width: @desc-max;
+  padding: 15px;
+
+  &.no-padding {
+    padding: 0;
+  }
+
+  @media(max-width: @desc-max-media) {
+    width: @desc;
+  }
+  @media(max-width: @desc-media) {
+    width: @tablet-max;
+  }
+  @media(max-width: @tablet-max-media) {
+    width: @tablet;
+  }
+  @media(max-width: @tablet-media) {
+    width: @mobile;
+    border-radius: 0;
+  }
+}

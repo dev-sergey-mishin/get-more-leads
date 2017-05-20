@@ -5,22 +5,20 @@ header {
   height: 70px;
   width: 100%;
   padding-top: 28px;
+  margin-bottom: 170px;
 
   .phone-block {
     float: right;
   }
   .logo-block, .phone-block {
     display: inline-block;
-    @media (max-width: @screen-sm) {
+    @media (max-width: @tablet) {
       display: block;
       float: none;
       margin-bottom: 15px;
-    }
-    @media (max-width: @screen-xs) {
       text-align: center;
     }
   }
-
 
   .logo {
     display: inline-block;
