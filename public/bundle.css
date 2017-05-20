@@ -63,6 +63,76 @@ body *::selection {
     border-radius: 0;
   }
 }
+.btn {
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+  background: none;
+  padding: 20px 24px;
+  font-size: 17px;
+  font-family: SFUIDisplay-Thin;
+  cursor: pointer;
+}
+.btn.red {
+  background: #e82028;
+  border-color: #e82028;
+  color: white;
+}
+.btn-container {
+  display: block;
+  position: relative;
+  text-align: center;
+  padding: 30px 0;
+}
+.btn-container .btn-block {
+  display: inline-block;
+  text-align: left;
+}
+@media (max-width: 620px) {
+  .btn-container .btn-block {
+    display: block;
+    text-align: center;
+  }
+}
+.btn-container .btn-desc,
+.btn-container .btn-red-desc,
+.btn-container .btn {
+  margin-right: 30px;
+}
+@media (max-width: 620px) {
+  .btn-container .btn-desc,
+  .btn-container .btn-red-desc,
+  .btn-container .btn {
+    margin: 0 auto 15px;
+    display: block;
+  }
+}
+.btn-container .btn-desc {
+  display: inline-block;
+  vertical-align: -8px;
+  font-size: 18px;
+  font-family: SFUIDisplay-Thin;
+}
+.btn-container .btn-red-desc {
+  display: inline-block;
+  vertical-align: -8px;
+  font-size: 14px;
+  color: #636363;
+}
+.btn-container .divider {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #f0f0f0;
+}
+.btn-container .divider.top {
+  top: 0;
+}
+.btn-container .divider.bottom {
+  bottom: 0;
+}
 header {
   display: block;
   position: relative;
@@ -171,5 +241,6 @@ header .call-back {
   background-color: #e82028;
 }
 .screen-2 {
+  text-align: center;
   padding-top: 30px;
 }

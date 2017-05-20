@@ -1,0 +1,47 @@
+.btn-container {
+  display: block;
+  position: relative;
+  text-align: center;
+  padding: 30px 0;
+
+  .btn-block {
+    display: inline-block;
+    text-align: left;
+    @media (max-width: 620px) {
+      display: block;
+      text-align: center;
+    }
+  }
+  .btn-desc, .btn-red-desc, .btn {
+    margin-right: 30px;
+    @media (max-width: 620px) {
+      margin: 0 auto 15px;
+      display: block;
+    }
+  }
+  .btn-desc {
+    display: inline-block;
+    vertical-align: -8px;
+    font-size: 18px;
+    font-family: SFUIDisplay-Thin;
+  }
+  .btn-red-desc {
+    display: inline-block;
+    vertical-align: -8px;
+    font-size: 14px;
+    color: @grey;
+  }
+  .divider {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid @divider;
+    &.top {
+      top: 0;
+    }
+    &.bottom {
+      bottom: 0;
+    }
+  }
+}
