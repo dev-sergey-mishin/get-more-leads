@@ -133,6 +133,22 @@ body *::selection {
 .btn-container .divider.bottom {
   bottom: 0;
 }
+.inference {
+  display: block;
+  text-align: center;
+}
+.inference .title {
+  display: block;
+  font-size: 37px;
+  margin: 0 0 28px;
+  font-family: SFUIDisplay-Thin;
+}
+.inference .desc {
+  display: block;
+  margin: 0;
+  font-size: 17px;
+  font-family: SFUIDisplay-Thin;
+}
 header {
   display: block;
   position: relative;
@@ -243,4 +259,32 @@ header .call-back {
 .screen-2 {
   text-align: center;
   padding-top: 30px;
+}
+.screen-2 .stat-block-container .stat-block-aggregator {
+  display: inline-block;
+}
+.screen-2 .stat-block-container .stat-block {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: default;
+  width: 160px;
+  height: 160px;
+  border-radius: 80px;
+  border: 1px solid transparent;
+  transition: border 0.5s;
+  padding-top: 45px;
+  margin: 0 43px 12px;
+}
+.screen-2 .stat-block-container .stat-block:hover {
+  border: 1px solid #e82028;
+}
+.screen-2 .stat-block-container .number {
+  font-family: SFUIDisplay-Thin;
+  font-size: 45px;
+}
+.screen-2 .divider {
+  display: block;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #f0f0f0;
 }

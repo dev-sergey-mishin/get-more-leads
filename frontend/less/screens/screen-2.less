@@ -1,4 +1,37 @@
 .screen-2 {
   text-align: center;
   padding-top: 30px;
+
+  .stat-block-container {
+    .stat-block-aggregator {
+      display: inline-block;
+    }
+    .stat-block {
+      display: inline-block;
+      box-sizing: border-box;
+      cursor: default;
+      @size: 160px;
+      width: @size;
+      height: @size;
+      border-radius: @size / 2;
+      border: 1px solid transparent;
+      transition: border 0.5s;
+      padding-top: 45px;
+      margin: 0 43px 12px;
+      &:hover {
+        border: 1px solid @red;
+      }
+    }
+    .number {
+      font-family: SFUIDisplay-Thin;
+      font-size: 45px;
+    }
+  }
+
+  .divider {
+    display: block;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid @divider;
+  }
 }
