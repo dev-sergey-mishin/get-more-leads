@@ -1,9 +1,12 @@
 const webpack = require('webpack');
 const path = require('path');
-
 const NODE_ENV = process.env.NODE_ENV || 'dev';
 
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var extractLESS = new ExtractTextPlugin('bundle.css');
+
 module.exports = {
+    cache: true,
     entry: [
         './frontend/entry.js'
     ],
@@ -13,11 +16,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            {
-                test: /\.less$/,
-                loader: "style!css!less",
-                include: includeLocations()
-            },
+            {test: /\.less$/i, loader: extractLESS.extract(['css','less'])},
             {
                 test: /\.(png|jpg|gif|svg)$/,
                 loader: 'url-loader',
@@ -27,6 +26,7 @@ module.exports = {
     },
     watch: NODE_ENV == 'dev',
     plugins: [
+        extractLESS,
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
         new webpack.NoErrorsPlugin(),
