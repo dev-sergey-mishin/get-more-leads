@@ -1,0 +1,20 @@
+{
+  "name": "get-more-leads",
+  "version": "0.0.1",
+  "description": "get more leads landing",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dev-sergey-mishin/get-more-leads"
+  },
+  "dependencies": {
+    "bootstrap-less": "^3.3.8",
+    "css-loader": "~0.26.1",
+    "file-loader": "~0.9.0",
+    "less": "~2.7.2",
+    "less-loader": "~2.2.3",
+    "style-loader": "~0.13.1",
+    "url-loader": "~0.5.7",
+    "webpack": "~1.14.0"
+  }
+}
