@@ -22,17 +22,6 @@ module.exports = {
                 test: /\.(png|jpg|gif|svg)$/,
                 loader: 'url-loader',
                 include: includeLocations()
-            },
-            {
-                test: [/\.jsx?$/, /\.js$/],
-                loaders: ['babel'],
-                include: includeLocations(),
-                plugins: [
-                    'transform-runtime',
-                    'transform-react-remove-prop-types',
-                    'transform-react-constant-elements',
-                    'transform-react-inline-elements'
-                ]
             }
         ]
     },
@@ -41,15 +30,7 @@ module.exports = {
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
         new webpack.NoErrorsPlugin(),
-        new webpack.DefinePlugin({ NODE_ENV: JSON.stringify(NODE_ENV) }),
-        new webpack.ProvidePlugin({
-            React: "react",
-            ReactDOM: "react-dom",
-            moment: "moment",
-            NODE_ENV: NODE_ENV,
-            ajax: "jquery-ajax"
-        }),
-        //new webpack.optimize.CommonsChunkPlugin('common', 'common.js', Infinity), //пока не целесообразно включать плагин
+        new webpack.DefinePlugin({ NODE_ENV: JSON.stringify(NODE_ENV) })
     ],
 
     resolve: {
@@ -65,8 +46,7 @@ module.exports = {
 
 function includeLocations() {
     return [
-        path.resolve(__dirname, "frontend"),
-        path.resolve(__dirname, "node_modules/react-cubocloud-components")
+        path.resolve(__dirname, "frontend")
     ]
 }
 
