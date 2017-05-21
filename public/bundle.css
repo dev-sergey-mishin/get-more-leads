@@ -164,9 +164,11 @@ body *::selection {
 .action-container .action {
   display: inline-block;
   position: relative;
+  box-sizing: border-box;
   vertical-align: top;
   cursor: default;
-  height: 180px;
+  padding-bottom: 20px;
+  min-height: 200px;
   width: 360px;
   padding-top: 40px;
   transition: border 0.5s;
@@ -195,6 +197,28 @@ body *::selection {
   margin: 0;
   font-size: 16px;
   line-height: 22px;
+}
+.input-text {
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+  height: 50px;
+  width: 100%;
+  padding: 0 30px;
+  font-size: 20px;
+  font-family: SFUIDisplay-Thin;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+.input-text:focus {
+  border-color: #2a6aec;
+  background-color: #eef2f7;
+}
+.input-text:focus::placeholder {
+  color: black;
+}
+.input-range {
+  width: 100%;
 }
 header {
   display: block;
@@ -680,6 +704,9 @@ header .call-back {
     line-height: 18px;
   }
 }
+.screen-8 {
+  margin-bottom: 100px;
+}
 .screen-8 .clients-logo {
   text-align: center;
   margin-bottom: 50px;
@@ -741,4 +768,76 @@ header .call-back {
 }
 .screen-8 .video-container .text .blue {
   color: #0179ff;
+}
+.screen-9 {
+  text-align: center;
+  padding-bottom: 70px;
+}
+.screen-9 .run {
+  font-size: 20px;
+  margin: 0 0 70px;
+}
+.screen-9 .form {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  width: 830px;
+  padding: 80px 120px;
+  margin: 0 auto;
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+  max-width: 100%;
+}
+.screen-9 .form .input-text {
+  margin-bottom: 20px;
+}
+.screen-9 .form .range {
+  margin-bottom: 36px;
+  text-align: left;
+}
+.screen-9 .form .range .range-title {
+  font-size: 17px;
+  margin: 20px 0;
+}
+.screen-9 .form .range .range-budget {
+  font-size: 17px;
+  color: #636363;
+}
+.screen-9 .form .accept {
+  display: inline-block;
+  user-select: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-bottom: 70px;
+}
+.screen-9 .form .detail {
+  text-align: left;
+  font-size: 17px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.screen-9 .form .title {
+  margin: 0 -15px;
+  margin-bottom: 50px;
+  font-size: 42px;
+  font-family: SFUIDisplay-Thin;
+}
+@media (max-width: 991px) {
+  .screen-9 .form {
+    padding: 60px 80px;
+  }
+  .screen-9 .form .title {
+    margin: 0 -15px;
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+}
+@media (max-width: 450px) {
+  .screen-9 .form {
+    padding: 30px 20px;
+  }
+  .screen-9 .form .title {
+    margin: 0 0 30px;
+    font-size: 20px;
+  }
 }
