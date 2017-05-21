@@ -5,4 +5,71 @@
   text-align: center;
   padding-top: 95px;
   padding-bottom: 54px;
+  .slider {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 50px;
+    @media (max-width: @tablet-max-media) {
+      padding: 0 30px;
+    }
+    .arrow {
+      display: block;
+      position: absolute;
+      top: 50%;
+      background: url("../../images/arrow.svg") no-repeat center;
+      width: 0.529cm;
+      height: 36px;
+      cursor: pointer;
+      &.left {
+        left: 0;
+        transform: rotate(180deg);
+      }
+      &.right {
+        right: 0;
+        margin-top: 5px;
+      }
+    }
+    .slide {
+      .image {
+        display: inline-block;
+        box-sizing: border-box;
+        vertical-align: middle;
+        text-align: right;
+        padding-right: 50px;
+        width: 49%;
+        @media (max-width: @tablet-max-media) {
+          width: calc(~'100% + 80px');
+          margin: 0 -40px;
+          margin-bottom: 30px;
+          padding-right: 0;
+          text-align: center;
+        }
+        img {
+          width: 340px;
+          max-width: 100%;
+        }
+      }
+      .text {
+        display: inline-block;
+        box-sizing: border-box;
+        vertical-align: middle;
+        max-width: 100%;
+        text-align: left;
+        font-size: 17px;
+        line-height: 22px;
+
+        width: 500px;
+        @media (max-width: @desc-media) {
+          width: 400px;
+        }
+        @media (max-width: @tablet-max-media) {
+          width: 100%;
+          text-align: center;
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
 }

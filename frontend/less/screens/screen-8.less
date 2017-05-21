@@ -1,0 +1,58 @@
+.screen-8 {
+  .clients-logo {
+    text-align: center;
+    margin-bottom: 50px;
+    .logo {
+      margin: 0 15px 15px;
+      @media (max-width: 420px) {
+        display: block;
+        text-align: center;
+        margin: 0 auto 15px;
+      }
+    }
+  }
+  .video-container {
+    .block {
+      display: inline-block;
+      box-sizing: border-box;
+      vertical-align: middle;
+      width: 49%;
+      &.right {
+        text-align: right;
+        @media (max-width: @tablet) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+      @media (max-width: @tablet) {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    }
+    .video {
+      display: inline-block;
+      box-sizing: border-box;
+      max-width: 100%;
+      width: 440px;
+      height: 250px;
+    }
+    .text {
+      margin-left: 45px;
+      font-size: 15px;
+      line-height: 20px;
+      max-width: 500px;
+      @media (max-width: @tablet) {
+        margin: 0 auto;
+      }
+      .red {
+        color: @red;
+        font-size: 20px;
+        line-height: 45px;
+      }
+      .blue {
+        color: @blue;
+      }
+    }
+  }
+}
