@@ -33,6 +33,10 @@ body *::selection {
 .pull-right {
   float: right;
 }
+.divider-screen {
+  display: block;
+  border-bottom: 1px solid #f0f0f0;
+}
 .container {
   display: block;
   position: relative;
@@ -190,6 +194,7 @@ body *::selection {
   display: block;
   margin: 0;
   font-size: 16px;
+  line-height: 22px;
 }
 header {
   display: block;
@@ -490,12 +495,14 @@ header .call-back {
   position: relative;
   box-sizing: border-box;
   text-align: center;
+  padding-bottom: 115px;
 }
 .screen-5 .tariff-container {
   display: inline-block;
   position: relative;
   box-sizing: border-box;
   margin-top: -70px;
+  margin-bottom: 46px;
   max-width: 100%;
 }
 .screen-5 .tariff-container .tariff {
@@ -581,4 +588,23 @@ header .call-back {
 .screen-5 .tariff-container .tariff.main .btn {
   background-color: #ffc000;
   border-color: #ffc000;
+}
+.screen-5 .allow-budget {
+  margin: 0;
+}
+.screen-6 {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 115px;
+  padding-bottom: 140px;
+}
+.screen-7 {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 95px;
+  padding-bottom: 54px;
 }
