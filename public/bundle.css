@@ -841,3 +841,10 @@ header .call-back {
     font-size: 20px;
   }
 }
+footer {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  height: 270px;
+  background-color: #373737;
+}
