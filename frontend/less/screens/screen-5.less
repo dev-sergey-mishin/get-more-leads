@@ -1,0 +1,95 @@
+.screen-5 {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  .tariff-container {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    margin-top: -70px;
+    max-width: 100%;
+    .tariff {
+      display: inline-block;
+      position: relative;
+      box-sizing: border-box;
+      text-align: center;
+      background-color: white;
+      width: 260px;
+      height: 450px;
+      border: 3px solid @divider;
+      padding-top: 65px;
+      padding-bottom: 50px;
+      @media (max-width: @tablet-max) {
+        display: block;
+        margin: 0 auto 15px;
+      }
+      .strategy-name {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 32px;
+      }
+      .service-list {
+        height: 180px;
+        .service {
+          font-size: 15px;
+          line-height: 21px;
+          color: @light-grey;
+          font-family: SFUIDisplay-Thin;
+          letter-spacing: 1px;
+        }
+      }
+      .price {
+        font-size: 22px;
+        font-family: SFUIDisplay-Black;
+        margin-bottom: 10px;
+        &::before {
+          content: 'от';
+          font-size: 12px;
+          vertical-align: 9px;
+        }
+      }
+      .in-month {
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      .btn {
+        padding: 16px 40px;
+        font-size: 12px;
+        font-family: inherit;
+        font-weight: 600;
+        border: 2px solid @divider;
+      }
+
+
+      &.main {
+        height: 550px;
+        width: 310px;
+        padding-top: 125px;
+        background-color: @tarif;
+        color: white;
+        border-color: @tarif;
+        border-radius: 4px;
+        margin: 0 -20px;
+        z-index: 100;
+        @media (max-width: @tablet-max) {
+          display: block;
+          margin: 0 auto 15px;
+          max-width: calc(~'100% - 30px');
+        }
+        .service {
+          color: white;
+        }
+        .btn {
+          background-color: @yellow;
+          border-color: @yellow;
+        }
+      }
+    }
+  }
+}
