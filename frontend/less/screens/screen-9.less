@@ -42,6 +42,41 @@
       font-size: 17px;
       margin-top: 20px;
       margin-bottom: 40px;
+      a {
+        cursor: pointer;
+        &.active {
+          color: @blue;
+          border-bottom: 1px dotted;
+          pointer-events: none;
+        }
+      }
+      .detail-switcher {
+        display: inline-block;
+        position: relative;
+        box-sizing: border-box;
+        vertical-align: middle;
+        margin: 0 15px;
+        height: 22px;
+        width: 45px;
+        border-radius: 11px;
+        background-color: @blue;
+        .pup {
+          display: block;
+          position: absolute;
+          @size: 20px;
+          width: @size;
+          height: @size;
+          border-radius: @size / 2;
+          background-color: white;
+          top: 1px;
+          &.right {
+            right: 1px;
+          }
+          &.left {
+            left: 1px;
+          }
+        }
+      }
     }
     .title {
       margin: 0 -15px;

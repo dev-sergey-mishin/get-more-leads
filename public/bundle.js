@@ -51,11 +51,41 @@
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
+	__webpack_require__(4);
 	__webpack_require__(3);
 	__webpack_require__(2);
 
 /***/ },
 /* 2 */
+/***/ function(module, exports) {
+
+	(function() {
+	    $(document).ready(function(){
+	        var $detail = $('.detail');
+	        var $short = $detail.find('.short');
+	        var $long = $detail.find('.long');
+	        var $detailInner = $('.detail-inner');
+	        var $pup = $('.pup');
+
+	        $short.click(function () {
+	            $long.removeClass('active');
+	            $short.addClass('active');
+	            $detailInner.hide();
+	            $pup.addClass('left');
+	            $pup.removeClass('right');
+	        });
+	        $long.click(function () {
+	            $short.removeClass('active');
+	            $long.addClass('active');
+	            $detailInner.show();
+	            $pup.removeClass('left');
+	            $pup.addClass('right');
+	        });
+	    })
+	})();
+
+/***/ },
+/* 3 */
 /***/ function(module, exports) {
 
 	(function() {
@@ -90,7 +120,7 @@
 	})();
 
 /***/ },
-/* 3 */
+/* 4 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
