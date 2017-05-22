@@ -660,6 +660,12 @@ header .call-back {
   right: 0;
   margin-top: 5px;
 }
+.screen-7 .slider .slide {
+  display: none;
+}
+.screen-7 .slider .slide.active {
+  display: block;
+}
 .screen-7 .slider .slide .image {
   display: inline-block;
   box-sizing: border-box;
@@ -678,8 +684,8 @@ header .call-back {
   }
 }
 .screen-7 .slider .slide .image img {
-  width: 340px;
-  max-width: 100%;
+  width: 450px;
+  max-width: calc(100% - 20px);
 }
 .screen-7 .slider .slide .text {
   display: inline-block;
