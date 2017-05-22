@@ -274,7 +274,7 @@
                 </div>
                 <div class="price">50 000 ₽</div>
                 <div class="in-month">в месяц</div>
-                <button class="btn">Заказать</button>
+                <button class="btn" data-val="50000">Заказать</button>
             </div>
             <div class="tariff main">
                 <div class="strategy-name">Стратегия Medium</div>
@@ -285,7 +285,7 @@
                 </div>
                 <div class="price">100 000 ₽</div>
                 <div class="in-month">в месяц</div>
-                <button class="btn">Заказать</button>
+                <button class="btn" data-val="100000">Заказать</button>
             </div>
             <div class="tariff">
                 <div class="strategy-name">Стратегия Pro</div>
@@ -299,7 +299,7 @@
                 </div>
                 <div class="price">150 000 ₽</div>
                 <div class="in-month">в месяц</div>
-                <button class="btn">Заказать</button>
+                <button class="btn" data-val="150000">Заказать</button>
             </div>
         </div>
         <p class="allow-budget">* Рекламный бюджет на контекстную и таргетированную рекламу может быть абсолютно любой.</p>
@@ -518,6 +518,21 @@
             <h2>Спасибо за заявку!</h2>
             <p>Наш менеджер свяжется с вами<br/>в ближайшее время.</p>
             <button class="btn close">Закрыть</button>
+        </div>
+    </div>
+    <div id="callback-modal" class="cb-modal-window hide">
+        <div class="cb-modal-layer"></div>
+        <div class="cb-modal-container" style="width: 300px; height: 320px;">
+            <div class="cb-close-modal"></div>
+            <div class="form">
+                <div class="info">
+                    <h2 class="title">Заказ обратного звонка</h2>
+                    <input type="text" class="input-text" style="margin-bottom: 15px;" placeholder="Введите имя" />
+                    <input type="tel" class="input-text" style="margin-bottom: 15px;" placeholder="Введите телефон" />
+                </div>
+
+                <button class="btn red">Заказать</button>
+            </div>
         </div>
     </div>
 </body>

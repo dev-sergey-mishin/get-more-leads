@@ -74,8 +74,27 @@
 	            $conversionModal.addClass('hide');
 	        });
 
+	        var $callBackModal = $('#callback-modal');
+	        $('.call-back').click(function() {
+	            $callBackModal.removeClass('hide');
+	        });
+	        $callBackModal.find('.cb-modal-layer').click(function() {
+	            $callBackModal.addClass('hide');
+	        });
+	        $callBackModal.find('.close').click(function() {
+	            $callBackModal.addClass('hide');
+	        });
+	        $callBackModal.find('.btn.red').click(function() {
+	            $(this).removeClass('red').text('Закрыть');
+	            $callBackModal.find('.info').html('<p>Спасибо за заявку! <br />Наш менеджер свяжется с вами<br /> в ближайшее время.</p>')
+	        });
+
 
 	        $('.tariff-container').find('.btn').click(function() {
+	            var price = $(this).data('val');
+	            var $range = $('#range');
+	            $range.val(price);
+	            $range.trigger('change');
 	            var destination = $('#form').offset().top;
 	            $("html:not(:animated),body:not(:animated)").animate({
 	                scrollTop: destination
