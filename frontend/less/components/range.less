@@ -1,0 +1,99 @@
+@import "../../less/core/palette.less";
+
+.cb-range-container {
+  position: relative;
+}
+
+.cb-input-range {
+  // hide default ---------------------------------------------------------------------
+
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+  // thumb ----------------------------------------------------------------------------
+  .thumb() {
+    -webkit-appearance: none;
+    @size: 24px;
+    width: @size;
+    height: @size;
+    border-radius: @size / 2;
+    line-height: 24px;
+    text-align: center;
+    background: linear-gradient(180deg, @white 0%, @whitty 100%);
+    box-shadow: -2px 2px 4px 0 rgba(19, 27, 36, 0.20), inset 0 1px 0 2px @white;
+    color: @black;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+
+  &::-webkit-slider-thumb {
+    .thumb();
+    margin-top: -12px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  }
+
+  /* All the same stuff for Firefox */
+  &::-moz-range-thumb {
+    .thumb();
+  }
+
+  /* All the same stuff for IE */
+  &::-ms-thumb {
+    .thumb();
+    margin-top: -2px;
+  }
+
+  // track ----------------------------------------------------------------------------------
+  .track() {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(270deg, #78BC00 0%, #F40000 100%);
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  &::-webkit-slider-runnable-track {
+    .track();
+  }
+
+  &::-moz-range-track {
+    .track();
+  }
+
+  &::-ms-track {
+    .track();
+  }
+}
+
+.cb-input-range-output {
+  position: absolute;
+  left: 0;
+  pointer-events: none;
+  @size: 24px;
+  width: @size;
+  text-align: center;
+}
+
+@-moz-document url-prefix(){
+  .cb-input-range-output {
+    margin-left: 10px;
+  }
+}
