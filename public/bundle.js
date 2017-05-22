@@ -1,1 +1,165 @@
-!function(i){function n(t){if(e[t])return e[t].exports;var a=e[t]={exports:{},id:t,loaded:!1};return i[t].call(a.exports,a,a.exports,n),a.loaded=!0,a.exports}var e={};return n.m=i,n.c=e,n.p="",n(0)}([function(i,n,e){i.exports=e(1)},function(i,n,e){e(4),e(3),e(2)},function(i,n){!function(){$(document).ready(function(){var i=$(".detail"),n=i.find(".short"),e=i.find(".long"),t=$(".detail-inner"),a=$(".pup");n.click(function(){e.removeClass("active"),n.addClass("active"),t.hide(),a.addClass("left"),a.removeClass("right")}),e.click(function(){n.removeClass("active"),e.addClass("active"),t.show(),a.removeClass("left"),a.addClass("right")})})}()},function(i,n){!function(){$(document).ready(function(){function i(i){var e=n.find(".slide").length-1;return i<0?e:i>e?0:i}var n=$(".slider"),e=n.find(".arrow.left"),t=n.find(".arrow.right"),a=0;e.click(function(){a=i(--a),n.find(".slide").removeClass("active"),$(n.find(".slide")[a]).addClass("active")}),t.click(function(){a=i(++a),n.find(".slide").removeClass("active"),$(n.find(".slide")[a]).addClass("active")})})}()},function(i,n){}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(2);
+
+
+/***/ },
+/* 1 */,
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(6);
+	__webpack_require__(5);
+	__webpack_require__(4);
+	__webpack_require__(3);
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	(function() {
+	    $(document).ready(function(){
+	        var $conversionModal = $('#conversion-modal');
+	        $('.conversion').click(function() {
+	            $conversionModal.removeClass('hide');
+	        });
+	        $conversionModal.find('.cb-modal-layer').click(function() {
+	            $conversionModal.addClass('hide');
+	        });
+	        $conversionModal.find('.close').click(function() {
+	            $conversionModal.addClass('hide');
+	        });
+
+
+	        $('.tariff-container').find('.btn').click(function() {
+	            var destination = $('#form').offset().top;
+	            $("html:not(:animated),body:not(:animated)").animate({
+	                scrollTop: destination
+	            }, 800);
+	            return false;
+	        });
+	    })
+	})();
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	(function() {
+	    $(document).ready(function(){
+	        var $detail = $('.detail');
+	        var $short = $detail.find('.short');
+	        var $long = $detail.find('.long');
+	        var $detailInner = $('.detail-inner');
+	        var $pup = $('.pup');
+	        var $range = $('#range');
+	        var $budget = $('#budget');
+
+	        $short.click(function () {
+	            $long.removeClass('active');
+	            $short.addClass('active');
+	            $detailInner.hide();
+	            $pup.addClass('left');
+	            $pup.removeClass('right');
+	        });
+	        $long.click(function () {
+	            $short.removeClass('active');
+	            $long.addClass('active');
+	            $detailInner.show();
+	            $pup.removeClass('left');
+	            $pup.addClass('right');
+	        });
+	        $range.on('change', function(e) {
+	            var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+	            $budget.text(price + ' ₽');
+	        });
+	    })
+	})();
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	(function() {
+	    $(document).ready(function(){
+	        var $slider = $('.slider');
+	        var $left = $slider.find('.arrow.left');
+	        var $right = $slider.find('.arrow.right');
+	        var index = 0;
+
+	        function incrementIndex(newVal) {
+	            var maxVal = $slider.find('.slide').length - 1;
+	            if (newVal < 0) {
+	                return maxVal;
+	            }
+	            if (newVal > maxVal) {
+	                return 0
+	            }
+	            return newVal;
+	        }
+
+	        $left.click(function() {
+	            index = incrementIndex(--index);
+	            $slider.find('.slide').removeClass('active');
+	            $($slider.find('.slide')[index]).addClass('active');
+	        });
+	        $right.click(function() {
+	            index = incrementIndex(++index);
+	            $slider.find('.slide').removeClass('active');
+	            $($slider.find('.slide')[index]).addClass('active');
+	        });
+	    })
+	})();
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ }
+/******/ ]);

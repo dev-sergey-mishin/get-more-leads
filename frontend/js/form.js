@@ -5,6 +5,8 @@
         var $long = $detail.find('.long');
         var $detailInner = $('.detail-inner');
         var $pup = $('.pup');
+        var $range = $('#range');
+        var $budget = $('#budget');
 
         $short.click(function () {
             $long.removeClass('active');
@@ -19,6 +21,10 @@
             $detailInner.show();
             $pup.removeClass('left');
             $pup.addClass('right');
+        });
+        $range.on('change', function(e) {
+            var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+            $budget.text(price + ' ₽');
         });
     })
 })();

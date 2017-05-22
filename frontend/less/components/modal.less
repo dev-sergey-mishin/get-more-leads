@@ -1,0 +1,47 @@
+@import '../../less/core/palette.less';
+
+.cb-modal-window {
+  @zIndex: 1000;
+  position: fixed;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: @zIndex + 1;
+  font-family: HelveticaNeue, sans-serif;
+  &.hide {
+    display: none;
+  }
+  .cb-modal-layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: @zIndex;
+    background-color: black;
+    opacity: 0.5;
+  }
+  .cb-modal-container {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    z-index: @zIndex + 1;
+    background-color: white;
+    border-radius: 4px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 900px;
+    height: 320px;
+    max-height: 95%;
+
+    padding: 20px;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: center;
+  }
+}
