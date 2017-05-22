@@ -1,0 +1,36 @@
+@import '../../less/core/palette.less';
+
+.cb-checkbox {
+  display: none;
+}
+
+.cb-checkbox + label {
+  @size: 20px;
+  display: inline-block;
+  position: relative;
+  height: @size;
+  line-height: @size;
+  padding: 0;
+  cursor: pointer;
+  user-select: none;
+  background: url('../../images/unchecked.svg') no-repeat;
+  background-size: contain;
+
+  .cb-checkbox-label-text {
+    margin-left: @size + 8;
+    font-size: 14px;
+    line-height: 18px;
+    color: black;
+  }
+}
+
+.cb-checkbox[disabled] + label {
+  opacity: 0.3;
+  user-select: none;
+  cursor: no-drop;
+}
+
+.cb-checkbox:checked + label {
+  background: url('../../images/checked.svg') no-repeat;
+  background-size: contain;
+}
