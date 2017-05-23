@@ -2,6 +2,127 @@ footer {
   display: block;
   position: relative;
   box-sizing: border-box;
-  height: 270px;
+  min-height: 270px;
   background-color: rgb(55, 55, 55);
+  @media (max-width: @tablet-media) {
+    padding-bottom: 50px;
+  }
+  .container {
+    height: 100%;
+    overflow: hidden;
+  }
+  .main-block {
+    display: inline-block;
+    box-sizing: border-box;
+    float: left;
+    vertical-align: top;
+
+    @media (max-width: @desc-media) {
+      width: 600px;
+    }
+    @media (max-width: @tablet-max-media) {
+      width: 468px;
+    }
+    @media (max-width: @tablet-media) {
+      width: 100%;
+      float: none;
+      text-align: center;
+    }
+
+    .block {
+      display: inline-block;
+      box-sizing: border-box;
+      vertical-align: top;
+      padding-top: 40px;
+      height: 270px;
+      margin-right: 40px;
+      color: white;
+      @media (max-width: @tablet-media) {
+        padding: 40px 10px 0;
+        margin: 0 auto;
+      }
+      .title {
+        margin: 0 0 25px;
+        font-weight: 200;
+        font-size: 17px;
+      }
+      .about-info {
+        margin: 0 0 10px;
+        font-size: 16px;
+      }
+      .link {
+        display: block;
+        color: white;
+        text-decoration: underline;
+        cursor: pointer;
+        text-decoration-color: @divider;
+        margin: 0 0 10px;
+        font-size: 15px;
+      }
+    }
+  }
+  .right-block {
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    float: right;
+    padding-top: 60px;
+    height: 100%;
+    width: 270px;
+    text-align: right;
+
+    @media (max-width: @tablet-media) {
+      width: 100%;
+      float: none;
+      text-align: center;
+    }
+
+    * {
+      display: block;
+      margin-bottom: 15px;
+      color: white;
+      text-decoration: none;
+    }
+    .phone {
+      cursor: pointer;
+      font-size: 30px;
+    }
+    .call-back {
+      color: @blue;
+      text-decoration: underline;
+      cursor: pointer;
+      font-size: 17px;
+    }
+    .email {
+      cursor: pointer;
+      font-size: 17px;
+    }
+    .address {}
+  }
+
+  .social-container {
+    margin-bottom: 10px;
+    .social {
+      display: inline-block;
+      cursor: pointer;
+      border: 1px solid @blue;
+      border-radius: 3px;
+      width: 37px;
+      height: 37px;
+      transition: background-color 0.5s;
+
+      &.vk {
+        background: url("../../images/vk.svg") no-repeat 8px 12px;
+      }
+      &.fb {
+        background: url("../../images/fb.svg") no-repeat 14px 10px;
+      }
+      &.ytb {
+        background: url("../../images/ytb.svg") no-repeat -1px 5px;
+      }
+      &:hover {
+        background-color: @blue;
+      }
+    }
+  }
 }
