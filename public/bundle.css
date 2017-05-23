@@ -873,6 +873,7 @@ header .call-back {
   position: relative;
   box-sizing: border-box;
   padding: 0 50px;
+  height: 670px;
 }
 @media (max-width: 1021px) {
   .screen-7 .slider {
@@ -1010,6 +1011,15 @@ header .call-back {
 }
 .screen-8 .video-container .text .blue {
   color: #0179ff;
+}
+.screen-8 .signature {
+  display: block;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .screen-8 .signature {
+    margin: 0 auto;
+  }
 }
 .screen-9 {
   text-align: center;
