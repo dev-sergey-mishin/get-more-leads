@@ -445,6 +445,7 @@ body *::selection {
   font-size: 16px;
   margin-bottom: 16px;
   text-align: center;
+  cursor: pointer;
 }
 .cb-modal-window .cb-modal-container .btn {
   width: 250px;
