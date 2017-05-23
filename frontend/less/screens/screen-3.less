@@ -19,7 +19,29 @@
     height: 420px;
   }
   .image {
+    position: relative;
     text-align: right;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+    .big-img {
+      display: none;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 20px;
+      margin: 0 auto;
+      height: 80vh;
+      width: auto;
+      z-index: 100;
+    }
+    &:focus {
+      pointer-events: none;
+      .big-img {
+        display: block;
+      }
+    }
+
     @media (max-width: @desc) {
       img {
         width: 500px;
