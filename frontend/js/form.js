@@ -26,5 +26,11 @@
             var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
             $budget.text(price + ' ₽');
         });
+        $range.mousedown(function(e) {
+            $range.mousemove(function(e) {
+                var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+                $budget.text(price + ' ₽');
+            });
+        });
     })
 })();
