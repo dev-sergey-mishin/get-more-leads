@@ -422,9 +422,29 @@ body *::selection {
   font-weight: 200;
   margin: 0 0 40px;
 }
+@media (max-width: 768px) {
+  .cb-modal-window .cb-modal-container .title {
+    font-size: 28px;
+  }
+}
+.cb-modal-window .cb-modal-container .desc {
+  display: block;
+  text-align: center;
+  margin: 0 0 70px;
+}
+@media (max-width: 768px) {
+  .cb-modal-window .cb-modal-container .desc {
+    margin: 0 0 30px;
+  }
+}
 .cb-modal-window .cb-modal-container .btn {
   width: 250px;
   height: 65px;
+}
+@media (max-width: 768px) {
+  .cb-modal-window .cb-modal-container .btn {
+    width: 180px;
+  }
 }
 .cb-modal-window .cb-modal-container .btn.red {
   background-color: #f03d36;
@@ -668,6 +688,7 @@ header .call-back {
   text-decoration: underline;
   font-size: 16px;
   margin-bottom: 16px;
+  cursor: pointer;
 }
 .screen-3 .link::after {
   content: '';

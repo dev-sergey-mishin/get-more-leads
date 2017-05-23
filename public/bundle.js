@@ -63,36 +63,35 @@
 
 	(function() {
 	    $(document).ready(function(){
-	        var $conversionModal = $('#conversion-modal');
-	        $('.conversion').click(function() {
-	            $conversionModal.removeClass('hide');
-	        });
-	        $conversionModal.find('.cb-modal-layer').click(function() {
-	            $conversionModal.addClass('hide');
-	        });
-	        $conversionModal.find('.close').click(function() {
-	            $conversionModal.addClass('hide');
+	        function modalHandler($container, $actor) {
+	            $actor.click(function() {
+	                $container.removeClass('hide');
+	            });
+	            $container.find('.cb-modal-layer').click(function() {
+	                $container.addClass('hide');
+	            });
+	            $container.find('.close').click(function() {
+	                $container.addClass('hide');
+	            });
+	        }
+
+	        modalHandler($('#conversion-modal'), $('.conversion'));
+	        modalHandler($('#service-modal'), $('.feedback-container .link'));
+	        modalHandler($('#callback-modal'), $('.call-back'));
+
+	        $('.feedback-container .link').click(function() {
+	            var text = 'Узнать подробнее об услуге  «' + $(this).data('val') + '»';
+	            $('#service-modal').find('.title').text(text);
 	        });
 
 	        var $callBackModal = $('#callback-modal');
-	        $('.call-back').click(function() {
-	            $callBackModal.removeClass('hide');
-	        });
-	        $callBackModal.find('.cb-modal-layer').click(function() {
-	            $callBackModal.addClass('hide');
-	        });
 	        $callBackModal.find('.btn.red').click(function() {
 	            $(this).removeClass('red').addClass('close').text('Закрыть');
 	            $callBackModal.find('.info').html('<p>Спасибо за заявку! <br />Наш менеджер свяжется с вами<br /> в ближайшее время.</p>')
 	            $callBackModal.find('.close').click(function() {
 	                $callBackModal.addClass('hide');
 	            });
-
 	        });
-	        $callBackModal.find('.close').click(function() {
-	            $callBackModal.addClass('hide');
-	        });
-
 
 	        $('.tariff-container').find('.btn').click(function() {
 	            var price = $(this).data('val');
