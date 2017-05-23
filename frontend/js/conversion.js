@@ -18,12 +18,16 @@
         $callBackModal.find('.cb-modal-layer').click(function() {
             $callBackModal.addClass('hide');
         });
+        $callBackModal.find('.btn.red').click(function() {
+            $(this).removeClass('red').addClass('close').text('Закрыть');
+            $callBackModal.find('.info').html('<p>Спасибо за заявку! <br />Наш менеджер свяжется с вами<br /> в ближайшее время.</p>')
+            $callBackModal.find('.close').click(function() {
+                $callBackModal.addClass('hide');
+            });
+
+        });
         $callBackModal.find('.close').click(function() {
             $callBackModal.addClass('hide');
-        });
-        $callBackModal.find('.btn.red').click(function() {
-            $(this).removeClass('red').text('Закрыть');
-            $callBackModal.find('.info').html('<p>Спасибо за заявку! <br />Наш менеджер свяжется с вами<br /> в ближайшее время.</p>')
         });
 
 
