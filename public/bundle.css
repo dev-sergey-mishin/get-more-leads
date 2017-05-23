@@ -118,6 +118,9 @@ body *::selection {
   height: 62px;
   font-size: 19px;
 }
+.btn-container .btn-block-phone.error {
+  border-color: #e82028;
+}
 .btn-container .btn-block-phone:focus {
   border-color: #2a6aec;
   background-color: #eef2f7;
@@ -232,6 +235,9 @@ body *::selection {
   font-size: 20px;
   font-family: SFUIDisplay-Thin;
   transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+.input-text.error {
+  border-color: #e82028;
 }
 .input-text:focus {
   border-color: #2a6aec;
