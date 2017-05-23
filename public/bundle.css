@@ -415,6 +415,11 @@ body *::selection {
   background-color: white;
   max-width: 100%;
 }
+@media (max-width: 768px) {
+  .cb-modal-window .cb-modal-container {
+    padding: 25px 20px;
+  }
+}
 .cb-modal-window .cb-modal-container .title {
   font-size: 48px;
   font-family: SFUIDisplay-Thin;
@@ -425,7 +430,8 @@ body *::selection {
 }
 @media (max-width: 768px) {
   .cb-modal-window .cb-modal-container .title {
-    font-size: 28px;
+    font-size: 24px;
+    margin-bottom: 20px;
   }
 }
 .cb-modal-window .cb-modal-container .desc {
@@ -435,7 +441,7 @@ body *::selection {
 }
 @media (max-width: 768px) {
   .cb-modal-window .cb-modal-container .desc {
-    margin: 0 0 30px;
+    margin: 0 0 15px;
   }
 }
 .cb-modal-window .cb-modal-container .link {
