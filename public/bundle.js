@@ -44,292 +44,11 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(2);
+	module.exports = __webpack_require__(7);
 
 
 /***/ },
-/* 1 */,
-/* 2 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(7);
-	__webpack_require__(6);
-	__webpack_require__(5);
-	__webpack_require__(4);
-
-	__webpack_require__(3);
-
-/***/ },
-/* 3 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var Inputmask = __webpack_require__(55);
-
-	(function() {
-	    $(document).ready(function(){
-
-	        var selector = document.getElementsByClassName("btn-block-phone");
-	        var im = new Inputmask("+7 (999) 999 99-99");
-	        im.mask(selector);
-
-
-	        $('.btn-container .btn.red').click(function() {
-	            var $container = $(this).closest('.btn-container');
-
-	            var phoneVal = $container.find('.btn-block-phone').val().replace(/\D/g, '');
-
-	            if (phoneVal.length != 11) {
-	                $container.find('.btn-block-phone').addClass('error');
-	            } else {
-	                $container.find('.btn-block-phone').removeClass('error');
-	                var $modal = $('#conversion-modal');
-	                $modal.removeClass('hide');
-	                $modal.find('.cb-modal-layer').click(function() {
-	                    $modal.addClass('hide');
-	                });
-	                $modal.find('.close').click(function() {
-	                    $modal.addClass('hide');
-	                });
-	            }
-	        });
-
-	    })
-	})();
-
-/***/ },
-/* 4 */
-/***/ function(module, exports) {
-
-	(function() {
-	    $(document).ready(function(){
-	        function modalHandler($container, $actor) {
-	            $actor.click(function() {
-	                $container.removeClass('hide');
-	            });
-	            $container.find('.cb-modal-layer').click(function() {
-	                $container.addClass('hide');
-	            });
-	            $container.find('.close').click(function() {
-	                $container.addClass('hide');
-	            });
-	        }
-
-	        modalHandler($('#service-modal'), $('.feedback-container .link'));
-	        modalHandler($('#callback-modal'), $('.call-back'));
-
-	        $('.feedback-container .link').click(function() {
-	            var text = 'Узнать подробнее об услуге  «' + $(this).data('val') + '»';
-	            $('#service-modal').find('.title').text(text);
-	        });
-
-	        var $callBackModal = $('#callback-modal');
-	        $callBackModal.find('.btn.red').click(function() {
-	            $(this).removeClass('red').addClass('close').text('Закрыть');
-	            $callBackModal.find('.info').html('<p>Спасибо за заявку! <br />Наш менеджер свяжется с вами<br /> в ближайшее время.</p>')
-	            $callBackModal.find('.close').click(function() {
-	                $callBackModal.addClass('hide');
-	            });
-	        });
-
-	        $('.tariff-container').find('.btn').click(function() {
-	            var price = $(this).data('val');
-	            var $range = $('#range');
-	            $range.val(price);
-	            $range.trigger('change');
-	            var destination = $('#form').offset().top;
-	            $("html:not(:animated),body:not(:animated)").animate({
-	                scrollTop: destination
-	            }, 800);
-	            return false;
-	        });
-	    })
-	})();
-
-/***/ },
-/* 5 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var Inputmask = __webpack_require__(55);
-
-	(function() {
-	    $(document).ready(function(){
-
-	        var selector = document.getElementById("form-phone");
-	        var im = new Inputmask("+7 (999) 999 99-99");
-	        im.mask(selector);
-
-	        var $detail = $('.detail');
-	        var $short = $detail.find('.short');
-	        var $long = $detail.find('.long');
-	        var $detailInner = $('.detail-inner');
-	        var $pup = $('.pup');
-	        var $range = $('#range');
-	        var $budget = $('#budget');
-	        var $switcher = $('.detail-switcher');
-	        var $submit = $('#form').find('.btn.red');
-
-	        function setShort() {
-	            $long.removeClass('active');
-	            $short.addClass('active');
-	            $detailInner.hide();
-	            $pup.addClass('left');
-	            $pup.removeClass('right');
-	        }
-	        function setLong() {
-	            $short.removeClass('active');
-	            $long.addClass('active');
-	            $detailInner.show();
-	            $pup.removeClass('left');
-	            $pup.addClass('right');
-	        }
-
-	        $short.click(function () {
-	            setShort();
-	        });
-	        $long.click(function () {
-	            setLong();
-	        });
-	        $switcher.click(function () {
-	            if ($short.hasClass('active')) {
-	                setLong();
-	            } else {
-	                setShort();
-	            }
-	        });
-
-	        $range.on('change', function(e) {
-	            var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
-	            $budget.text(price + ' ₽');
-	        });
-	        $range.mousedown(function(e) {
-	            $range.mousemove(function(e) {
-	                var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
-	                $budget.text(price + ' ₽');
-	            });
-	        });
-
-	        $submit.click(function() {
-	            var $modal = $('#conversion-modal');
-	            var $name = $('#form-name');
-	            var $phone = $('#form-phone');
-	            var $email = $('#form-mail');
-
-	            var phoneVal = $phone.val().replace(/\D/g, '');
-
-	            function validateEmail(email) {
-	                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	                return re.test(email);
-	            }
-
-	            if ($name.val().length > 0 && phoneVal.length === 11 && validateEmail($email.val())) {
-	                $modal.removeClass('hide');
-	                $modal.find('.cb-modal-layer').click(function() {
-	                    $modal.addClass('hide');
-	                });
-	                $modal.find('.close').click(function() {
-	                    $modal.addClass('hide');
-	                });
-	                $name.removeClass('error');
-	                $phone.removeClass('error');
-	                $email.removeClass('error');
-	            } else {
-	                if ($name.val().length === 0) {
-	                    $name.addClass('error');
-	                } else {
-	                    $name.removeClass('error');
-	                }
-	                if (phoneVal.length != 11) {
-	                    $phone.addClass('error');
-	                } else {
-	                    $phone.removeClass('error');
-	                }
-	                if (!validateEmail($email.val())) {
-	                    $email.addClass('error');
-	                } else {
-	                    $email.removeClass('error');
-	                }
-	            }
-	        });
-	    })
-	})();
-
-/***/ },
-/* 6 */
-/***/ function(module, exports) {
-
-	(function() {
-	    $(document).ready(function(){
-	        var $slider = $('.slider');
-	        var $left = $slider.find('.arrow.left');
-	        var $right = $slider.find('.arrow.right');
-	        var index = 0;
-
-	        function incrementIndex(newVal) {
-	            var maxVal = $slider.find('.slide').length - 1;
-	            if (newVal < 0) {
-	                return maxVal;
-	            }
-	            if (newVal > maxVal) {
-	                return 0
-	            }
-	            return newVal;
-	        }
-
-	        $left.click(function() {
-	            index = incrementIndex(--index);
-	            $slider.find('.slide').removeClass('active');
-	            $($slider.find('.slide')[index]).addClass('active');
-	        });
-	        $right.click(function() {
-	            index = incrementIndex(++index);
-	            $slider.find('.slide').removeClass('active');
-	            $($slider.find('.slide')[index]).addClass('active');
-	        });
-	    })
-	})();
-
-/***/ },
-/* 7 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */,
-/* 35 */,
-/* 36 */,
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */
+/* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -341,7 +60,7 @@
 	*/
 
 	!function(factory) {
-	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(43), __webpack_require__(45), __webpack_require__(44) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./global/window"), require("./global/document")) : window.Inputmask = factory(window.dependencyLib || jQuery, window, document);
+	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(5), __webpack_require__(4) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./global/window"), require("./global/document")) : window.Inputmask = factory(window.dependencyLib || jQuery, window, document);
 	}(function($, window, document, undefined) {
 	    function Inputmask(alias, options, internal) {
 	        if (!(this instanceof Inputmask)) return new Inputmask(alias, options, internal);
@@ -1964,7 +1683,7 @@
 	});
 
 /***/ },
-/* 43 */
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -1976,7 +1695,7 @@
 	*/
 
 	!function(factory) {
-	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(45), __webpack_require__(44) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("../global/window"), require("../global/document")) : window.dependencyLib = factory(window, document);
+	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(5), __webpack_require__(4) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("../global/window"), require("../global/document")) : window.dependencyLib = factory(window, document);
 	}(function(window, document) {
 	    function indexOf(list, elem) {
 	        for (var i = 0, len = list.length; i < len; i++) if (list[i] === elem) return i;
@@ -2108,7 +1827,8 @@
 	});
 
 /***/ },
-/* 44 */
+/* 3 */,
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2124,7 +1844,7 @@
 	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports && (module.exports = document);
 
 /***/ },
-/* 45 */
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2140,7 +1860,265 @@
 	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports && (module.exports = window);
 
 /***/ },
-/* 46 */
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(13);
+	__webpack_require__(14);
+	__webpack_require__(15);
+	__webpack_require__(16);
+
+	__webpack_require__(17);
+	__webpack_require__(18);
+	__webpack_require__(19);
+	__webpack_require__(20);
+	__webpack_require__(21);
+
+	module.exports = __webpack_require__(1);
+
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(12);
+	__webpack_require__(11);
+	__webpack_require__(10);
+	__webpack_require__(9);
+
+	__webpack_require__(8);
+	__webpack_require__(56);
+	__webpack_require__(57);
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Inputmask = __webpack_require__(6);
+
+	(function() {
+	    $(document).ready(function(){
+
+	        var selector = document.getElementsByClassName("btn-block-phone");
+	        var im = new Inputmask("+7 (999) 999 99-99");
+	        im.mask(selector);
+
+
+	        $('.btn-container .btn.red').click(function() {
+	            var $container = $(this).closest('.btn-container');
+
+	            var phoneVal = $container.find('.btn-block-phone').val().replace(/\D/g, '');
+
+	            if (phoneVal.length != 11) {
+	                $container.find('.btn-block-phone').addClass('error');
+	            } else {
+	                $container.find('.btn-block-phone').removeClass('error');
+	                var $modal = $('#conversion-modal');
+	                $modal.removeClass('hide');
+	                $modal.find('.cb-modal-layer').click(function() {
+	                    $modal.addClass('hide');
+	                });
+	                $modal.find('.close').click(function() {
+	                    $modal.addClass('hide');
+	                });
+	            }
+	        });
+
+	    })
+	})();
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	(function() {
+	    $(document).ready(function(){
+	        function modalHandler($container, $actor) {
+	            $actor.click(function() {
+	                $container.removeClass('hide');
+	            });
+	            $container.find('.cb-modal-layer').click(function() {
+	                $container.addClass('hide');
+	            });
+	            $container.find('.close').click(function() {
+	                $container.addClass('hide');
+	            });
+	        }
+
+	        modalHandler($('#service-modal'), $('.feedback-container .link'));
+	        modalHandler($('#callback-modal'), $('.call-back'));
+
+	        $('.feedback-container .link').click(function() {
+	            var text = 'Узнать подробнее об услуге  «' + $(this).data('val') + '»';
+	            $('#service-modal').find('.title').text(text);
+	        });
+
+
+	        $('.tariff-container').find('.btn').click(function() {
+	            var price = $(this).data('val');
+	            var $range = $('#range');
+	            $range.val(price);
+	            $range.trigger('change');
+	            var destination = $('#form').offset().top;
+	            $("html:not(:animated),body:not(:animated)").animate({
+	                scrollTop: destination
+	            }, 800);
+	            return false;
+	        });
+	    })
+	})();
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Inputmask = __webpack_require__(6);
+
+	(function() {
+	    $(document).ready(function(){
+
+	        var selector = document.getElementById("form-phone");
+	        var im = new Inputmask("+7 (999) 999 99-99");
+	        im.mask(selector);
+
+	        var $detail = $('.detail');
+	        var $short = $detail.find('.short');
+	        var $long = $detail.find('.long');
+	        var $detailInner = $('.detail-inner');
+	        var $pup = $('.pup');
+	        var $range = $('#range');
+	        var $budget = $('#budget');
+	        var $switcher = $('.detail-switcher');
+	        var $submit = $('#form').find('.btn.red');
+
+	        function setShort() {
+	            $long.removeClass('active');
+	            $short.addClass('active');
+	            $detailInner.hide();
+	            $pup.addClass('left');
+	            $pup.removeClass('right');
+	        }
+	        function setLong() {
+	            $short.removeClass('active');
+	            $long.addClass('active');
+	            $detailInner.show();
+	            $pup.removeClass('left');
+	            $pup.addClass('right');
+	        }
+
+	        $short.click(function () {
+	            setShort();
+	        });
+	        $long.click(function () {
+	            setLong();
+	        });
+	        $switcher.click(function () {
+	            if ($short.hasClass('active')) {
+	                setLong();
+	            } else {
+	                setShort();
+	            }
+	        });
+
+	        $range.on('change', function(e) {
+	            var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+	            $budget.text(price + ' ₽');
+	        });
+	        $range.mousedown(function(e) {
+	            $range.mousemove(function(e) {
+	                var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+	                $budget.text(price + ' ₽');
+	            });
+	        });
+
+	        $submit.click(function() {
+	            var $modal = $('#conversion-modal');
+	            var $name = $('#form-name');
+	            var $phone = $('#form-phone');
+	            var $email = $('#form-mail');
+
+	            var phoneVal = $phone.val().replace(/\D/g, '');
+
+	            function validateEmail(email) {
+	                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	                return re.test(email);
+	            }
+
+	            if ($name.val().length > 0 && phoneVal.length === 11 && validateEmail($email.val())) {
+	                $modal.removeClass('hide');
+	                $modal.find('.cb-modal-layer').click(function() {
+	                    $modal.addClass('hide');
+	                });
+	                $modal.find('.close').click(function() {
+	                    $modal.addClass('hide');
+	                });
+	                $name.removeClass('error');
+	                $phone.removeClass('error');
+	                $email.removeClass('error');
+	            } else {
+	                if ($name.val().length === 0) {
+	                    $name.addClass('error');
+	                } else {
+	                    $name.removeClass('error');
+	                }
+	                if (phoneVal.length != 11) {
+	                    $phone.addClass('error');
+	                } else {
+	                    $phone.removeClass('error');
+	                }
+	                if (!validateEmail($email.val())) {
+	                    $email.addClass('error');
+	                } else {
+	                    $email.removeClass('error');
+	                }
+	            }
+	        });
+	    })
+	})();
+
+/***/ },
+/* 11 */
+/***/ function(module, exports) {
+
+	(function() {
+	    $(document).ready(function(){
+	        var $slider = $('.slider');
+	        var $left = $slider.find('.arrow.left');
+	        var $right = $slider.find('.arrow.right');
+	        var index = 0;
+
+	        function incrementIndex(newVal) {
+	            var maxVal = $slider.find('.slide').length - 1;
+	            if (newVal < 0) {
+	                return maxVal;
+	            }
+	            if (newVal > maxVal) {
+	                return 0
+	            }
+	            return newVal;
+	        }
+
+	        $left.click(function() {
+	            index = incrementIndex(--index);
+	            $slider.find('.slide').removeClass('active');
+	            $($slider.find('.slide')[index]).addClass('active');
+	        });
+	        $right.click(function() {
+	            index = incrementIndex(++index);
+	            $slider.find('.slide').removeClass('active');
+	            $($slider.find('.slide')[index]).addClass('active');
+	        });
+	    })
+	})();
+
+/***/ },
+/* 12 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2152,7 +2130,7 @@
 	*/
 
 	!function(factory) {
-	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(43), __webpack_require__(42) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./inputmask")) : factory(window.dependencyLib || jQuery, window.Inputmask);
+	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(1) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./inputmask")) : factory(window.dependencyLib || jQuery, window.Inputmask);
 	}(function($, Inputmask) {
 	    function isLeapYear(year) {
 	        return isNaN(year) || 29 === new Date(year, 2, 0).getDate();
@@ -2623,7 +2601,7 @@
 	});
 
 /***/ },
-/* 47 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2635,7 +2613,7 @@
 	*/
 
 	!function(factory) {
-	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(43), __webpack_require__(42) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./inputmask")) : factory(window.dependencyLib || jQuery, window.Inputmask);
+	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(1) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./inputmask")) : factory(window.dependencyLib || jQuery, window.Inputmask);
 	}(function($, Inputmask) {
 	    return Inputmask.extendDefinitions({
 	        A: {
@@ -2725,7 +2703,7 @@
 	});
 
 /***/ },
-/* 48 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2737,7 +2715,7 @@
 	*/
 
 	!function(factory) {
-	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(43), __webpack_require__(42) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./inputmask")) : factory(window.dependencyLib || jQuery, window.Inputmask);
+	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(1) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./inputmask")) : factory(window.dependencyLib || jQuery, window.Inputmask);
 	}(function($, Inputmask, undefined) {
 	    function autoEscape(txt, opts) {
 	        for (var escapedTxt = "", i = 0; i < txt.length; i++) Inputmask.prototype.definitions[txt.charAt(i)] || opts.definitions[txt.charAt(i)] || opts.optionalmarker.start === txt.charAt(i) || opts.optionalmarker.end === txt.charAt(i) || opts.quantifiermarker.start === txt.charAt(i) || opts.quantifiermarker.end === txt.charAt(i) || opts.groupmarker.start === txt.charAt(i) || opts.groupmarker.end === txt.charAt(i) || opts.alternatormarker === txt.charAt(i) ? escapedTxt += "\\" + txt.charAt(i) : escapedTxt += txt.charAt(i);
@@ -3071,7 +3049,7 @@
 	});
 
 /***/ },
-/* 49 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -3083,7 +3061,7 @@
 	*/
 
 	!function(factory) {
-	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(43), __webpack_require__(42) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./inputmask")) : factory(window.dependencyLib || jQuery, window.Inputmask);
+	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(1) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./inputmask")) : factory(window.dependencyLib || jQuery, window.Inputmask);
 	}(function($, Inputmask) {
 	    function maskSort(a, b) {
 	        var maska = (a.mask || a).replace(/#/g, "9").replace(/\)/, "9").replace(/[+()#-]/g, ""), maskb = (b.mask || b).replace(/#/g, "9").replace(/\)/, "9").replace(/[+()#-]/g, ""), maskas = (a.mask || a).split("#")[0], maskbs = (b.mask || b).split("#")[0];
@@ -3137,7 +3115,7 @@
 	});
 
 /***/ },
-/* 50 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -3149,7 +3127,7 @@
 	*/
 
 	!function(factory) {
-	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(42) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("../inputmask")) : factory(window.Inputmask);
+	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(1) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("../inputmask")) : factory(window.Inputmask);
 	}(function(Inputmask) {
 	    return Inputmask.extendAliases({
 	        phonebe: {
@@ -3386,7 +3364,7 @@
 	});
 
 /***/ },
-/* 51 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -3398,7 +3376,7 @@
 	*/
 
 	!function(factory) {
-	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(42) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("../inputmask")) : factory(window.Inputmask);
+	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(1) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("../inputmask")) : factory(window.Inputmask);
 	}(function(Inputmask) {
 	    return Inputmask.extendAliases({
 	        phonenl: {
@@ -4315,7 +4293,7 @@
 	});
 
 /***/ },
-/* 52 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -4327,7 +4305,7 @@
 	*/
 
 	!function(factory) {
-	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(42) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("../inputmask")) : factory(window.Inputmask);
+	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(1) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("../inputmask")) : factory(window.Inputmask);
 	}(function(Inputmask) {
 	    return Inputmask.extendAliases({
 	        phoneru: {
@@ -23560,7 +23538,7 @@
 	});
 
 /***/ },
-/* 53 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -23572,7 +23550,7 @@
 	*/
 
 	!function(factory) {
-	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(42) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("../inputmask")) : factory(window.Inputmask);
+	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(1) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("../inputmask")) : factory(window.Inputmask);
 	}(function(Inputmask) {
 	    return Inputmask.extendAliases({
 	        phoneuk: {
@@ -24574,7 +24552,7 @@
 	});
 
 /***/ },
-/* 54 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -24586,7 +24564,7 @@
 	*/
 
 	!function(factory) {
-	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(42) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("../inputmask")) : factory(window.Inputmask);
+	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(1) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("../inputmask")) : factory(window.Inputmask);
 	}(function(Inputmask) {
 	    return Inputmask.extendAliases({
 	        phone: {
@@ -26690,22 +26668,128 @@
 	});
 
 /***/ },
-/* 55 */
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(46);
-	__webpack_require__(47);
-	__webpack_require__(48);
-	__webpack_require__(49);
+	var Inputmask = __webpack_require__(6);
 
-	__webpack_require__(50);
-	__webpack_require__(51);
-	__webpack_require__(52);
-	__webpack_require__(53);
-	__webpack_require__(54);
+	(function() {
+	    $(document).ready(function(){
+	        var selector = document.getElementById("call-back-phone");
+	        var im = new Inputmask("+7 (999) 999 99-99");
+	        im.mask(selector);
 
-	module.exports = __webpack_require__(42);
+	        var $modal = $('#callback-modal');
+	        var $submit = $modal.find('.btn.red');
+	        $submit.click(function() {
+	            var $name = $modal.find('#call-back-name');
+	            var $phone = $modal.find('#call-back-phone');
+	            var nameLength = $name.val().length;
+	            var phoneLength = $phone.val().replace(/\D/g, '').length;
 
+	            if (nameLength === 0 || phoneLength != 11) {
+	                $name.addClass(nameLength === 0 ? 'error' : '');
+	                $phone.addClass(phoneLength < 6 ? 'error' : '');
+	            } else {
+	                $name.removeClass('error');
+	                $phone.removeClass('error');
+
+	                $modal.addClass('hide');
+	                var $newModal = $('#conversion-modal');
+	                $newModal.removeClass('hide');
+	                $newModal.find('.close').click(function() {
+	                    $newModal.addClass('hide');
+	                });
+	                $newModal.find('.cb-modal-layer').click(function() {
+	                    $newModal.addClass('hide');
+	                });
+	            }
+	        });
+	    })
+	})();
+
+/***/ },
+/* 57 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Inputmask = __webpack_require__(6);
+	(function() {
+	    $(document).ready(function(){
+	        function validateEmail(email) {
+	            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	            return re.test(email);
+	        }
+
+	        var selector = document.getElementById("service-phone");
+	        var im = new Inputmask("+7 (999) 999 99-99");
+	        im.mask(selector);
+
+	        var $modal = $('#service-modal');
+	        var $submit = $modal.find('.btn.red');
+	        $submit.click(function() {
+	            var $name = $modal.find('#service-name');
+	            var $phone = $modal.find('#service-phone');
+	            var $email = $modal.find('#service-mail');
+	            var nameLength = $name.val().length;
+	            var phoneLength = $phone.val().replace(/\D/g, '').length;
+	            var emailValid = validateEmail($email.val());
+
+	            if (nameLength === 0 || phoneLength != 11 || !emailValid) {
+	                $name.addClass(nameLength === 0 ? 'error' : '');
+	                $phone.addClass(phoneLength < 6 ? 'error' : '');
+	                $email.addClass(!emailValid ? 'error' : '');
+	            } else {
+	                $name.removeClass('error');
+	                $phone.removeClass('error');
+	                $email.removeClass('error');
+
+	                $modal.addClass('hide');
+	                var $newModal = $('#conversion-modal');
+	                $newModal.removeClass('hide');
+	                $newModal.find('.close').click(function() {
+	                    $newModal.addClass('hide');
+	                });
+	                $newModal.find('.cb-modal-layer').click(function() {
+	                    $newModal.addClass('hide');
+	                });
+	            }
+	        });
+	    })
+	})();
 
 /***/ }
 /******/ ]);

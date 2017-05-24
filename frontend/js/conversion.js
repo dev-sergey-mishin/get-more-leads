@@ -20,14 +20,6 @@
             $('#service-modal').find('.title').text(text);
         });
 
-        var $callBackModal = $('#callback-modal');
-        $callBackModal.find('.btn.red').click(function() {
-            $(this).removeClass('red').addClass('close').text('Закрыть');
-            $callBackModal.find('.info').html('<p>Спасибо за заявку! <br />Наш менеджер свяжется с вами<br /> в ближайшее время.</p>')
-            $callBackModal.find('.close').click(function() {
-                $callBackModal.addClass('hide');
-            });
-        });
 
         $('.tariff-container').find('.btn').click(function() {
             var price = $(this).data('val');
