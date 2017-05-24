@@ -40,29 +40,53 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(2);
 
 
 /***/ },
-
-/***/ 2:
+/* 1 */,
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
+	__webpack_require__(7);
 	__webpack_require__(6);
 	__webpack_require__(5);
 	__webpack_require__(4);
+
 	__webpack_require__(3);
 
-	__webpack_require__(41);
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	(function() {
+	    $(document).ready(function(){
+	        $('.btn-container .btn.red').click(function() {
+	            var $container = $(this).closest('.btn-container');
+	            if ($container.find('.btn-block-phone').val().length < 6) {
+	                $container.find('.btn-block-phone').addClass('error');
+	            } else {
+	                $container.find('.btn-block-phone').removeClass('error');
+	                var $modal = $('#conversion-modal');
+	                $modal.removeClass('hide');
+	                $modal.find('.cb-modal-layer').click(function() {
+	                    $modal.addClass('hide');
+	                });
+	                $modal.find('.close').click(function() {
+	                    $modal.addClass('hide');
+	                });
+	            }
+	        });
+
+	    })
+	})();
 
 /***/ },
-
-/***/ 3:
+/* 4 */
 /***/ function(module, exports) {
 
 	(function() {
@@ -112,8 +136,7 @@
 	})();
 
 /***/ },
-
-/***/ 4:
+/* 5 */
 /***/ function(module, exports) {
 
 	(function() {
@@ -154,8 +177,7 @@
 	})();
 
 /***/ },
-
-/***/ 5:
+/* 6 */
 /***/ function(module, exports) {
 
 	(function() {
@@ -190,39 +212,10 @@
 	})();
 
 /***/ },
-
-/***/ 6:
+/* 7 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
-/***/ },
-
-/***/ 41:
-/***/ function(module, exports) {
-
-	(function() {
-	    $(document).ready(function(){
-	        $('.btn-container .btn.red').click(function() {
-	            var $container = $(this).closest('.btn-container');
-	            if ($container.find('.btn-block-phone').val().length < 6) {
-	                $container.find('.btn-block-phone').addClass('error');
-	            } else {
-	                $container.find('.btn-block-phone').removeClass('error');
-	                var $modal = $('#conversion-modal');
-	                $modal.removeClass('hide');
-	                $modal.find('.cb-modal-layer').click(function() {
-	                    $modal.addClass('hide');
-	                });
-	                $modal.find('.close').click(function() {
-	                    $modal.addClass('hide');
-	                });
-	            }
-	        });
-
-	    })
-	})();
-
 /***/ }
-
-/******/ });
+/******/ ]);
