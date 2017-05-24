@@ -12,7 +12,6 @@
             });
         }
 
-        modalHandler($('#conversion-modal'), $('.conversion'));
         modalHandler($('#service-modal'), $('.feedback-container .link'));
         modalHandler($('#callback-modal'), $('.call-back'));
 

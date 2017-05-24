@@ -8,6 +8,7 @@
         var $range = $('#range');
         var $budget = $('#budget');
         var $switcher = $('.detail-switcher');
+        var $submit = $('#form').find('.btn.red');
 
         function setShort() {
             $long.removeClass('active');
@@ -47,6 +48,50 @@
                 var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
                 $budget.text(price + ' ₽');
             });
+        });
+
+        $submit.click(function() {
+            var $modal = $('#conversion-modal');
+            var $name = $('#form-name');
+            var $phone = $('#form-phone');
+            var $email = $('#form-mail');
+
+            function validateEmail(email) {
+                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(email);
+            }
+            
+            if ($name.val().length > 0 && $phone.val().length >= 6 && validateEmail($email.val())) {
+                $modal.removeClass('hide');
+                $modal.find('.cb-modal-layer').click(function() {
+                    $modal.addClass('hide');
+                });
+                $modal.find('.close').click(function() {
+                    $modal.addClass('hide');
+                });
+                $name.removeClass('error');
+                $phone.removeClass('error');
+                $email.removeClass('error');
+            } else {
+                if ($name.val().length === 0) {
+                    $name.addClass('error');
+                } else {
+                    $name.removeClass('error');
+                }
+                if ($phone.val().length < 6) {
+                    $phone.addClass('error');
+                } else {
+                    $phone.removeClass('error');
+                }
+                if (!validateEmail($email.val())) {
+                    $email.addClass('error');
+                } else {
+                    $email.removeClass('error');
+                }
+            }
+
+
+
         });
     })
 })();
