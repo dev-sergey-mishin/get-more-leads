@@ -14,6 +14,7 @@
 
         modalHandler($('#service-modal'), $('.feedback-container .link'));
         modalHandler($('#callback-modal'), $('.call-back'));
+        modalHandler($('#policy-modal'), $('.policy-link'));
 
         $('.feedback-container .link').click(function() {
             var text = 'Узнать подробнее об услуге  «' + $(this).data('val') + '»';
