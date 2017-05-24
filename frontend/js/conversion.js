@@ -13,7 +13,6 @@
         }
 
         modalHandler($('#conversion-modal'), $('.conversion'));
-        modalHandler($('#conversion-modal'), $('.btn-container .btn.red'));
         modalHandler($('#service-modal'), $('.feedback-container .link'));
         modalHandler($('#callback-modal'), $('.call-back'));
 

@@ -642,6 +642,14 @@ header .call-back {
   outline: none;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .screen-3 .image {
+    pointer-events: none;
+  }
+}
+.screen-3 .image img {
+  width: 610px;
+}
 .screen-3 .image .big-img {
   display: none;
   position: fixed;
@@ -652,6 +660,12 @@ header .call-back {
   height: 80vh;
   width: auto;
   z-index: 100;
+}
+@media (max-width: 991px) {
+  .screen-3 .image .big-img {
+    height: auto;
+    width: 80vw;
+  }
 }
 .screen-3 .image:focus {
   pointer-events: none;

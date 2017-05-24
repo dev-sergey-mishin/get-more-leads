@@ -24,6 +24,12 @@
     user-select: none;
     outline: none;
     cursor: pointer;
+    @media (max-width: @tablet) {
+      pointer-events: none;
+    }
+    img {
+      width: 610px;
+    }
     .big-img {
       display: none;
       position: fixed;
@@ -34,6 +40,10 @@
       height: 80vh;
       width: auto;
       z-index: 100;
+      @media (max-width: @tablet-max) {
+        height: auto;
+        width: 80vw;
+      }
     }
     &:focus {
       pointer-events: none;
