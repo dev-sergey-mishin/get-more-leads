@@ -46,16 +46,33 @@ var Inputmask = require('inputmask');
             }
         });
 
+
+        // range -------------------------------
+
+        function setRangeProgress(that) {
+            var val = ($(that).val() - $(that).attr('min')) / ($(that).attr('max') - $(that).attr('min'));
+            $(that).css('background-image',
+                '-webkit-gradient(linear, left top, right top, '
+                + 'color-stop(' + val + ', rgb(192, 192, 192)), '
+                + 'color-stop(' + val + ', #4185fb)'
+                + ')'
+            );
+        }
         $range.on('change', function(e) {
             var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
             $budget.text(price + ' ₽');
+            setRangeProgress(this);
         });
         $range.mousedown(function(e) {
             $range.mousemove(function(e) {
                 var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
                 $budget.text(price + ' ₽');
+                setRangeProgress(this);
             });
         });
+
+
+
 
         $submit.click(function() {
             var $modal = $('#conversion-modal');

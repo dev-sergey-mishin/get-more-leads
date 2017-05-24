@@ -60,7 +60,7 @@
 	*/
 
 	!function(factory) {
-	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(5), __webpack_require__(4) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./global/window"), require("./global/document")) : window.Inputmask = factory(window.dependencyLib || jQuery, window, document);
+	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(6), __webpack_require__(5) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./global/window"), require("./global/document")) : window.Inputmask = factory(window.dependencyLib || jQuery, window, document);
 	}(function($, window, document, undefined) {
 	    function Inputmask(alias, options, internal) {
 	        if (!(this instanceof Inputmask)) return new Inputmask(alias, options, internal);
@@ -1695,7 +1695,7 @@
 	*/
 
 	!function(factory) {
-	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(5), __webpack_require__(4) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("../global/window"), require("../global/document")) : window.dependencyLib = factory(window, document);
+	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(6), __webpack_require__(5) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("../global/window"), require("../global/document")) : window.dependencyLib = factory(window, document);
 	}(function(window, document) {
 	    function indexOf(list, elem) {
 	        for (var i = 0, len = list.length; i < len; i++) if (list[i] === elem) return i;
@@ -1827,8 +1827,26 @@
 	});
 
 /***/ },
-/* 3 */,
-/* 4 */
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(15);
+	__webpack_require__(16);
+	__webpack_require__(17);
+	__webpack_require__(18);
+
+	__webpack_require__(19);
+	__webpack_require__(20);
+	__webpack_require__(21);
+	__webpack_require__(22);
+	__webpack_require__(23);
+
+	module.exports = __webpack_require__(1);
+
+
+/***/ },
+/* 4 */,
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -1844,7 +1862,7 @@
 	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports && (module.exports = document);
 
 /***/ },
-/* 5 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -1860,41 +1878,23 @@
 	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports && (module.exports = window);
 
 /***/ },
-/* 6 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(13);
-	__webpack_require__(14);
-	__webpack_require__(15);
-	__webpack_require__(16);
-
-	__webpack_require__(17);
-	__webpack_require__(18);
-	__webpack_require__(19);
-	__webpack_require__(20);
-	__webpack_require__(21);
-
-	module.exports = __webpack_require__(1);
-
-
-/***/ },
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(12);
+	__webpack_require__(14);
+	__webpack_require__(13);
 	__webpack_require__(11);
 	__webpack_require__(10);
-	__webpack_require__(9);
 
 	__webpack_require__(8);
-	__webpack_require__(56);
-	__webpack_require__(57);
+	__webpack_require__(9);
+	__webpack_require__(12);
 
 /***/ },
 /* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Inputmask = __webpack_require__(6);
+	var Inputmask = __webpack_require__(3);
 
 	(function() {
 	    $(document).ready(function(){
@@ -1929,6 +1929,47 @@
 
 /***/ },
 /* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Inputmask = __webpack_require__(3);
+
+	(function() {
+	    $(document).ready(function(){
+	        var selector = document.getElementById("call-back-phone");
+	        var im = new Inputmask("+7 (999) 999 99-99");
+	        im.mask(selector);
+
+	        var $modal = $('#callback-modal');
+	        var $submit = $modal.find('.btn.red');
+	        $submit.click(function() {
+	            var $name = $modal.find('#call-back-name');
+	            var $phone = $modal.find('#call-back-phone');
+	            var nameLength = $name.val().length;
+	            var phoneLength = $phone.val().replace(/\D/g, '').length;
+
+	            if (nameLength === 0 || phoneLength != 11) {
+	                $name.addClass(nameLength === 0 ? 'error' : '');
+	                $phone.addClass(phoneLength < 6 ? 'error' : '');
+	            } else {
+	                $name.removeClass('error');
+	                $phone.removeClass('error');
+
+	                $modal.addClass('hide');
+	                var $newModal = $('#conversion-modal');
+	                $newModal.removeClass('hide');
+	                $newModal.find('.close').click(function() {
+	                    $newModal.addClass('hide');
+	                });
+	                $newModal.find('.cb-modal-layer').click(function() {
+	                    $newModal.addClass('hide');
+	                });
+	            }
+	        });
+	    })
+	})();
+
+/***/ },
+/* 10 */
 /***/ function(module, exports) {
 
 	(function() {
@@ -1969,10 +2010,10 @@
 	})();
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Inputmask = __webpack_require__(6);
+	var Inputmask = __webpack_require__(3);
 
 	(function() {
 	    $(document).ready(function(){
@@ -2020,16 +2061,33 @@
 	            }
 	        });
 
+
+	        // range -------------------------------
+
+	        function setRangeProgress(that) {
+	            var val = ($(that).val() - $(that).attr('min')) / ($(that).attr('max') - $(that).attr('min'));
+	            $(that).css('background-image',
+	                '-webkit-gradient(linear, left top, right top, '
+	                + 'color-stop(' + val + ', rgb(192, 192, 192)), '
+	                + 'color-stop(' + val + ', #4185fb)'
+	                + ')'
+	            );
+	        }
 	        $range.on('change', function(e) {
 	            var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
 	            $budget.text(price + ' ₽');
+	            setRangeProgress(this);
 	        });
 	        $range.mousedown(function(e) {
 	            $range.mousemove(function(e) {
 	                var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
 	                $budget.text(price + ' ₽');
+	                setRangeProgress(this);
 	            });
 	        });
+
+
+
 
 	        $submit.click(function() {
 	            var $modal = $('#conversion-modal');
@@ -2077,7 +2135,56 @@
 	})();
 
 /***/ },
-/* 11 */
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Inputmask = __webpack_require__(3);
+	(function() {
+	    $(document).ready(function(){
+	        function validateEmail(email) {
+	            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	            return re.test(email);
+	        }
+
+	        var selector = document.getElementById("service-phone");
+	        var im = new Inputmask("+7 (999) 999 99-99");
+	        im.mask(selector);
+
+	        var $modal = $('#service-modal');
+	        var $submit = $modal.find('.btn.red');
+	        $submit.click(function() {
+	            var $name = $modal.find('#service-name');
+	            var $phone = $modal.find('#service-phone');
+	            var $email = $modal.find('#service-mail');
+	            var nameLength = $name.val().length;
+	            var phoneLength = $phone.val().replace(/\D/g, '').length;
+	            var emailValid = validateEmail($email.val());
+
+	            if (nameLength === 0 || phoneLength != 11 || !emailValid) {
+	                $name.addClass(nameLength === 0 ? 'error' : '');
+	                $phone.addClass(phoneLength < 6 ? 'error' : '');
+	                $email.addClass(!emailValid ? 'error' : '');
+	            } else {
+	                $name.removeClass('error');
+	                $phone.removeClass('error');
+	                $email.removeClass('error');
+
+	                $modal.addClass('hide');
+	                var $newModal = $('#conversion-modal');
+	                $newModal.removeClass('hide');
+	                $newModal.find('.close').click(function() {
+	                    $newModal.addClass('hide');
+	                });
+	                $newModal.find('.cb-modal-layer').click(function() {
+	                    $newModal.addClass('hide');
+	                });
+	            }
+	        });
+	    })
+	})();
+
+/***/ },
+/* 13 */
 /***/ function(module, exports) {
 
 	(function() {
@@ -2112,13 +2219,13 @@
 	})();
 
 /***/ },
-/* 12 */
+/* 14 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 13 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2601,7 +2708,7 @@
 	});
 
 /***/ },
-/* 14 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2703,7 +2810,7 @@
 	});
 
 /***/ },
-/* 15 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -3049,7 +3156,7 @@
 	});
 
 /***/ },
-/* 16 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -3115,7 +3222,7 @@
 	});
 
 /***/ },
-/* 17 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -3364,7 +3471,7 @@
 	});
 
 /***/ },
-/* 18 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -4293,7 +4400,7 @@
 	});
 
 /***/ },
-/* 19 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -23538,7 +23645,7 @@
 	});
 
 /***/ },
-/* 20 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -24552,7 +24659,7 @@
 	});
 
 /***/ },
-/* 21 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -26666,130 +26773,6 @@
 	        }
 	    }), Inputmask;
 	});
-
-/***/ },
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */,
-/* 35 */,
-/* 36 */,
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var Inputmask = __webpack_require__(6);
-
-	(function() {
-	    $(document).ready(function(){
-	        var selector = document.getElementById("call-back-phone");
-	        var im = new Inputmask("+7 (999) 999 99-99");
-	        im.mask(selector);
-
-	        var $modal = $('#callback-modal');
-	        var $submit = $modal.find('.btn.red');
-	        $submit.click(function() {
-	            var $name = $modal.find('#call-back-name');
-	            var $phone = $modal.find('#call-back-phone');
-	            var nameLength = $name.val().length;
-	            var phoneLength = $phone.val().replace(/\D/g, '').length;
-
-	            if (nameLength === 0 || phoneLength != 11) {
-	                $name.addClass(nameLength === 0 ? 'error' : '');
-	                $phone.addClass(phoneLength < 6 ? 'error' : '');
-	            } else {
-	                $name.removeClass('error');
-	                $phone.removeClass('error');
-
-	                $modal.addClass('hide');
-	                var $newModal = $('#conversion-modal');
-	                $newModal.removeClass('hide');
-	                $newModal.find('.close').click(function() {
-	                    $newModal.addClass('hide');
-	                });
-	                $newModal.find('.cb-modal-layer').click(function() {
-	                    $newModal.addClass('hide');
-	                });
-	            }
-	        });
-	    })
-	})();
-
-/***/ },
-/* 57 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var Inputmask = __webpack_require__(6);
-	(function() {
-	    $(document).ready(function(){
-	        function validateEmail(email) {
-	            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	            return re.test(email);
-	        }
-
-	        var selector = document.getElementById("service-phone");
-	        var im = new Inputmask("+7 (999) 999 99-99");
-	        im.mask(selector);
-
-	        var $modal = $('#service-modal');
-	        var $submit = $modal.find('.btn.red');
-	        $submit.click(function() {
-	            var $name = $modal.find('#service-name');
-	            var $phone = $modal.find('#service-phone');
-	            var $email = $modal.find('#service-mail');
-	            var nameLength = $name.val().length;
-	            var phoneLength = $phone.val().replace(/\D/g, '').length;
-	            var emailValid = validateEmail($email.val());
-
-	            if (nameLength === 0 || phoneLength != 11 || !emailValid) {
-	                $name.addClass(nameLength === 0 ? 'error' : '');
-	                $phone.addClass(phoneLength < 6 ? 'error' : '');
-	                $email.addClass(!emailValid ? 'error' : '');
-	            } else {
-	                $name.removeClass('error');
-	                $phone.removeClass('error');
-	                $email.removeClass('error');
-
-	                $modal.addClass('hide');
-	                var $newModal = $('#conversion-modal');
-	                $newModal.removeClass('hide');
-	                $newModal.find('.close').click(function() {
-	                    $newModal.addClass('hide');
-	                });
-	                $newModal.find('.cb-modal-layer').click(function() {
-	                    $newModal.addClass('hide');
-	                });
-	            }
-	        });
-	    })
-	})();
 
 /***/ }
 /******/ ]);
