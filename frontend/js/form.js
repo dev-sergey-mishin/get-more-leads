@@ -1,5 +1,15 @@
+var Inputmask = require('inputmask');
+
 (function() {
     $(document).ready(function(){
+
+        var selector = document.getElementById("form-phone");
+
+        var im = new Inputmask("+7 (999) 999 99-99");
+        im.mask(selector);
+
+
+
         var $detail = $('.detail');
         var $short = $detail.find('.short');
         var $long = $detail.find('.long');
@@ -56,12 +66,14 @@
             var $phone = $('#form-phone');
             var $email = $('#form-mail');
 
+            var phoneVal = $phone.val().replace(/\D/g, '');
+
             function validateEmail(email) {
                 var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                 return re.test(email);
             }
-            
-            if ($name.val().length > 0 && $phone.val().length >= 6 && validateEmail($email.val())) {
+
+            if ($name.val().length > 0 && phoneVal.length === 11 && validateEmail($email.val())) {
                 $modal.removeClass('hide');
                 $modal.find('.cb-modal-layer').click(function() {
                     $modal.addClass('hide');
@@ -78,7 +90,7 @@
                 } else {
                     $name.removeClass('error');
                 }
-                if ($phone.val().length < 6) {
+                if (phoneVal.length != 11) {
                     $phone.addClass('error');
                 } else {
                     $phone.removeClass('error');
