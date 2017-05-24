@@ -148,21 +148,37 @@
 	        var $pup = $('.pup');
 	        var $range = $('#range');
 	        var $budget = $('#budget');
+	        var $switcher = $('.detail-switcher');
 
-	        $short.click(function () {
+	        function setShort() {
 	            $long.removeClass('active');
 	            $short.addClass('active');
 	            $detailInner.hide();
 	            $pup.addClass('left');
 	            $pup.removeClass('right');
-	        });
-	        $long.click(function () {
+	        }
+	        function setLong() {
 	            $short.removeClass('active');
 	            $long.addClass('active');
 	            $detailInner.show();
 	            $pup.removeClass('left');
 	            $pup.addClass('right');
+	        }
+
+	        $short.click(function () {
+	            setShort();
 	        });
+	        $long.click(function () {
+	            setLong();
+	        });
+	        $switcher.click(function () {
+	            if ($short.hasClass('active')) {
+	                setLong();
+	            } else {
+	                setShort();
+	            }
+	        });
+
 	        $range.on('change', function(e) {
 	            var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
 	            $budget.text(price + ' ₽');
