@@ -79,8 +79,8 @@ body *::selection {
   background: none;
   padding: 20px 24px;
   font-size: 17px;
-  font-family: SFUIDisplay-Thin;
   cursor: pointer;
+  font-weight: 600;
 }
 .btn.red {
   background: #e82028;
@@ -216,7 +216,7 @@ body *::selection {
   display: block;
   font-size: 24px;
   margin: 0 0 28px;
-  font-family: SFUIDisplay-Thin;
+  font-weight: 600;
 }
 .action-container .action .desc {
   display: block;
@@ -966,7 +966,8 @@ header .call-back {
   position: relative;
   box-sizing: border-box;
   padding: 0 50px;
-  height: 670px;
+  min-height: 670px;
+  user-select: none;
 }
 @media (max-width: 1021px) {
   .screen-7 .slider {
@@ -1003,6 +1004,7 @@ header .call-back {
   text-align: right;
   padding-right: 50px;
   width: 49%;
+  max-height: 600px;
 }
 @media (max-width: 1021px) {
   .screen-7 .slider .slide .image {
@@ -1020,11 +1022,12 @@ header .call-back {
 .screen-7 .slider .slide .text {
   display: inline-block;
   box-sizing: border-box;
-  vertical-align: middle;
   max-width: 100%;
   text-align: left;
   font-size: 17px;
   line-height: 22px;
+  vertical-align: top;
+  margin-top: 22%;
   width: 500px;
 }
 @media (max-width: 1310px) {
@@ -1038,6 +1041,7 @@ header .call-back {
     text-align: center;
     font-size: 14px;
     line-height: 18px;
+    margin-top: 0;
   }
 }
 .screen-8 {
