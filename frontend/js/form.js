@@ -53,8 +53,8 @@ var Inputmask = require('inputmask');
             var val = ($(that).val() - $(that).attr('min')) / ($(that).attr('max') - $(that).attr('min'));
             $(that).css('background-image',
                 '-webkit-gradient(linear, left top, right top, '
-                + 'color-stop(' + val + ', rgb(192, 192, 192)), '
-                + 'color-stop(' + val + ', #4185fb)'
+                + 'color-stop(' + val + ', #4185fb), '
+                + 'color-stop(' + val + ', rgb(192, 192, 192)) '
                 + ')'
             );
         }

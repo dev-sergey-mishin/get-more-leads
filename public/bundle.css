@@ -80,7 +80,7 @@ body *::selection {
   padding: 20px 24px;
   font-size: 17px;
   cursor: pointer;
-  font-weight: 600;
+  font-family: SFUIDisplay-Thin;
 }
 .btn.red {
   background: #e82028;
@@ -132,6 +132,9 @@ body *::selection {
 }
 .btn-container .btn-block-phone:focus::placeholder {
   color: black;
+}
+.btn-container .btn {
+  width: 230px;
 }
 .btn-container .btn-desc,
 .btn-container .btn-red-desc,
@@ -222,6 +225,7 @@ body *::selection {
   font-size: 24px;
   margin: 0 0 28px;
   font-weight: 600;
+  white-space: nowrap;
 }
 .action-container .action .desc {
   display: block;
@@ -287,7 +291,7 @@ input[type="range"] {
   outline: none;
   border-radius: 4px;
   height: 4px;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.3, #c0c0c0), color-stop(0.3, #4185fb));
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.3, #4185fb), color-stop(0.3, #c0c0c0));
 }
 input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -449,6 +453,9 @@ header .call-back {
   font-size: 15px;
   padding-bottom: 5px;
   border-bottom: 1px dotted;
+}
+header .call-back:hover {
+  color: #0179ff;
 }
 .screen-1 {
   display: block;
@@ -728,7 +735,7 @@ header .call-back {
   display: block;
   position: relative;
   box-sizing: border-box;
-  padding: 90px 0 150px;
+  padding: 90px 0 0;
   background-color: #f3f7f9;
 }
 .screen-4 .client-container {
@@ -830,6 +837,7 @@ header .call-back {
   line-height: 21px;
   color: #979ca0;
   font-family: SFUIDisplay-Thin;
+  font-weight: 600;
   letter-spacing: 1px;
 }
 .screen-5 .tariff-container .tariff .price {
@@ -850,11 +858,13 @@ header .call-back {
   margin-bottom: 20px;
 }
 .screen-5 .tariff-container .tariff .btn {
-  padding: 16px 40px;
+  padding: 0 40px;
   font-size: 12px;
-  font-family: inherit;
+  font-size: 17px;
+  height: 50px;
   font-weight: 600;
   border: 2px solid #f0f0f0;
+  font-family: SFUIDisplay-Thin;
 }
 .screen-5 .tariff-container .tariff.main {
   height: 550px;

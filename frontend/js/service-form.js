@@ -7,7 +7,7 @@ var Inputmask = require('inputmask');
         }
 
         var selector = document.getElementById("service-phone");
-        var im = new Inputmask("+7 (999) 999 99-99");
+        var im = new Inputmask("+7 (999) 999-99-99");
         im.mask(selector);
 
         var $modal = $('#service-modal');
