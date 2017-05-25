@@ -58,6 +58,7 @@ var Inputmask = require('inputmask');
                 + ')'
             );
         }
+
         $range.on('change', function(e) {
             var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
             $budget.text(price + ' ₽');
@@ -69,6 +70,11 @@ var Inputmask = require('inputmask');
                 $budget.text(price + ' ₽');
                 setRangeProgress(this);
             });
+        });
+        $range.on('touchstart mousemove', function(e) {
+            var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+            $budget.text(price + ' ₽');
+            setRangeProgress(this);
         });
 
 
