@@ -16,5 +16,11 @@
     &:hover {
       opacity: 0.8;
     }
+    &[disabled] {
+      color: @grey !important;
+      border: 1px solid @bordery !important;
+      background-color: white !important;
+      pointer-events: none;
+    }
   }
 }

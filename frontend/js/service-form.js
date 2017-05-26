@@ -10,6 +10,11 @@ var Inputmask = require('inputmask');
         var im = new Inputmask("+7 (999) 999-99-99");
         im.mask(selector);
 
+        // checkbox
+        $('#service-accept').click(function(e) {
+            $submit.attr('disabled', !document.getElementById('service-accept').checked);
+        });
+
         var $modal = $('#service-modal');
         var $submit = $modal.find('.btn.red');
         $submit.click(function() {

@@ -11,7 +11,12 @@ var Inputmask = require('inputmask');
         im.mask(selector);
 
         var $modal = $('#callback-modal');
-        var $submit = $modal.find('.btn.red');
+        var $submit = $modal.find('#call-back-submit');
+        // checkbox
+        $('#call-back-accept').click(function(e) {
+            $submit.attr('disabled', !document.getElementById('call-back-accept').checked);
+        });
+
         $submit.click(function() {
             var $name = $modal.find('#call-back-name');
             var $phone = $modal.find('#call-back-phone');

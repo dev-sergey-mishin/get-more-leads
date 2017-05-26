@@ -5,16 +5,25 @@
 }
 
 .cb-checkbox + label {
-  @size: 20px;
+  @size: 30px;
   display: inline-block;
   position: relative;
   height: @size;
   line-height: @size;
-  padding: 0;
+  padding: 0 0 0 40px;
   cursor: pointer;
   user-select: none;
-  background: url('../../images/unchecked.svg') no-repeat;
+ // background: url('../../images/unchecked.svg') no-repeat;
   background-size: contain;
+  &::after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @bordery;
+  }
 
   .cb-checkbox-label-text {
     margin-left: @size + 8;
@@ -31,6 +40,6 @@
 }
 
 .cb-checkbox:checked + label {
-  background: url('../../images/checked.svg') no-repeat;
+  background: url('../../images/check.png') no-repeat;
   background-size: contain;
 }

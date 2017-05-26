@@ -2,7 +2,6 @@ var Inputmask = require('inputmask');
 
 (function() {
     $(document).ready(function(){
-
         var selector = document.getElementById("form-phone");
         var im = new Inputmask("+7 (999) 999 99-99");
         im.mask(selector);
@@ -71,13 +70,18 @@ var Inputmask = require('inputmask');
                 setRangeProgress(this);
             });
         });
-        $range.on('touchstart mousemove', function(e) {
-            var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
-            $budget.text(price + ' ₽');
-            setRangeProgress(this);
+        $range.on("touchstart",function(e){
+            $range.on('touchmove', function(e) {
+                var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+                $budget.text(price + ' ₽');
+                setRangeProgress(this);
+            });
         });
 
-
+        // checkbox
+        $('#accept').click(function(e) {
+            $submit.attr('disabled', !document.getElementById('accept').checked);
+        });
 
 
         $submit.click(function() {
