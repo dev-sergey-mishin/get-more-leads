@@ -1830,16 +1830,16 @@
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(15);
 	__webpack_require__(16);
 	__webpack_require__(17);
 	__webpack_require__(18);
-
 	__webpack_require__(19);
+
 	__webpack_require__(20);
 	__webpack_require__(21);
 	__webpack_require__(22);
 	__webpack_require__(23);
+	__webpack_require__(24);
 
 	module.exports = __webpack_require__(1);
 
@@ -1881,7 +1881,7 @@
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(14);
+	__webpack_require__(15);
 	__webpack_require__(13);
 	__webpack_require__(11);
 	__webpack_require__(10);
@@ -1889,6 +1889,7 @@
 	__webpack_require__(8);
 	__webpack_require__(9);
 	__webpack_require__(12);
+	__webpack_require__(14);
 
 /***/ },
 /* 8 */
@@ -2001,6 +2002,7 @@
 	        modalHandler($('#service-modal'), $('.feedback-container .link'));
 	        modalHandler($('#callback-modal'), $('.call-back'));
 	        modalHandler($('#policy-modal'), $('.policy-link'));
+	        modalHandler($('#strategy-modal'), $('.tariff-container').find('.btn'));
 
 	        $('.feedback-container .link').click(function() {
 	            var text = 'Узнать подробнее об услуге  «' + $(this).data('val') + '»';
@@ -2008,17 +2010,17 @@
 	        });
 
 
-	        $('.tariff-container').find('.btn').click(function() {
-	            var price = $(this).data('val');
-	            var $range = $('#range');
-	            $range.val(price);
-	            $range.trigger('change');
-	            var destination = $('#form').offset().top;
-	            $("html:not(:animated),body:not(:animated)").animate({
-	                scrollTop: destination
-	            }, 800);
-	            return false;
-	        });
+	        //$('.tariff-container').find('.btn').click(function() {
+	        //    var price = $(this).data('val');
+	        //    var $range = $('#range');
+	        //    $range.val(price);
+	        //    $range.trigger('change');
+	        //    var destination = $('#form').offset().top;
+	        //    $("html:not(:animated),body:not(:animated)").animate({
+	        //        scrollTop: destination
+	        //    }, 800);
+	        //    return false;
+	        //});
 	    })
 	})();
 
@@ -2031,7 +2033,7 @@
 	(function() {
 	    $(document).ready(function(){
 	        var selector = document.getElementById("form-phone");
-	        var im = new Inputmask("+7 (999) 999 99-99");
+	        var im = new Inputmask("+7 (999) 999-99-99");
 	        im.mask(selector);
 
 	        var $detail = $('.detail');
@@ -2248,12 +2250,65 @@
 
 /***/ },
 /* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Inputmask = __webpack_require__(3);
+
+	(function() {
+	    $(document).ready(function(){
+	        function validateEmail(email) {
+	            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	            return re.test(email);
+	        }
+	        var selector = document.getElementById("strategy-phone");
+	        var im = new Inputmask("+7 (999) 999-99-99");
+	        im.mask(selector);
+
+	        var $modal = $('#strategy-modal');
+	        var $submit = $modal.find('#strategy-submit');
+	        // checkbox
+	        $('#strategy-accept').click(function(e) {
+	            $submit.attr('disabled', !document.getElementById('strategy-accept').checked);
+	        });
+
+	        $submit.click(function() {
+	            var $name = $modal.find('#strategy-name');
+	            var $phone = $modal.find('#strategy-phone');
+	            var $email = $modal.find('#strategy-mail');
+	            var nameLength = $name.val().length;
+	            var phoneLength = $phone.val().replace(/\D/g, '').length;
+
+	            if (nameLength === 0 || phoneLength != 11 || !validateEmail($email.val())) {
+	                $name.addClass(nameLength === 0 ? 'error' : '');
+	                $phone.addClass(phoneLength < 6 ? 'error' : '');
+	                $email.addClass(!validateEmail($email.val()) ? 'error' : '');
+	            } else {
+	                $name.removeClass('error');
+	                $phone.removeClass('error');
+	                $email.removeClass('error');
+
+	                $modal.addClass('hide');
+	                var $newModal = $('#conversion-modal');
+	                $newModal.removeClass('hide');
+	                $newModal.find('.close').click(function() {
+	                    $newModal.addClass('hide');
+	                });
+	                $newModal.find('.cb-modal-layer').click(function() {
+	                    $newModal.addClass('hide');
+	                });
+	            }
+	        });
+	    })
+	})();
+
+/***/ },
+/* 15 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 15 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2736,7 +2791,7 @@
 	});
 
 /***/ },
-/* 16 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2838,7 +2893,7 @@
 	});
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -3184,7 +3239,7 @@
 	});
 
 /***/ },
-/* 18 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -3250,7 +3305,7 @@
 	});
 
 /***/ },
-/* 19 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -3499,7 +3554,7 @@
 	});
 
 /***/ },
-/* 20 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -4428,7 +4483,7 @@
 	});
 
 /***/ },
-/* 21 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -23673,7 +23728,7 @@
 	});
 
 /***/ },
-/* 22 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -24687,7 +24742,7 @@
 	});
 
 /***/ },
-/* 23 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!

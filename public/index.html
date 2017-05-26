@@ -49,7 +49,7 @@
                 <div class="stat-block"><div class="number">64</div>сферы&nbsp;бизнеса</div>
             </div>
             <div class="stat-block-aggregator">
-                <div class="stat-block"><div class="number">46&nbsp;434</div>заявки</div>
+                <div class="stat-block"><div class="number">7</div>брендов</div>
                 <div class="stat-block"><div class="number">5</div>лет&nbsp;на&nbsp;рынке</div>
             </div>
         </div>
@@ -278,7 +278,7 @@
     <div class="screen-5">
         <div class="inference" style='margin-top: 110px; margin-bottom: 150px;'>
             <h2 class="title">Выберите подходящее решение</h2>
-            <p class="desc">Мы рассчитаем прогноз результата, который будет нашим KPI</p>
+            <p class="desc">Вы получите медиаплан с прогнозом результата, который будет нашим KPI</p>
         </div>
         <div class="tariff-container">
             <div class="tariff">
@@ -637,7 +637,7 @@
     </div>
     <div id="service-modal" class="cb-modal-window hide">
         <div class="cb-modal-layer"></div>
-        <div class="cb-modal-container" style="width: 700px; height: 950px;">
+        <div class="cb-modal-container" style="width: 700px; height: 670px">
             <div class="cb-close-modal close"></div>
             <div class="form">
                 <div class="info">
@@ -656,7 +656,7 @@
     </div>
     <div id="policy-modal" class="cb-modal-window hide">
         <div class="cb-modal-layer"></div>
-        <div class="cb-modal-container" style="width: 700px; height: 950px; overflow-y: auto">
+        <div class="cb-modal-container" style="width: 700px; height: 570px; overflow-y: auto">
             <div class="cb-close-modal close"></div>
             <div class="form">
                 <div class="info">
@@ -668,13 +668,20 @@
     </div>
     <div id="strategy-modal" class="cb-modal-window hide">
         <div class="cb-modal-layer"></div>
-        <div class="cb-modal-container" style="width: 700px; height: 950px;">
+        <div class="cb-modal-container" style="width: 700px; height: 650px;">
             <div class="cb-close-modal close"></div>
             <div class="form">
                 <div class="info">
-                    <h2 class="title" style="text-align: left">Соглашение об обработке персональных данных.</h2>
-                    <p class="desc" style="text-align: left">Обработка персональных данных Пользователя осуществляется в соответствии с законодательством Российской Федерации. Администрация Сайта обрабатывает персональные данные Пользователя в целях предоставления Пользователю услуг. Пользователь заполняя форму «Имя» «Емейл» «Телефон» даёт согласие на обработку своих персональных данных – имени, адреса электронной почты и номера телефона. Под обработкой персональных данных понимается сбор, систематизация, накопление, уточнение (обновление, изменение). Обработка осуществляется с использованием средств автоматизации и/или без использования таких средств, в целях реализации мероприятий оповещения пользователя о новых услугах и акциях компании и для обратной связи с пользователями сайта.</p>
+                    <h2 class="title">Заказать Стратегию</h2>
+                    <p class="desc">Заполните форму и наш менеджер позвонит в течение 30 минут</p>
+                    <input type="text" class="input-text" id="strategy-name" style="margin-bottom: 15px;" placeholder="Введите имя" />
+                    <input type="tel" class="input-text" id="strategy-phone" style="margin-bottom: 15px;" placeholder="Введите телефон" />
+                    <input type="email" class="input-text" id="strategy-mail" style="margin-bottom: 15px;" placeholder="Введите e-mail" />
+                    <input id="strategy-accept" type="checkbox" class="cb-checkbox" checked />
+                    <label for="strategy-accept" class="accept">Я даю согласие на обработку своих персональных данных</label>
                 </div>
+
+                <button id="strategy-submit" class="btn red" style="margin-top: 20px;">Заказать стратегию</button>
             </div>
         </div>
     </div>

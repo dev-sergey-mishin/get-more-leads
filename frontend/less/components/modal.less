@@ -25,8 +25,8 @@
     opacity: 0.5;
   }
   .cb-modal-container {
-    position: absolute;
-    display: block;
+    position: fixed;
+    display: inline-block;
     box-sizing: border-box;
     z-index: @zIndex + 1;
     border-radius: 4px;
@@ -36,7 +36,7 @@
     top: 0;
     bottom: 0;
     width: 900px;
-    height: 320px;
+    min-height: 320px;
     max-height: 95%;
 
     padding: 50px 40px;
