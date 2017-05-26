@@ -39,6 +39,9 @@
       margin-bottom: 70px;
       padding-left: 40px;
       float: left;
+      @media (max-width: @tablet) {
+        font-size: 16px;
+      }
     }
     .detail {
       text-align: left;
@@ -105,5 +108,20 @@
       }
     }
 
+  }
+  .after-form {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px;
+
+    width: 830px;
+    max-width: 100%;
+    margin: 32px auto 0;
+
+    @media (max-width: @tablet) {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 }

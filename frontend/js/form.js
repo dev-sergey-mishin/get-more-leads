@@ -109,6 +109,13 @@ var Inputmask = require('inputmask');
                 $phone.removeClass('error');
                 $email.removeClass('error');
             } else {
+
+                var destination = $('#form').offset().top;
+                $("html:not(:animated),body:not(:animated)").animate({
+                    scrollTop: destination
+                }, 0);
+
+
                 if ($name.val().length === 0) {
                     $name.addClass('error');
                 } else {
