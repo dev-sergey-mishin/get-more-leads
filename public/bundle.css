@@ -280,6 +280,7 @@ body *::selection {
   width: 30px;
   height: 30px;
   border: 1px solid #c0c0c0;
+  border-radius: 4px;
 }
 .cb-checkbox + label .cb-checkbox-label-text {
   margin-left: 38px;
@@ -431,6 +432,48 @@ input[type='range']::-webkit-slider-thumb {
 }
 .cb-modal-window .cb-modal-container .btn.red {
   background-color: #f03d36;
+}
+#conversion-modal .cb-modal-container {
+  width: 840px;
+  height: 490px;
+  min-height: 490px;
+  padding-top: 50px;
+}
+@media (max-width: 768px) {
+  #conversion-modal .cb-modal-container {
+    min-height: 400px;
+  }
+}
+#call-back-modal .cb-modal-container {
+  width: 480px;
+  height: 650px;
+  min-height: 650px;
+}
+@media (max-width: 768px) {
+  #call-back-modal .cb-modal-container {
+    min-height: 400px;
+  }
+}
+#service-modal .cb-modal-container {
+  width: 700px;
+  height: 670px;
+  min-height: 670px;
+}
+@media (max-width: 768px) {
+  #service-modal .cb-modal-container {
+    min-height: 400px;
+  }
+}
+#policy-modal .cb-modal-container {
+  width: 700px;
+  height: 570px;
+  min-height: 570px;
+  overflow-y: auto;
+}
+@media (max-width: 768px) {
+  #policy-modal .cb-modal-container {
+    min-height: 400px;
+  }
 }
 header {
   display: block;
@@ -589,8 +632,7 @@ header .call-back:hover {
 }
 @media (max-width: 1280px) {
   .screen-3 .feedback-container {
-    padding-top: 10px;
-    padding-bottom: 40px;
+    padding: 40px 0;
   }
 }
 .screen-3 .feedback-container.grey {
@@ -602,7 +644,6 @@ header .call-back:hover {
   box-sizing: border-box;
   vertical-align: top;
   width: 49%;
-  height: 420px;
 }
 .screen-3 .image {
   position: relative;
@@ -697,7 +738,7 @@ header .call-back:hover {
 }
 @media (max-width: 768px) {
   .screen-3 .text {
-    padding: 75px 0;
+    padding: 0 0 30px;
     text-align: center;
     margin-bottom: 10px;
   }
@@ -1367,6 +1408,8 @@ footer .main-block .block .title {
 footer .main-block .block .about-info {
   margin: 0 0 10px;
   font-size: 16px;
+  color: white;
+  text-decoration: none;
 }
 footer .main-block .block .link {
   display: block;
