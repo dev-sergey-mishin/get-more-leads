@@ -360,7 +360,7 @@ input[type='range']::-webkit-slider-thumb {
   bottom: 0;
   width: 350px;
   max-width: 99%;
-  height: 482px;
+  height: 440px;
   padding: 30px 40px;
   font-size: 17px;
   line-height: 21px;
@@ -403,6 +403,16 @@ input[type='range']::-webkit-slider-thumb {
   font-size: 14px;
   font-family: SFUIDisplay-Light;
   padding: 0 15px;
+  margin-bottom: 10px;
+}
+.cb-modal-window .cb-modal-container .input-text-label {
+  font-size: 13px;
+  line-height: 15px;
+  color: #636363;
+  margin-bottom: 5px;
+}
+.cb-modal-window .cb-modal-container .btn {
+  margin-bottom: 15px;
 }
 .cb-modal-window .cb-modal-container .accept {
   font-size: 14px;
