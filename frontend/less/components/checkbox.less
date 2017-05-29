@@ -5,23 +5,22 @@
 }
 
 .cb-checkbox + label {
-  @size: 30px;
+  @size: 14px;
   display: inline-block;
   position: relative;
   height: @size;
   line-height: @size;
-  padding: 0 0 0 40px;
+  padding: 0 0 0 20px;
   cursor: pointer;
   user-select: none;
- // background: url('../../images/unchecked.svg') no-repeat;
   background-size: contain;
   &::after {
     content: '';
     position: absolute;
     left: -2px;
-    top: 0;
-    width: 30px;
-    height: 30px;
+    top: -1px;
+    width: @size;
+    height: @size;
     border: 1px solid @bordery;
     border-radius: 4px;
   }
@@ -29,7 +28,7 @@
   .cb-checkbox-label-text {
     margin-left: @size + 8;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 17px;
     color: black;
   }
 }
@@ -41,6 +40,11 @@
 }
 
 .cb-checkbox:checked + label {
-  background: url('../../images/check.png') no-repeat;
+  background: url('../../images/checked.png') no-repeat;
   background-size: contain;
+  &::after {
+    border-color: rgb(62, 153, 251);
+    background-color: rgb(62, 153, 251);
+    z-index: -1;
+  }
 }
