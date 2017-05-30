@@ -478,6 +478,9 @@ header .logo-desc {
   font-weight: 200;
 }
 header .phone {
+  display: block;
+  text-decoration: none;
+  color: black;
   font-family: SFUIDisplay-Thin;
   font-size: 22px;
 }
@@ -973,7 +976,7 @@ header .call-back:hover {
   position: relative;
   box-sizing: border-box;
   padding: 0 50px;
-  min-height: 670px;
+  height: 470px;
   -moz-user-select: none;
   -khtml-user-select: none;
   user-select: none;
@@ -1041,7 +1044,7 @@ header .call-back:hover {
   }
 }
 .screen-7 .slider .slide .image img {
-  width: 450px;
+  width: 330px;
   max-width: calc(100% - 20px);
 }
 .screen-7 .slider .slide .image .big-img {
@@ -1055,12 +1058,6 @@ header .call-back:hover {
   width: auto;
   z-index: 100;
   box-shadow: 0px 0px 33.25px 1.75px rgba(0, 126, 255, 0.54);
-}
-@media (max-width: 991px) {
-  .screen-7 .slider .slide .image .big-img {
-    height: auto;
-    width: 80vw;
-  }
 }
 .screen-7 .slider .slide .image:focus {
   pointer-events: none;
@@ -1087,7 +1084,7 @@ header .call-back:hover {
   font-size: 17px;
   line-height: 22px;
   vertical-align: top;
-  margin-top: 22%;
+  margin-top: 14%;
   width: 500px;
 }
 @media (max-width: 1310px) {
@@ -1219,7 +1216,6 @@ header .call-back:hover {
   user-select: none;
   cursor: pointer;
   font-size: 18px;
-  margin-bottom: 70px;
   padding-left: 30px;
   float: left;
 }
@@ -1297,6 +1293,7 @@ header .call-back:hover {
 }
 .screen-9 .form .conversion {
   width: 100%;
+  margin-bottom: 25px;
 }
 .screen-9 .after-form {
   display: block;
@@ -1419,7 +1416,8 @@ footer .right-block * {
 }
 footer .right-block .phone {
   cursor: pointer;
-  font-size: 30px;
+  font-family: SFUIDisplay-Thin;
+  font-size: 22px;
 }
 footer .right-block .call-back {
   color: #0179ff;
