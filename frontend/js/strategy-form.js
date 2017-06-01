@@ -6,6 +6,21 @@ var Inputmask = require('inputmask');
             var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return re.test(email);
         }
+        function modalHandler($container, $actor) {
+            $actor.click(function() {
+                $container.removeClass('hide');
+                $('#strategyName').text($(this).data('name'));
+            });
+            $container.find('.cb-modal-layer').click(function() {
+                $container.addClass('hide');
+            });
+            $container.find('.close').click(function() {
+                $container.addClass('hide');
+            });
+        }
+
+        modalHandler($('#strategy-modal'), $('.tariff-container').find('.btn'));
+
         var selector = document.getElementById("strategy-phone");
         var im = new Inputmask("+7 (999) 999-99-99");
         im.mask(selector);

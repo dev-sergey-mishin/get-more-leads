@@ -15,24 +15,12 @@
         modalHandler($('#service-modal'), $('.feedback-container .link'));
         modalHandler($('#callback-modal'), $('.call-back'));
         modalHandler($('#policy-modal'), $('.policy-link'));
-        modalHandler($('#strategy-modal'), $('.tariff-container').find('.btn'));
+
 
         $('.feedback-container .link').click(function() {
             var text = 'Узнать подробнее об услуге  «' + $(this).data('val') + '»';
             $('#service-modal').find('.title').text(text);
         });
 
-
-        //$('.tariff-container').find('.btn').click(function() {
-        //    var price = $(this).data('val');
-        //    var $range = $('#range');
-        //    $range.val(price);
-        //    $range.trigger('change');
-        //    var destination = $('#form').offset().top;
-        //    $("html:not(:animated),body:not(:animated)").animate({
-        //        scrollTop: destination
-        //    }, 800);
-        //    return false;
-        //});
     })
 })();

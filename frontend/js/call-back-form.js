@@ -1,4 +1,5 @@
 var Inputmask = require('inputmask');
+var Submit = require('./submit');
 
 (function() {
     $(document).ready(function(){
@@ -16,7 +17,6 @@ var Inputmask = require('inputmask');
         $('#call-back-accept').click(function(e) {
             $submit.attr('disabled', !document.getElementById('call-back-accept').checked);
         });
-
         $submit.click(function() {
             var $name = $modal.find('#call-back-name');
             var $phone = $modal.find('#call-back-phone');
@@ -42,6 +42,7 @@ var Inputmask = require('inputmask');
                 $newModal.find('.cb-modal-layer').click(function() {
                     $newModal.addClass('hide');
                 });
+                Submit.submit($name.val(), $phone.val(), $email.val(), 'Заказ обратного звонка');
             }
         });
     })

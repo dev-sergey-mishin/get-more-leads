@@ -991,6 +991,11 @@ header .call-back:hover {
     padding: 0 30px;
   }
 }
+@media (max-width: 768px) {
+  .screen-7 .slider {
+    height: 620px;
+  }
+}
 .screen-7 .slider .arrow {
   display: block;
   position: absolute;
@@ -1188,6 +1193,7 @@ header .call-back:hover {
   display: block;
   position: relative;
   box-sizing: border-box;
+  overflow: hidden;
   width: 830px;
   padding: 80px 120px;
   margin: 0 auto;
@@ -1197,6 +1203,7 @@ header .call-back:hover {
 }
 .screen-9 .form .input-text {
   margin-bottom: 20px;
+  font-size: 19px;
 }
 .screen-9 .form .range {
   margin-bottom: 36px;

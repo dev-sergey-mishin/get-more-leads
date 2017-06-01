@@ -1830,16 +1830,16 @@
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(16);
 	__webpack_require__(17);
 	__webpack_require__(18);
 	__webpack_require__(19);
-
 	__webpack_require__(20);
+
 	__webpack_require__(21);
 	__webpack_require__(22);
 	__webpack_require__(23);
 	__webpack_require__(24);
+	__webpack_require__(25);
 
 	module.exports = __webpack_require__(1);
 
@@ -1881,7 +1881,7 @@
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(15);
+	__webpack_require__(16);
 	__webpack_require__(13);
 	__webpack_require__(11);
 	__webpack_require__(10);
@@ -1933,6 +1933,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var Inputmask = __webpack_require__(3);
+	var Submit = __webpack_require__(15);
 
 	(function() {
 	    $(document).ready(function(){
@@ -1950,7 +1951,6 @@
 	        $('#call-back-accept').click(function(e) {
 	            $submit.attr('disabled', !document.getElementById('call-back-accept').checked);
 	        });
-
 	        $submit.click(function() {
 	            var $name = $modal.find('#call-back-name');
 	            var $phone = $modal.find('#call-back-phone');
@@ -1976,6 +1976,7 @@
 	                $newModal.find('.cb-modal-layer').click(function() {
 	                    $newModal.addClass('hide');
 	                });
+	                Submit.submit($name.val(), $phone.val(), $email.val(), 'Заказ обратного звонка');
 	            }
 	        });
 	    })
@@ -2002,25 +2003,13 @@
 	        modalHandler($('#service-modal'), $('.feedback-container .link'));
 	        modalHandler($('#callback-modal'), $('.call-back'));
 	        modalHandler($('#policy-modal'), $('.policy-link'));
-	        modalHandler($('#strategy-modal'), $('.tariff-container').find('.btn'));
+
 
 	        $('.feedback-container .link').click(function() {
 	            var text = 'Узнать подробнее об услуге  «' + $(this).data('val') + '»';
 	            $('#service-modal').find('.title').text(text);
 	        });
 
-
-	        //$('.tariff-container').find('.btn').click(function() {
-	        //    var price = $(this).data('val');
-	        //    var $range = $('#range');
-	        //    $range.val(price);
-	        //    $range.trigger('change');
-	        //    var destination = $('#form').offset().top;
-	        //    $("html:not(:animated),body:not(:animated)").animate({
-	        //        scrollTop: destination
-	        //    }, 800);
-	        //    return false;
-	        //});
 	    })
 	})();
 
@@ -2138,6 +2127,8 @@
 	                $name.removeClass('error');
 	                $phone.removeClass('error');
 	                $email.removeClass('error');
+
+	                Submit.submit($name.val(), $phone.val(), $email.val(), 'Отправка главной формы снизу, бюджет: ' + $range.val());
 	            } else {
 
 	                var destination = $('#form').offset().top;
@@ -2215,6 +2206,8 @@
 	                $newModal.find('.cb-modal-layer').click(function() {
 	                    $newModal.addClass('hide');
 	                });
+
+	                Submit.submit($name.val(), $phone.val(), $email.val(), 'Отправка главной формы снизу, бюджет: ' + $range.val());
 	            }
 	        });
 	    })
@@ -2267,6 +2260,21 @@
 	            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	            return re.test(email);
 	        }
+	        function modalHandler($container, $actor) {
+	            $actor.click(function() {
+	                $container.removeClass('hide');
+	                $('#strategyName').text($(this).data('name'));
+	            });
+	            $container.find('.cb-modal-layer').click(function() {
+	                $container.addClass('hide');
+	            });
+	            $container.find('.close').click(function() {
+	                $container.addClass('hide');
+	            });
+	        }
+
+	        modalHandler($('#strategy-modal'), $('.tariff-container').find('.btn'));
+
 	        var selector = document.getElementById("strategy-phone");
 	        var im = new Inputmask("+7 (999) 999-99-99");
 	        im.mask(selector);
@@ -2312,10 +2320,33 @@
 /* 15 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	module.exports.submit = function (name, phone, email, data){
+	    emailjs.init("user_XhnfRmcG2yfBxRi6TzVYx");
+
+	    emailjs.send("gmail","test",{
+	            name: name,
+	            phone: phone,
+	            email: email,
+	            data: data
+	        })
+	        .then(
+	            function(response) {
+	                console.log("SUCCESS", response);
+	            },
+	            function(error) {
+	                console.log("FAILED", error);
+	            }
+	        );
+	};
 
 /***/ },
 /* 16 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2798,7 +2829,7 @@
 	});
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2900,7 +2931,7 @@
 	});
 
 /***/ },
-/* 18 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -3246,7 +3277,7 @@
 	});
 
 /***/ },
-/* 19 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -3312,7 +3343,7 @@
 	});
 
 /***/ },
-/* 20 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -3561,7 +3592,7 @@
 	});
 
 /***/ },
-/* 21 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -4490,7 +4521,7 @@
 	});
 
 /***/ },
-/* 22 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -23735,7 +23766,7 @@
 	});
 
 /***/ },
-/* 23 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -24749,7 +24780,7 @@
 	});
 
 /***/ },
-/* 24 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!

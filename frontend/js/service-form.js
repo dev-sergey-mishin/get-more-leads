@@ -43,6 +43,8 @@ var Inputmask = require('inputmask');
                 $newModal.find('.cb-modal-layer').click(function() {
                     $newModal.addClass('hide');
                 });
+
+                Submit.submit($name.val(), $phone.val(), $email.val(), 'Отправка главной формы снизу, бюджет: ' + $range.val());
             }
         });
     })

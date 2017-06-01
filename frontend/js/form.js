@@ -108,6 +108,8 @@ var Inputmask = require('inputmask');
                 $name.removeClass('error');
                 $phone.removeClass('error');
                 $email.removeClass('error');
+
+                Submit.submit($name.val(), $phone.val(), $email.val(), 'Отправка главной формы снизу, бюджет: ' + $range.val());
             } else {
 
                 var destination = $('#form').offset().top;
