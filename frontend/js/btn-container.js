@@ -1,4 +1,5 @@
 var Inputmask = require('inputmask');
+var Submit = require('./submit');
 
 (function() {
     $(document).ready(function(){
@@ -10,7 +11,6 @@ var Inputmask = require('inputmask');
 
         $('.btn-container .btn.red').click(function() {
             var $container = $(this).closest('.btn-container');
-
             var phoneVal = $container.find('.btn-block-phone').val().replace(/\D/g, '');
 
             if (phoneVal.length != 11) {
@@ -25,6 +25,7 @@ var Inputmask = require('inputmask');
                 $modal.find('.close').click(function() {
                     $modal.addClass('hide');
                 });
+                Submit.submit('', phoneVal, '', 'Отправка формы "получить бесплатный аудит"');
             }
         });
 

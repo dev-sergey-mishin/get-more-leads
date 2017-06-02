@@ -1,4 +1,6 @@
 var Inputmask = require('inputmask');
+var Submit = require('./submit');
+
 (function() {
     $(document).ready(function(){
         function validateEmail(email) {
@@ -44,7 +46,7 @@ var Inputmask = require('inputmask');
                     $newModal.addClass('hide');
                 });
 
-                Submit.submit($name.val(), $phone.val(), $email.val(), 'Отправка главной формы снизу, бюджет: ' + $range.val());
+                Submit.submit($name.val(), $phone.val(), $email.val(), 'Отправка формы "Узнать больше');
             }
         });
     })

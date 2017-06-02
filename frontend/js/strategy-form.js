@@ -1,6 +1,8 @@
 var Inputmask = require('inputmask');
+var Submit = require('./submit');
 
 (function() {
+    var strategyName = '';
     $(document).ready(function(){
         function validateEmail(email) {
             var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -10,6 +12,7 @@ var Inputmask = require('inputmask');
             $actor.click(function() {
                 $container.removeClass('hide');
                 $('#strategyName').text($(this).data('name'));
+                strategyName = $(this).data('name');
             });
             $container.find('.cb-modal-layer').click(function() {
                 $container.addClass('hide');
@@ -57,6 +60,7 @@ var Inputmask = require('inputmask');
                 $newModal.find('.cb-modal-layer').click(function() {
                     $newModal.addClass('hide');
                 });
+                Submit.submit($name.val(), $phone.val(), $email.val(), 'Заказ стратегии ' + strategyName);
             }
         });
     })

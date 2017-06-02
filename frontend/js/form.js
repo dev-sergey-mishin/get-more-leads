@@ -1,4 +1,5 @@
 var Inputmask = require('inputmask');
+var Submit = require('./submit');
 
 (function() {
     $(document).ready(function(){
