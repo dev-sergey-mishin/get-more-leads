@@ -2,10 +2,13 @@ header {
   display: block;
   position: relative;
   box-sizing: border-box;
-  height: 70px;
+  min-height: 70px;
   width: 100%;
   padding-top: 28px;
   margin-bottom: 170px;
+  @media (max-width: @tablet) {
+    margin-bottom: 120px;
+  }
 
   .phone-block {
     float: right;

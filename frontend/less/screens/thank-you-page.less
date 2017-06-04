@@ -1,0 +1,55 @@
+.thank-you-page {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  .sub-title {
+    display: block;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 48px 0;
+  }
+  .article-container {
+    margin-bottom: 52px;
+    .article {
+      display: inline-block;
+      position: relative;
+      box-sizing: border-box;
+      vertical-align: top;
+      cursor: pointer;
+
+      margin: 0 15px 20px;
+      width: 360px;
+      max-width: calc(~'100% - 30px');
+      .image {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .text {
+        text-align: left;
+        font-size: 19px;
+        font-weight: 300;
+        text-decoration: none;
+        color: black;
+        margin: 0;
+      }
+    }
+  }
+  .good-bye {
+    display: block;
+    position: relative;
+    font-size: 19px;
+    font-weight: 300;
+    margin: 0;
+    z-index: 50;
+  }
+  .good-bye-line {
+    z-index: -1;
+    display: block;
+    width: 250px;
+    height: 15px;
+    background-color: rgb(255, 210, 0);
+    transform: rotate(-2deg);
+    margin: -7px auto 102px;
+  }
+}
