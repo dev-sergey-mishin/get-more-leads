@@ -86,7 +86,7 @@ var Submit = require('./submit');
 
 
         $submit.click(function() {
-            var $modal = $('#conversion-modal');
+
             var $name = $('#form-name');
             var $phone = $('#form-phone');
             var $email = $('#form-mail');
@@ -99,13 +99,6 @@ var Submit = require('./submit');
             }
 
             if ($name.val().length > 0 && phoneVal.length === 11 && validateEmail($email.val())) {
-                $modal.removeClass('hide');
-                $modal.find('.cb-modal-layer').click(function() {
-                    $modal.addClass('hide');
-                });
-                $modal.find('.close').click(function() {
-                    $modal.addClass('hide');
-                });
                 $name.removeClass('error');
                 $phone.removeClass('error');
                 $email.removeClass('error');

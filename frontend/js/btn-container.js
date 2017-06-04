@@ -17,17 +17,8 @@ var Submit = require('./submit');
                 $container.find('.btn-block-phone').addClass('error');
             } else {
                 $container.find('.btn-block-phone').removeClass('error');
-                var $modal = $('#conversion-modal');
-                $modal.removeClass('hide');
-                $modal.find('.cb-modal-layer').click(function() {
-                    $modal.addClass('hide');
-                });
-                $modal.find('.close').click(function() {
-                    $modal.addClass('hide');
-                });
                 Submit.submit('', phoneVal, '', 'Отправка формы "получить бесплатный аудит"');
             }
         });
-
     })
 })();

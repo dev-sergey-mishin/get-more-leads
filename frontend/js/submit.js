@@ -9,9 +9,11 @@ module.exports.submit = function (name, phone, email, data){
         .then(
             function(response) {
                 console.log("SUCCESS", response);
+                window.location.pathname = '/thankyou.html'
             },
             function(error) {
                 console.log("FAILED", error);
+                alert('произошла ошибка при отправке письма');
             }
         );
 };

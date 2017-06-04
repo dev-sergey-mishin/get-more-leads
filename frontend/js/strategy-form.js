@@ -51,15 +51,6 @@ var Submit = require('./submit');
                 $phone.removeClass('error');
                 $email.removeClass('error');
 
-                $modal.addClass('hide');
-                var $newModal = $('#conversion-modal');
-                $newModal.removeClass('hide');
-                $newModal.find('.close').click(function() {
-                    $newModal.addClass('hide');
-                });
-                $newModal.find('.cb-modal-layer').click(function() {
-                    $newModal.addClass('hide');
-                });
                 Submit.submit($name.val(), $phone.val(), $email.val(), 'Заказ стратегии ' + strategyName);
             }
         });
