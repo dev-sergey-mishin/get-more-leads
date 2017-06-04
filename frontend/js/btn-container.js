@@ -17,6 +17,7 @@ var Submit = require('./submit');
                 $container.find('.btn-block-phone').addClass('error');
             } else {
                 $container.find('.btn-block-phone').removeClass('error');
+                $(this).text('обработка запроса...').prop('disabled', true);
                 Submit.submit('', phoneVal, '', 'Отправка формы "получить бесплатный аудит"');
             }
         });

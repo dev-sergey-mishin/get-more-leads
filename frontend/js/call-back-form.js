@@ -32,6 +32,7 @@ var Submit = require('./submit');
                 $name.removeClass('error');
                 $phone.removeClass('error');
                 $email.removeClass('error');
+                $(this).text('обработка запроса...').prop('disabled', true);
                 Submit.submit($name.val(), $phone.val(), $email.val(), 'Заказ обратного звонка');
             }
         });

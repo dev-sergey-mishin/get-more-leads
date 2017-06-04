@@ -103,7 +103,16 @@ var Submit = require('./submit');
                 $phone.removeClass('error');
                 $email.removeClass('error');
 
-                Submit.submit($name.val(), $phone.val(), $email.val(), 'Отправка главной формы снизу, бюджет: ' + $range.val());
+                $submit.text('обработка запроса...').prop('disabled', true);
+                Submit.submit($name.val(),
+                    $phone.val(),
+                    $email.val(),
+                    'Отправка главной формы снизу, ' +
+                    ' бюджет: ' + $range.val() +
+                    ' бренд: ' + $('#form-brand').val() +
+                    ' сайт: ' + $('#form-site').val() +
+                    ' регион: ' + $('#form-region').val()
+                );
             } else {
 
                 var destination = $('#form').offset().top;

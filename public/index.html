@@ -538,9 +538,9 @@
                     <a class="short">Кратко</a> <div class="detail-switcher"><div class="pup right"></div></div> <a class="long active">Подробно</a>
                 </div>
                 <div class="detail-inner">
-                    <input type="text" class="input-text" placeholder="Укажите ваш бренд" />
-                    <input type="text" class="input-text" placeholder="Укажите ваш сайт" />
-                    <input type="text" class="input-text" placeholder="Укажите ваш регион" />
+                    <input type="text" class="input-text" id="form-brand" placeholder="Укажите ваш бренд" />
+                    <input type="text" class="input-text" id="form-site" placeholder="Укажите ваш сайт" />
+                    <input type="text" class="input-text" id="form-region" placeholder="Укажите ваш регион" />
                     <div class="range">
                         <div class="range-title">Ваш рекламный бюджет</div>
                         <input id="range" type="range" class="cb-input-range" min="10000" max="1000000" value="300000" style="width: 100%" />
@@ -663,7 +663,7 @@
     </div>
     <div id="policy-modal" class="cb-modal-window hide">
         <div class="cb-modal-layer"></div>
-        <div class="cb-modal-container" style="overflow-y: auto; padding: 20px;">
+        <div class="cb-modal-container" style="overflow-y: auto; padding: 10px 20px;">
             <div class="cb-close-modal close"></div>
             <div class="form">
                 <div class="info">

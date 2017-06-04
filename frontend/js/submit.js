@@ -13,7 +13,6 @@ module.exports.submit = function (name, phone, email, data){
             },
             function(error) {
                 console.log("FAILED", error);
-                alert('произошла ошибка при отправке письма');
             }
         );
 };
