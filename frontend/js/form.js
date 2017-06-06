@@ -58,24 +58,24 @@ var Submit = require('./submit');
                 + ')'
             );
         }
+        function changePrice(e, that) {
+            var priceVal = (Math.round(+e.target.value / 10000) * 10000) + '';
+            var price = priceVal.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+            $budget.text(price + ' ₽');
+            setRangeProgress(that);
+        }
 
         $range.on('change', function(e) {
-            var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
-            $budget.text(price + ' ₽');
-            setRangeProgress(this);
+            changePrice(e, this);
         });
         $range.mousedown(function(e) {
             $range.mousemove(function(e) {
-                var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
-                $budget.text(price + ' ₽');
-                setRangeProgress(this);
+                changePrice(e, this);
             });
         });
         $range.on("touchstart",function(e){
             $range.on('touchmove', function(e) {
-                var price = e.target.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
-                $budget.text(price + ' ₽');
-                setRangeProgress(this);
+                changePrice(e, this);
             });
         });
 
@@ -86,7 +86,6 @@ var Submit = require('./submit');
 
 
         $submit.click(function() {
-
             var $name = $('#form-name');
             var $phone = $('#form-phone');
             var $email = $('#form-mail');
@@ -103,15 +102,13 @@ var Submit = require('./submit');
                 $phone.removeClass('error');
                 $email.removeClass('error');
 
-                $submit.text('обработка запроса...').prop('disabled', true);
-                Submit.submit($name.val(),
-                    $phone.val(),
-                    $email.val(),
-                    'Отправка главной формы снизу, ' +
-                    ' бюджет: ' + $range.val() +
-                    ' бренд: ' + $('#form-brand').val() +
-                    ' сайт: ' + $('#form-site').val() +
-                    ' регион: ' + $('#form-region').val()
+                Submit.submit($submit, $name.val(), $phone.val(), $email.val(), {
+                        form: 'главная форма снизу',
+                        brand: $('#form-brand').val(),
+                        site: $('#form-site').val(),
+                        region: $('#form-region').val(),
+                        budget: Math.round(+$range.val() / 1000) * 1000
+                    }
                 );
             } else {
 

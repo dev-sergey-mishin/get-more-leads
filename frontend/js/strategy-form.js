@@ -51,8 +51,7 @@ var Submit = require('./submit');
                 $phone.removeClass('error');
                 $email.removeClass('error');
 
-                $submit.text('обработка запроса...').prop('disabled', true);
-                Submit.submit($name.val(), $phone.val(), $email.val(), 'Заказ стратегии ' + strategyName);
+                Submit.submit($submit, $name.val(), $phone.val(), $email.val(), { form: 'Заказ стратегии ' + strategyName });
             }
         });
     })

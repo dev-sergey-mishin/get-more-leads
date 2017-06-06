@@ -36,8 +36,7 @@ var Submit = require('./submit');
                 $phone.removeClass('error');
                 $email.removeClass('error');
 
-                $submit.text('обработка запроса...').prop('disabled', true);
-                Submit.submit($name.val(), $phone.val(), $email.val(), 'Отправка формы "Узнать больше');
+                Submit.submit($submit, $name.val(), $phone.val(), $email.val(), { form: 'Узнать больше' });
             }
         });
     })
