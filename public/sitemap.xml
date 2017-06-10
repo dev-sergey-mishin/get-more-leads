@@ -7,9 +7,52 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://getmoreleads.ru/thankyoupage.html</loc>
+        <loc>http://getmoreleads.ru/thankyoupage/index.html</loc>
         <lastmod>2017-06-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>http://getmoreleads.ru/analytic/index.html</loc>
+        <lastmod>2017-06-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>http://getmoreleads.ru/context/index.html</loc>
+        <lastmod>2017-06-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>http://getmoreleads.ru/email/index.html</loc>
+        <lastmod>2017-06-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>http://getmoreleads.ru/landing/index.html</loc>
+        <lastmod>2017-06-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>http://getmoreleads.ru/seo/index.html</loc>
+        <lastmod>2017-06-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>http://getmoreleads.ru/smm/index.html</loc>
+        <lastmod>2017-06-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>http://getmoreleads.ru/target/index.html</loc>
+        <lastmod>2017-06-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
 </urlset>

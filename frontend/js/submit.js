@@ -27,7 +27,7 @@ module.exports.submit = function (button, name, phone, email, data){
         .then(
             function(response) {
                 console.log("SUCCESS", response);
-                window.location.pathname = '/thankyoupage.html'
+                window.location.pathname = '/thankyoupage'
             },
             function(error) {
                 console.log("FAILED", error);
