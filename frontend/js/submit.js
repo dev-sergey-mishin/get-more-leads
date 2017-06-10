@@ -22,7 +22,8 @@ module.exports.submit = function (button, name, phone, email, data){
             region: data.region,
             budget: data.budget,
 
-            urlParams: window.location.search
+            urlParams: window.location.search,
+            landing: window.location.pathname === '/' ? 'Главный' : window.location.pathname.replace('/', '').replace('/', '')
         })
         .then(
             function(response) {
