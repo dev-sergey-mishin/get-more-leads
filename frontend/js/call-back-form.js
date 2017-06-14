@@ -32,7 +32,7 @@ var Submit = require('./submit');
                 $name.removeClass('error');
                 $phone.removeClass('error');
                 $email.removeClass('error');
-                Submit.submit($submit, $name.val(), $phone.val(), $email.val(), { form: 'Заказ обратного звонка' });
+                Submit.submit($submit, $name.val(), $phone.val(), $email.val(), { form: 'Заказать звонок (первый экран)' });
             }
         });
     })

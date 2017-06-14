@@ -51,7 +51,7 @@ var Submit = require('./submit');
                 $phone.removeClass('error');
                 $email.removeClass('error');
 
-                Submit.submit($submit, $name.val(), $phone.val(), $email.val(), { form: 'Заказ стратегии ' + strategyName });
+                Submit.submit($submit, $name.val(), $phone.val(), $email.val(), { form: 'Заказать стратегию ' + strategyName });
             }
         });
     })
