@@ -22,7 +22,6 @@
     text-align: right;
     user-select: none;
     outline: none;
-    cursor: pointer;
     @media (max-width: @tablet) {
       pointer-events: none;
     }
@@ -45,23 +44,29 @@
         width: 80vw;
       }
     }
-    &:focus {
-      pointer-events: none;
-      .big-img {
-        display: block;
-      }
-      &::after {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: black;
-        opacity: 0.6;
-        z-index: 99;
+    .img-click {
+      display: inline-block;
+      cursor: pointer;
+      user-select: none;
+      &:focus {
+        pointer-events: none;
+        .big-img {
+          display: block;
+        }
+        &::after {
+          content: '';
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: black;
+          opacity: 0.6;
+          z-index: 99;
+        }
       }
     }
+
 
     @media (max-width: @desc) {
       img {

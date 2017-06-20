@@ -60,7 +60,7 @@
 	*/
 
 	!function(factory) {
-	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(7), __webpack_require__(6) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./global/window"), require("./global/document")) : window.Inputmask = factory(window.dependencyLib || jQuery, window, document);
+	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(7), __webpack_require__(6) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./global/window"), require("./global/document")) : window.Inputmask = factory(window.dependencyLib || jQuery, window, document);
 	}(function($, window, document, undefined) {
 	    function Inputmask(alias, options, internal) {
 	        if (!(this instanceof Inputmask)) return new Inputmask(alias, options, internal);
@@ -1684,48 +1684,6 @@
 
 /***/ },
 /* 2 */
-/***/ function(module, exports) {
-
-	module.exports.submit = function (button, name, phone, email, data){
-	    var text = 'обработка запроса';
-	    var point = '.  ';
-	    button.text(text + point).prop('disabled', true);
-	    setInterval(function() {
-	        if (point.indexOf(' ') === -1) {
-	            point = '   ';
-	        }
-	        point = point.replace(' ', '.');
-	        button.text(text + point).prop('disabled', true).addClass('progress');
-	    }, 500);
-
-	    emailjs.init("user_XhnfRmcG2yfBxRi6TzVYx");
-	    emailjs.send("gmail","getmoreleads",{
-	            name: name,
-	            phone: phone,
-	            email: email,
-
-	            form: data.form,
-	            brand: data.brand,
-	            site: data.site,
-	            region: data.region,
-	            budget: data.budget,
-
-	            urlParams: window.location.search,
-	            landing: window.location.pathname === '/' ? 'Главный' : window.location.pathname.replace('/', '').replace('/', '')
-	        })
-	        .then(
-	            function(response) {
-	                console.log("SUCCESS", response);
-	                window.location.pathname = '/thankyoupage'
-	            },
-	            function(error) {
-	                console.log("FAILED", error);
-	            }
-	        );
-	};
-
-/***/ },
-/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -1869,19 +1827,61 @@
 	});
 
 /***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	module.exports.submit = function (button, name, phone, email, data){
+	    var text = 'обработка запроса';
+	    var point = '.  ';
+	    button.text(text + point).prop('disabled', true);
+	    setInterval(function() {
+	        if (point.indexOf(' ') === -1) {
+	            point = '   ';
+	        }
+	        point = point.replace(' ', '.');
+	        button.text(text + point).prop('disabled', true).addClass('progress');
+	    }, 500);
+
+	    emailjs.init("user_XhnfRmcG2yfBxRi6TzVYx");
+	    emailjs.send("gmail","getmoreleads",{
+	            name: name,
+	            phone: phone,
+	            email: email,
+
+	            form: data.form,
+	            brand: data.brand,
+	            site: data.site,
+	            region: data.region,
+	            budget: data.budget,
+
+	            urlParams: window.location.search,
+	            landing: window.location.pathname === '/' ? 'Главный' : window.location.pathname.replace('/', '').replace('/', '')
+	        })
+	        .then(
+	            function(response) {
+	                console.log("SUCCESS", response);
+	                window.location.pathname = '/thankyoupage'
+	            },
+	            function(error) {
+	                console.log("FAILED", error);
+	            }
+	        );
+	};
+
+/***/ },
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
+	__webpack_require__(15);
+	__webpack_require__(16);
+	__webpack_require__(17);
 	__webpack_require__(18);
+
 	__webpack_require__(19);
 	__webpack_require__(20);
 	__webpack_require__(21);
-
 	__webpack_require__(22);
 	__webpack_require__(23);
-	__webpack_require__(24);
-	__webpack_require__(25);
-	__webpack_require__(26);
 
 	module.exports = __webpack_require__(1);
 
@@ -1923,31 +1923,31 @@
 /* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(17);
-	__webpack_require__(15);
+	__webpack_require__(14);
+	__webpack_require__(13);
+	__webpack_require__(10);
+	__webpack_require__(9);
 	__webpack_require__(12);
 	__webpack_require__(11);
 
-	__webpack_require__(9);
-	__webpack_require__(10);
-	__webpack_require__(14);
-	__webpack_require__(16);
-	__webpack_require__(13);
+	//require('./js/conversion.js');
+	//require('./js/call-back-form.js');
+	//require('./js/service-form.js');
+	//require('./js/strategy-form.js');
+
 
 /***/ },
 /* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var Inputmask = __webpack_require__(4);
-	var Submit = __webpack_require__(2);
+	var Submit = __webpack_require__(3);
 
 	(function() {
 	    $(document).ready(function(){
-
 	        var selector = document.getElementsByClassName("btn-block-phone");
 	        var im = new Inputmask("+7 (999) 999-99-99");
 	        im.mask(selector);
-
 
 	        $('.btn-container .btn.red').click(function() {
 	            var $that = $(this);
@@ -1958,7 +1958,7 @@
 	                $container.find('.btn-block-phone').addClass('error');
 	            } else {
 	                $container.find('.btn-block-phone').removeClass('error');
-	                Submit.submit($that, '', phoneVal, '', { form: 'получить бесплатный аудит' });
+	                Submit.submit($that, '', phoneVal, '', { form: $that.data('form') });
 	            }
 	        });
 	    })
@@ -1969,82 +1969,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var Inputmask = __webpack_require__(4);
-	var Submit = __webpack_require__(2);
-
-	(function() {
-	    $(document).ready(function(){
-	        function validateEmail(email) {
-	            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	            return re.test(email);
-	        }
-	        var selector = document.getElementById("call-back-phone");
-	        var im = new Inputmask("+7 (999) 999-99-99");
-	        im.mask(selector);
-
-	        var $modal = $('#callback-modal');
-	        var $submit = $modal.find('#call-back-submit');
-	        // checkbox
-	        $('#call-back-accept').click(function(e) {
-	            $submit.attr('disabled', !document.getElementById('call-back-accept').checked);
-	        });
-	        $submit.click(function() {
-	            var $name = $modal.find('#call-back-name');
-	            var $phone = $modal.find('#call-back-phone');
-	            var $email = $modal.find('#call-back-mail');
-	            var nameLength = $name.val().length;
-	            var phoneLength = $phone.val().replace(/\D/g, '').length;
-
-	            if (nameLength === 0 || phoneLength != 11 || !validateEmail($email.val())) {
-	                $name.addClass(nameLength === 0 ? 'error' : '');
-	                $phone.addClass(phoneLength < 6 ? 'error' : '');
-	                $email.addClass(!validateEmail($email.val()) ? 'error' : '');
-	            } else {
-	                $name.removeClass('error');
-	                $phone.removeClass('error');
-	                $email.removeClass('error');
-	                Submit.submit($submit, $name.val(), $phone.val(), $email.val(), { form: 'Заказать звонок (первый экран)' });
-	            }
-	        });
-	    })
-	})();
-
-/***/ },
-/* 11 */
-/***/ function(module, exports) {
-
-	(function() {
-	    $(document).ready(function(){
-	        function modalHandler($container, $actor) {
-	            $actor.click(function() {
-	                $container.removeClass('hide');
-	            });
-	            $container.find('.cb-modal-layer').click(function() {
-	                $container.addClass('hide');
-	            });
-	            $container.find('.close').click(function() {
-	                $container.addClass('hide');
-	            });
-	        }
-
-	        modalHandler($('#service-modal'), $('.feedback-container .link'));
-	        modalHandler($('#callback-modal'), $('.call-back'));
-	        modalHandler($('#policy-modal'), $('.policy-link'));
-
-
-	        $('.feedback-container .link').click(function() {
-	            var text = 'Узнать подробнее об услуге  «' + $(this).data('val') + '»';
-	            $('#service-modal').find('.title').text(text);
-	        });
-
-	    })
-	})();
-
-/***/ },
-/* 12 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var Inputmask = __webpack_require__(4);
-	var Submit = __webpack_require__(2);
+	var Submit = __webpack_require__(3);
 
 	(function() {
 	    $(document).ready(function(){
@@ -2129,7 +2054,6 @@
 	            $submit.attr('disabled', !document.getElementById('accept').checked);
 	        });
 
-
 	        $submit.click(function() {
 	            var $name = $('#form-name');
 	            var $phone = $('#form-phone');
@@ -2148,7 +2072,7 @@
 	                $email.removeClass('error');
 
 	                Submit.submit($submit, $name.val(), $phone.val(), $email.val(), {
-	                        form: 'главная форма снизу',
+	                        form: 'Заполните форму и получите коммерческое предложение в течение 3-х дней',
 	                        brand: $('#form-brand').val(),
 	                        site: $('#form-site').val(),
 	                        region: $('#form-region').val(),
@@ -2184,61 +2108,76 @@
 	})();
 
 /***/ },
-/* 13 */
+/* 11 */
 /***/ function(module, exports) {
 
 	(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter36370080 = new Ya.Metrika({ id:36370080, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
 
 /***/ },
-/* 14 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var Inputmask = __webpack_require__(4);
-	var Submit = __webpack_require__(2);
+	var Submit = __webpack_require__(3);
 
-	(function() {
-	    $(document).ready(function(){
-	        function validateEmail(email) {
-	            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	            return re.test(email);
-	        }
+	function phoneMask(phoneId) {
+	    var selector = document.getElementById(phoneId);
+	    var im = new Inputmask("+7 (999) 999-99-99");
+	    im.mask(selector);
+	}
+	function validateEmail(email) {
+	    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	    return re.test(email);
+	}
+	function submit($modal, $submit, formName) {
+	    var $name = $modal.find('#modal-name');
+	    var $phone = $modal.find('#modal-phone');
+	    var $email = $modal.find('#modal-mail');
+	    var nameLength = $name.val().length;
+	    var phoneLength = $phone.val().replace(/\D/g, '').length;
 
-	        var selector = document.getElementById("service-phone");
-	        var im = new Inputmask("+7 (999) 999-99-99");
-	        im.mask(selector);
+	    if (nameLength === 0 || phoneLength != 11 || !validateEmail($email.val())) {
+	        $name.addClass(nameLength === 0 ? 'error' : '');
+	        $phone.addClass(phoneLength < 6 ? 'error' : '');
+	        $email.addClass(!validateEmail($email.val()) ? 'error' : '');
+	    } else {
+	        $name.removeClass('error');
+	        $phone.removeClass('error');
+	        $email.removeClass('error');
+	        Submit.submit($submit, $name.val(), $phone.val(), $email.val(), { form: formName });
+	    }
+	}
 
-	        // checkbox
-	        $('#service-accept').click(function(e) {
-	            $submit.attr('disabled', !document.getElementById('service-accept').checked);
-	        });
+	function openModal(options) {
+	    var $modal = $('#modal-form');
+	    var $title = $modal.find('.title');
+	    var $submit = $modal.find('#modal-submit');
+	    var $checkbox = $modal.find('#modal-accept');
 
-	        var $modal = $('#service-modal');
-	        var $submit = $modal.find('.btn.red');
-	        $submit.click(function() {
-	            var $name = $modal.find('#service-name');
-	            var $phone = $modal.find('#service-phone');
-	            var $email = $modal.find('#service-mail');
-	            var nameLength = $name.val().length;
-	            var phoneLength = $phone.val().replace(/\D/g, '').length;
-	            var emailValid = validateEmail($email.val());
+	    $title.text(options.title);
+	    $submit.text(options.btnText);
 
-	            if (nameLength === 0 || phoneLength != 11 || !emailValid) {
-	                $name.addClass(nameLength === 0 ? 'error' : '');
-	                $phone.addClass(phoneLength < 6 ? 'error' : '');
-	                $email.addClass(!emailValid ? 'error' : '');
-	            } else {
-	                $name.removeClass('error');
-	                $phone.removeClass('error');
-	                $email.removeClass('error');
+	    phoneMask('modal-phone');
 
-	                Submit.submit($submit, $name.val(), $phone.val(), $email.val(), { form: $('#service-modal').find('.title').text() });
-	            }
-	        });
-	    })
-	})();
+	    $submit.click(function() {
+	        submit($modal, $submit, options.formName);
+	    });
+	    $checkbox.click(function(e) {
+	        $submit.attr('disabled', !document.getElementById('modal-accept').checked);
+	    });
+
+	    $modal.removeClass('hide');
+	}
+	function closeModal() {
+	    var $modal = $('#modal-form');
+	    $modal.addClass('hide');
+	}
+
+	window.openModal = openModal;
+	window.closeModal = closeModal;
 
 /***/ },
-/* 15 */
+/* 13 */
 /***/ function(module, exports) {
 
 	(function() {
@@ -2273,76 +2212,13 @@
 	})();
 
 /***/ },
-/* 16 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var Inputmask = __webpack_require__(4);
-	var Submit = __webpack_require__(2);
-
-	(function() {
-	    var strategyName = '';
-	    $(document).ready(function(){
-	        function validateEmail(email) {
-	            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	            return re.test(email);
-	        }
-	        function modalHandler($container, $actor) {
-	            $actor.click(function() {
-	                $container.removeClass('hide');
-	                $('#strategyName').text($(this).data('name'));
-	                strategyName = $(this).data('name');
-	            });
-	            $container.find('.cb-modal-layer').click(function() {
-	                $container.addClass('hide');
-	            });
-	            $container.find('.close').click(function() {
-	                $container.addClass('hide');
-	            });
-	        }
-
-	        modalHandler($('#strategy-modal'), $('.tariff-container').find('.btn'));
-
-	        var selector = document.getElementById("strategy-phone");
-	        var im = new Inputmask("+7 (999) 999-99-99");
-	        im.mask(selector);
-
-	        var $modal = $('#strategy-modal');
-	        var $submit = $modal.find('#strategy-submit');
-	        // checkbox
-	        $('#strategy-accept').click(function(e) {
-	            $submit.attr('disabled', !document.getElementById('strategy-accept').checked);
-	        });
-
-	        $submit.click(function() {
-	            var $name = $modal.find('#strategy-name');
-	            var $phone = $modal.find('#strategy-phone');
-	            var $email = $modal.find('#strategy-mail');
-	            var nameLength = $name.val().length;
-	            var phoneLength = $phone.val().replace(/\D/g, '').length;
-
-	            if (nameLength === 0 || phoneLength != 11 || !validateEmail($email.val())) {
-	                $name.addClass(nameLength === 0 ? 'error' : '');
-	                $phone.addClass(phoneLength < 6 ? 'error' : '');
-	                $email.addClass(!validateEmail($email.val()) ? 'error' : '');
-	            } else {
-	                $name.removeClass('error');
-	                $phone.removeClass('error');
-	                $email.removeClass('error');
-
-	                Submit.submit($submit, $name.val(), $phone.val(), $email.val(), { form: 'Заказать стратегию ' + strategyName });
-	            }
-	        });
-	    })
-	})();
-
-/***/ },
-/* 17 */
+/* 14 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 18 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2354,7 +2230,7 @@
 	*/
 
 	!function(factory) {
-	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(1) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./inputmask")) : factory(window.dependencyLib || jQuery, window.Inputmask);
+	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(1) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./inputmask")) : factory(window.dependencyLib || jQuery, window.Inputmask);
 	}(function($, Inputmask) {
 	    function isLeapYear(year) {
 	        return isNaN(year) || 29 === new Date(year, 2, 0).getDate();
@@ -2825,7 +2701,7 @@
 	});
 
 /***/ },
-/* 19 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2837,7 +2713,7 @@
 	*/
 
 	!function(factory) {
-	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(1) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./inputmask")) : factory(window.dependencyLib || jQuery, window.Inputmask);
+	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(1) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./inputmask")) : factory(window.dependencyLib || jQuery, window.Inputmask);
 	}(function($, Inputmask) {
 	    return Inputmask.extendDefinitions({
 	        A: {
@@ -2927,7 +2803,7 @@
 	});
 
 /***/ },
-/* 20 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2939,7 +2815,7 @@
 	*/
 
 	!function(factory) {
-	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(1) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./inputmask")) : factory(window.dependencyLib || jQuery, window.Inputmask);
+	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(1) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./inputmask")) : factory(window.dependencyLib || jQuery, window.Inputmask);
 	}(function($, Inputmask, undefined) {
 	    function autoEscape(txt, opts) {
 	        for (var escapedTxt = "", i = 0; i < txt.length; i++) Inputmask.prototype.definitions[txt.charAt(i)] || opts.definitions[txt.charAt(i)] || opts.optionalmarker.start === txt.charAt(i) || opts.optionalmarker.end === txt.charAt(i) || opts.quantifiermarker.start === txt.charAt(i) || opts.quantifiermarker.end === txt.charAt(i) || opts.groupmarker.start === txt.charAt(i) || opts.groupmarker.end === txt.charAt(i) || opts.alternatormarker === txt.charAt(i) ? escapedTxt += "\\" + txt.charAt(i) : escapedTxt += txt.charAt(i);
@@ -3273,7 +3149,7 @@
 	});
 
 /***/ },
-/* 21 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -3285,7 +3161,7 @@
 	*/
 
 	!function(factory) {
-	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(3), __webpack_require__(1) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./inputmask")) : factory(window.dependencyLib || jQuery, window.Inputmask);
+	     true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(2), __webpack_require__(1) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : "object" == typeof exports ? module.exports = factory(require("./dependencyLibs/inputmask.dependencyLib"), require("./inputmask")) : factory(window.dependencyLib || jQuery, window.Inputmask);
 	}(function($, Inputmask) {
 	    function maskSort(a, b) {
 	        var maska = (a.mask || a).replace(/#/g, "9").replace(/\)/, "9").replace(/[+()#-]/g, ""), maskb = (b.mask || b).replace(/#/g, "9").replace(/\)/, "9").replace(/[+()#-]/g, ""), maskas = (a.mask || a).split("#")[0], maskbs = (b.mask || b).split("#")[0];
@@ -3339,7 +3215,7 @@
 	});
 
 /***/ },
-/* 22 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -3588,7 +3464,7 @@
 	});
 
 /***/ },
-/* 23 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -4517,7 +4393,7 @@
 	});
 
 /***/ },
-/* 24 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -23762,7 +23638,7 @@
 	});
 
 /***/ },
-/* 25 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -24776,7 +24652,7 @@
 	});
 
 /***/ },
-/* 26 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!

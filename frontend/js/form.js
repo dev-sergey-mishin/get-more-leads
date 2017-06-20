@@ -84,7 +84,6 @@ var Submit = require('./submit');
             $submit.attr('disabled', !document.getElementById('accept').checked);
         });
 
-
         $submit.click(function() {
             var $name = $('#form-name');
             var $phone = $('#form-phone');
@@ -103,7 +102,7 @@ var Submit = require('./submit');
                 $email.removeClass('error');
 
                 Submit.submit($submit, $name.val(), $phone.val(), $email.val(), {
-                        form: 'главная форма снизу',
+                        form: 'Заполните форму и получите коммерческое предложение в течение 3-х дней',
                         brand: $('#form-brand').val(),
                         site: $('#form-site').val(),
                         region: $('#form-region').val(),

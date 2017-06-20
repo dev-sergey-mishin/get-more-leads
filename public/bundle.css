@@ -166,6 +166,7 @@ body *::selection {
   vertical-align: -8px;
   font-size: 14px;
   color: #636363;
+  margin-right: 0;
 }
 .btn-container .divider {
   display: block;
@@ -622,7 +623,6 @@ header .call-back:hover {
   text-align: right;
   user-select: none;
   outline: none;
-  cursor: pointer;
 }
 @media (max-width: 768px) {
   .screen-3 .image {
@@ -650,13 +650,18 @@ header .call-back:hover {
     width: 80vw;
   }
 }
-.screen-3 .image:focus {
+.screen-3 .image .img-click {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+}
+.screen-3 .image .img-click:focus {
   pointer-events: none;
 }
-.screen-3 .image:focus .big-img {
+.screen-3 .image .img-click:focus .big-img {
   display: block;
 }
-.screen-3 .image:focus::after {
+.screen-3 .image .img-click:focus::after {
   content: '';
   position: fixed;
   top: 0;
