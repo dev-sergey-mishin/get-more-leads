@@ -10,7 +10,7 @@ module.exports.submit = function (button, name, phone, email, data){
         button.text(text + point).prop('disabled', true).addClass('progress');
     }, 500);
 
-    emailjs.init("user_XhnfRmcG2yfBxRi6TzVYx");
+    emailjs.init("user_zzOSryL5cIjJ8AiCswti7");
     emailjs.send("gmail","getmoreleads",{
             name: name,
             phone: phone,
