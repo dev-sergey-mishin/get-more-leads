@@ -47,7 +47,7 @@
   }
 
   .left-container {
-    position: relative;
+    position: fixed;
     display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
@@ -55,6 +55,7 @@
     padding-top: 113px;
 
     @media (max-width: @tablet-max-media) {
+      position: relative;
       display: block;
       width: auto;
       margin-bottom: 24px;

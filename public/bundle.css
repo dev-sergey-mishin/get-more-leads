@@ -1569,7 +1569,7 @@ footer .social-container .social:hover {
   font-weight: bold;
 }
 .blog .left-container {
-  position: relative;
+  position: fixed;
   display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
@@ -1578,6 +1578,7 @@ footer .social-container .social:hover {
 }
 @media (max-width: 1021px) {
   .blog .left-container {
+    position: relative;
     display: block;
     width: auto;
     margin-bottom: 24px;
