@@ -124,10 +124,10 @@
       .photo {
         display: inline-block;
         box-sizing: border-box;
-        vertical-align: middle;
-        width: 150px;
-        height: 150px;
-        border-radius: 75px;
+        vertical-align: top;
+        width: 74px;
+        height: 74px;
+        border-radius: 37px;
         background-color: @whitty;
         margin-right: 40px;
         @media (max-width: @tablet-max-media) {
@@ -139,9 +139,7 @@
         display: inline-block;
         box-sizing: border-box;
         vertical-align: middle;
-        border-bottom: 1px solid @bordery;
         padding-bottom: 30px;
-        width: calc(~'100% - 200px');
         @media (max-width: @tablet-max-media) {
           display: block;
           width: auto;
@@ -183,8 +181,8 @@
         display: block;
         position: relative;
         box-sizing: border-box;
-        width: calc(~'100% - 200px');
-        float: right;
+        border-top: 1px solid @bordery;
+        padding-top: 20px;
         @media (max-width: @tablet-max-media) {
           display: block;
           width: auto;
