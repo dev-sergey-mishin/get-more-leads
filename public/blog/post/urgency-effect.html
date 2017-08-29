@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Пост test</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="shortcut icon" href="../../favicon.png" type="image/png">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script defer src="../../bundle.js"></script>
+    <script defer src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+<header style="margin-bottom: 30px">
+    <div class="container">
+        <div class="logo-block">
+            <div class="logo"></div>
+            <div class="logo-desc">Агентство интернет-маркетинга</div>
+        </div>
+        <div class="phone-block">
+            <a href="tel:74991100451" class="phone">+7 (499) 110-04-51</a>
+            <div
+                    class="call-back"
+                    onclick="openModal({
+                                title: 'Заказать обратный звонок',
+                                btnText: 'Заказать звонок',
+                                formName: 'Заказать звонок (первый экран)'
+                            })"
+            >
+                Заказать обратный звонок
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container blog">
+    <div class="right-container">
+        <h1 class="title">Блог GetMoreLeads.ru</h1>
+        <div class="desc">Получайте советы, повышаете конверсию, увеличивайте прибыль</div>
+        <div class="link-container">
+            <a class="link-filter active">Контекстная реклама</a>
+            <a class="link-filter">E-mail маркетинг</a>
+            <a class="link-filter">Аналитика</a>
+            <a class="link-filter">SMM</a>
+            <a class="link-filter">Копирайтинг</a>
+            <a class="link-filter">Дизайн</a>
+            <a class="link-filter">Юзабилити</a>
+            <a class="link-filter">Реальные кейсы</a>
+            <a class="link-filter">Видеоуроки</a>
+            <a class="link-filter">Лайфхаки</a>
+        </div>
+        <div class="post-container">
+            <div class="post">
+                <div class="photo"></div>
+                <div class="author">
+                    <div class="name">Тимур Нигматуллин, 12 августа 1937</div>
+                    <div class="position">начальник аналитического отдела SAMSUNG</div>
+                    <div class="hashtags">
+                        <a class="hashtag">примеры_лендингов</a>,
+                        <a class="hashtag">landings</a>,
+                        <a class="hashtag">маркетинг_шмаркетинг</a>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <div class="head">«Нет времени объяснять! Ты должен покупать!» Эффект срочности в маркетинге</div>
+                    <img class="image" src="../images/post-1.png">
+                    <div class="text">
+                        <p>
+                            Вспомните сколько спонтанных и зачастую глупых покупок было совершено вами или вашими
+                            близкими под влиянием: «последний день распродаж», «на складе осталось 3 товара» и самое
+                            страшное «до конца акции осталось… а дальше таймер с обратным отсчётом».
+                        </p>
+                        <p>
+                            Именно так работает эффект срочности в маркетинге, создавая перед пользователями
+                            иллюзорность (в основном) ограниченности предложения.
+                        </p>
+                        <p>
+                            Под давлением этой иллюзии пользователь может согласиться с возможностью упущенной
+                            аналогичной выгоды из-за боязни вообще её потерять.
+                        </p>
+                        <p>
+                            На рынке есть множество отраслей, располагающих к использованию данного подхода, они с ним,
+                            можно сказать, живут душа в душу уже давно. При этом зачастую пользователи воспринимают
+                            такое давление не просто без негатива, а с ощущением заботы об их интересах. К таким отраслям
+                            относятся: путешествия (авиабилеты, бронь отелей и т.п.), недвижимость (аренда и продажа), авто
+                            (покупка), развлечения (билеты на концерты, фестивали, в кино и т.п.), ритейл (крупные
+                            ритейлеры типа asos, ozon и т.п)
+                        </p>
+                        <h3>Рассмотрим, как это работает на примере Booking.com </h3>
+                        <p>
+                            Только введя необходимые вводные данные, на первой же странице в самом верху мы сразу
+                            видим предупреждение
+                        </p>
+                        <img class="image" src="../images/post-1.png">
+                            Далее устанавливаем дополнительные фильтры и…вуаля…. 63% меняется на 97%
+                        <img class="image" src="../images/post-1.png">
+                        <p>
+                            При этом в самих объявлениях мы видим уведомления типа «Остался всего 1 номер»,
+                            «Забронировано 3 раза за 6 часов», «3 пользователя сейчас просматривают эту страницу»,
+                            «сегодняшнее суперпредложение» (да-да, не просто суперпредложение, а именно сегодняшнее)
+                            и т.п
+                        </p>
+                        <img class="image" src="../images/post-1.png">
+                        <p>
+                            Даже зачем-то высветилось не актуальное предложение под лозунгом «Вы не успели!»
+                        </p>
+                        <img class="image" src="../images/post-1.png">
+                        <p>
+                            Далее переходим на страницу конкретного отеля. Спустя пару секунд видим предупреждение
+                        </p>
+                        <img class="image" src="../images/post-1.png">
+                        <p>
+                            Листаем страницу вниз, изучая предложение, там нас поджидают новые стимулы
+                        </p>
+                        <img class="image" src="../images/post-1.png">
+                        <p>
+                            Снова поднимаюсь на верх страницы и прямо на изображении меня предупреждают
+                        </p>
+                        <img class="image" src="../images/post-1.png">
+                        <p>
+                            В итоге мы ловим себя на том, что уже не степенно и вдумчиво оцениваем варианты и выбираем
+                            оптимальный, а стараемся успеть.
+                        </p>
+                        <p>
+                            При этом с «пугающими» предупреждениями для снятия морального напряжения и, опять же, для
+                            ускорения решения соседствуют блоки типа «бесплатное бронирование», «вы можете отменить
+                            бронирование до ____», «не требуется привязка карты», «БЕЗ ПРЕДОПЛАТЫ» и т.п.
+                        </p>
+                        <p>
+                            Для наглядности отметила их на верхних скриншотах другим цветом.
+                        </p>
+                        <p>
+                            То есть буквально каждый свободный сантиметр пространства занят прямыми или обратными
+                            мотиваторами. Такая себе мотивация кнутом и пряником.
+                        </p>
+                        <p>
+                            Многие сайты, такие, как например Ticketmaster или Цирк Дю Солей напрямую предпреждают
+                            своих пользователей о том, что если они не заршат покупку или бронирование в течение
+                            определённого времени, то их места снова попадут в открытый доступ, возможный для
+                            бронирования. Иногда даже не стесняются ставить таймер.
+                        </p>
+                        <p>
+                            А вот более деликатный пример подобного стимулирования. В данном случае автодилер
+                            уведомляет сколько автомобилей осталось на складе и сколько людей уже прошли тест-драйв.
+                            Конечно, вы же должны понимать ваши шансы и число потенциальных конкурентов ☺
+                        </p>
+                        <img class="image" src="../images/post-1.png">
+                        <p>
+                            В некоторых случаях, таких как предметы роскоши (те же премиальные авто, анпример), то
+                            ограниченность предложения действует не только на боязнь упустить выгоду, но и указывает на
+                            эксклюзивность вашего предложения.
+                        </p>
+                        <h3>Так где же идеальный баланс между кнутом и пряником? Как не «передавить» пользователя?</h3>
+                        <p>
+                            Проанализируйте ваш бизнес, подумайте насколько такой подход уместен в вашей отрасли?
+                            Пользуются ли им конкуренты и как они это делают? Как ведут себя пользователи на их сайтах?
+                        </p>
+                        <p>
+                            Чем вы можете обоснованно подтолкнуть пользователя скорее совершить покупку (прямые и
+                            обратные мотиваторы)?
+                        </p>
+                        <p>
+                            Проанализируйте «точки отвала» на сайте. Какими фразами на них вы можете удержать
+                            пользователя? С какими барьерами он столкнулся именно в этой точке?
+                        </p>
+                        <p>
+                            И в конце концов чётко составьте архитектуру размещения (так чтобы вы могли объяснить почему
+                            именно этот мотиватор расположен именно в этом месте) и проведите тесты.
+                        </p>
+                        <p>
+                            Доминируй и конвертируй! Больших вам продаж!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="left-container">
+        <div class="blog-form">
+            <h1 class="form-title">Получайте бесплатные советы по повышению  конверсии, среднего чека, охвата, узнаваемости и д.р</h1>
+            <div class="form-desc">Подпишитесь на рассылку прямо сейчас:</div>
+            <div class="mail-label">Введите e-mail</div>
+            <input type="email" class="input-text" id="blog-form-mail" placeholder="Введите e-mail" />
+
+            <button id="blog-form-submit" class="btn red">Подписаться сейчас</button>
+            <input id="blog-form-accept" type="checkbox" class="cb-checkbox" checked />
+            <label for="blog-form-accept" class="accept">Я даю согласие на обработку своих персональных данных</label>
+        </div>
+    </div>
+    <div class="thank-you-page">
+        <div class="divider-screen"></div>
+        <h2 class="sub-title">Читайте другие полезные статьи:</h2>
+        <div class="article-container">
+            <a class="article">
+                <img src="../../images/thank_you/article-1.png" class="image">
+                <h3 class="text">Нет времени объяснять.  Ты должен покупать!  Эффект срочности в маркетинге</h3>
+            </a>
+            <a class="article">
+                <img src="../../images/thank_you/article-2.png" class="image">
+                <h3 class="text">#тыжеssmщик. Стратегия  использования хештегов в Instagram</h3>
+            </a>
+            <a class="article">
+                <img src="../../images/thank_you/article-3.png" class="image">
+                <h3 class="text">Тренды SMM 2017-2018 Сам пришёл</h3>
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="main-block">
+            <div class="block">
+                <h4 class="title">О нас</h4>
+                <p class="about-info">ООО "ГМЛ Медиа"</p>
+                <p class="about-info">ОГРН 1167746256589</p>
+                <p class="about-info">ИНН 7709486993</p>
+            </div>
+            <div class="block">
+                <h4 class="title">Кейсы</h4>
+                <a class="link" href="#client-1">KIA Тула</a>
+                <a class="link" href="#client-2">AUDI Тула</a>
+                <a class="link" href="#client-7">Hyundai Калуга</a>
+                <a class="link" href="#client-8">Citroen Калуга</a>
+                <a class="link" href="#client-5">Nissan Тула</a>
+                <a class="link" href="#client-9">KIA Калуга</a>
+            </div>
+            <div class="block">
+                <h4 class="title">Услуги</h4>
+                <a class="link" target="_blank" href="/context/">Контекстная реклама</a>
+                <a class="link" target="_blank" href="/landingpage/">Landing page</a>
+                <a class="link" target="_blank" href="/seo/">Сео продвижение</a>
+                <a class="link" target="_blank" href="/target/">Таргетированная реклама</a>
+                <a class="link" target="_blank" href="/email/">Email рассылки</a>
+                <a class="link" target="_blank" href="/analytics/">Web-аналитика</a>
+                <a class="link" target="_blank" href="/smm/">СММ</a>
+            </div>
+            <div class="block">
+                <h4 class="title">Блог</h4>
+                <a class="link">Нет времени объяснять. Ты должен покупать! Эффект срочности в маркетинге</a>
+                <a class="link">#тыжеssmщик. Стратегия использования хештегов в Instagram</a>
+                <a class="link">Тренды SMM 2017-2018 Сам пришёл</a>
+                <a class="link">Поисковая оптимизация в Instagram</a>
+            </div>
+            <div class="block" style="margin: 0; width: 150px;">
+                <h4 class="title">Соц. сети</h4>
+                <div class="social-container">
+                    <a class="social vk" href="https://vk.com/getmoreleads_ru" target="blank"></a>
+                    <a class="social fb" href="https://www.facebook.com/getmoreleads.ru/" target="blank"></a>
+                    <a class="social ytb" href="https://www.youtube.com/channel/UC40orkZ_im9ulI_or8FmJNA" target="blank"></a>
+                </div>
+                <a class="link policy-link" onclick="(function() { $('#policy-modal').removeClass('hide'); })()">Политика конфиденциальности</a>
+            </div>
+        </div>
+        <div class="right-block">
+            <a href="tel:74991100451" class="phone">+7 (499) 110-04-51</a>
+            <a
+                    class="call-back"
+                    onclick="openModal({
+                        title: 'Заказать обратный звонок',
+                        btnText: 'Заказать звонок',
+                        formName: 'Заказать звонок (футер)'
+                    })">
+                Заказать обратный звонок
+            </a>
+            <a href="mailto:info@getmoreleads.ru" class="email">info@getmoreleads.ru</a>
+            <p class="address">109004, г. Москва, пер.&nbsp;Шелапутинский,&nbsp;д.1</p>
+        </div>
+    </div>
+</footer>
+<div id="policy-modal" class="cb-modal-window hide">
+    <div class="cb-modal-layer" onclick="(function() { $('#policy-modal').addClass('hide'); })()"></div>
+    <div class="cb-modal-container" style="overflow-y: auto; padding: 10px 20px;">
+        <div class="cb-close-modal close"></div>
+        <div class="form">
+            <div class="info">
+                <h2 class="title" style="text-align: left; margin-bottom: 10px;">Соглашение об обработке персональных данных.</h2>
+                <p class="desc" style="text-align: left; font-size: 13px ">Обработка персональных данных Пользователя осуществляется в соответствии с законодательством Российской Федерации. Администрация Сайта обрабатывает персональные данные Пользователя в целях предоставления Пользователю услуг. Пользователь заполняя форму «Имя» «Емейл» «Телефон» даёт согласие на обработку своих персональных данных – имени, адреса электронной почты и номера телефона. Под обработкой персональных данных понимается сбор, систематизация, накопление, уточнение (обновление, изменение). Обработка осуществляется с использованием средств автоматизации и/или без использования таких средств, в целях реализации мероприятий оповещения пользователя о новых услугах и акциях компании и для обратной связи с пользователями сайта.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal-form" class="cb-modal-window hide">
+    <div class="cb-modal-layer" onclick="closeModal()"></div>
+    <div class="cb-modal-container">
+        <div class="cb-close-modal close" onclick="closeModal()"></div>
+        <div class="form">
+            <div class="info">
+                <h2 class="title" style="margin-bottom: 30px">{title}</h2>
+                <p class="desc">Заполните форму и наш менеджер позвонит в течение 30 минут</p>
+                <input type="text" class="input-text" id="modal-name" placeholder="Введите имя" />
+                <input type="tel" class="input-text" id="modal-phone" placeholder="Введите телефон" />
+                <input type="email" class="input-text" id="modal-mail" placeholder="Введите e-mail" />
+
+                <button id="modal-submit" class="btn red">{btn-text}</button>
+                <input id="modal-accept" type="checkbox" class="cb-checkbox" checked />
+                <label for="modal-accept" class="accept">Я даю согласие на обработку своих персональных данных</label>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<link rel="stylesheet" href="../../bundle.css">

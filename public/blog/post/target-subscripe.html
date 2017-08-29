@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Пост test</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="shortcut icon" href="../../favicon.png" type="image/png">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script defer src="../../bundle.js"></script>
+    <script defer src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+<header style="margin-bottom: 30px">
+    <div class="container">
+        <div class="logo-block">
+            <div class="logo"></div>
+            <div class="logo-desc">Агентство интернет-маркетинга</div>
+        </div>
+        <div class="phone-block">
+            <a href="tel:74991100451" class="phone">+7 (499) 110-04-51</a>
+            <div
+                    class="call-back"
+                    onclick="openModal({
+                                title: 'Заказать обратный звонок',
+                                btnText: 'Заказать звонок',
+                                formName: 'Заказать звонок (первый экран)'
+                            })"
+            >
+                Заказать обратный звонок
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container blog">
+    <div class="right-container">
+        <h1 class="title">Блог GetMoreLeads.ru</h1>
+        <div class="desc">Получайте советы, повышаете конверсию, увеличивайте прибыль</div>
+        <div class="link-container">
+            <a class="link-filter active">Контекстная реклама</a>
+            <a class="link-filter">E-mail маркетинг</a>
+            <a class="link-filter">Аналитика</a>
+            <a class="link-filter">SMM</a>
+            <a class="link-filter">Копирайтинг</a>
+            <a class="link-filter">Дизайн</a>
+            <a class="link-filter">Юзабилити</a>
+            <a class="link-filter">Реальные кейсы</a>
+            <a class="link-filter">Видеоуроки</a>
+            <a class="link-filter">Лайфхаки</a>
+        </div>
+        <div class="post-container">
+            <div class="post">
+                <div class="photo"></div>
+                <div class="author">
+                    <div class="name">Тимур Нигматуллин, 12 августа 1937</div>
+                    <div class="position">начальник аналитического отдела SAMSUNG</div>
+                    <div class="hashtags">
+                        <a class="hashtag">примеры_лендингов</a>,
+                        <a class="hashtag">landings</a>,
+                        <a class="hashtag">маркетинг_шмаркетинг</a>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <div class="head">Фантастические фоловеры и где они обитают или как бесплатно привлекать в Instagram целевые подписки</div>
+                    <img class="image" src="../images/post-1.png">
+                    <div class="text">
+                        <p>
+                            В предыдущей статье я объяснила вам почему таргетированная реклама не работает на подписки а в
+                            этой я расскажу что же все-таки работает на целевые подписки. Обратите внимание, я говорю именно о
+                            целевых подписках поэтому различные сервисы для массфоловинга, масслайкинга и прочие офферные
+                            схемы нам не подойдут. Хоть многие из них, как, например, Tooligram и анонсируют возможность
+                            таргетирования, на практике это вам практически ничего не даст. Поверьте чужим уже набитым
+                            шишкам: размер отдачи на 1 руб затрат будет крайне мал
+                        </p>
+                        <p>
+                            В то же время совершенно бесплатно можно генерировать настоящие целевые подписки и лиды. Вам
+                            понадобится только смекалка, время и немного терпения
+                        </p>
+                        <p>
+                            Итак, существует несколько способов качественного парсинга аудитории. Идеальный вариант -
+                            совместить их все
+                        </p>
+                        <h3>Хештеги</h3>
+                        <p>
+                            Многие пользователи любят их используют и часто даже практикуют это как метод самоидентификации,
+                            размещая их даже в постах, которые, казалось бы, никак с этим хештегом не соотносятся. Например,
+                            девушка в посте может рассуждать о том, как она сходила в клуб с подругами, при этом её пост будет
+                            содержать хештег #тыжемать, #инстамама и т.п. Таким образом они определяют свою принадлежность
+                            к определенной касте (иногда это и есть самоцель а иногда это просто следствие желания обратить на
+                            себя внимание и самой получить новых подписчиков). Так вы можете вручную находить необходимые
+                            вам группы целевой аудитории.
+                        </p>
+                        <p>
+                            Тем же способом можно выявить аудиторию с горячей потребностью. Например, тур.агенства могут
+                            смело находить свою аудиторию по хештегу #хочунаморе, а магазины с мебелью, предметами декора и
+                            интерьера по хештегу #ремонт. Тут главно соблюсти 2 нюанса:<br />
+                            - обращайте внимание на дату публикации. Вряд ли стоит предлагать помощь одежду для беременных
+                            мамочке, которая 8 месяцев назад запустила фотку с хештегом #беременность. Помните об
+                            актуальности потребности!<br />
+                            - одной подписки здесь будет мало. Хотя бы поверхностно исследуйте профиль и выйдите с
+                            пользователем на помой контакт в директе или комментариях с максимально персонализированным
+                            предложением. И будьте "живей", старайтесь не общаться по скрипту на столько, на сколько это
+                            возможно. Пользователь должен понимать, что он общается с живым человеком, а не с сервисом.
+                        </p>
+                        <h3>Геолокация</h3>
+                        <p>
+                            Использовать данный метод целесообразно для локальных компаний и предложений. Но тут есть один
+                            тонкий, но важный нюанс: жители города обычно не размещают гео с этим городом или его основными
+                            достопримечательностями! То есть если вы региональная компания, например Тульская, то скорее
+                            всего будет ошибкой подписываться на всю подряд аудиторию, которая поставила гео "Тула" или
+                            "Музей оружия", скорее всего это будут приезжие, а значит им не интересна ваша "фотостудия в Туле".
+                            То же самое касается, кстати, и геохештегов. Если вы хотите найти местных, используйте места,
+                            которые и посещать будут в основном местные: супермаркеты, названия улиц, салоны красоты,
+                            тренажерные залы, университеты и т.п.<br />
+                            С помощью же гео города и его достопримечательностей можно искать туристов, которые в городе
+                            проездом. Но тут опять же крайне важна актуальность потребностей, реагируйте на посты не более чем
+                            двухдневной давности.
+                        </p>
+                        <img class="image" src="../images/post-1.png">
+                        <h3>Lookalike</h3>
+                        <p>
+                            Найдите хотя бы один профиль яркого представителя вашей ЦА. В Instagram на страничке каждого
+                            пользователя есть возможность посмотреть похожие профили. Собирайте их по цепочке.
+                        </p>
+                        <h3>Интересы</h3>
+                        <p>
+                            Вы можете найти лидера мнений или узкое тематическое сообщество вашей ЦА. Например, если ваша
+                            ЦА - мамочки, вы можете смело фолловить подписчиков известных инстамам или профилей типа
+                            mimikids. Так же вам подойдут сообщества конкурентов и смежные или замещающие товары.
+                        </p>
+                        <h3>Несколько важных нюансов:</h3>
+                        <p>
+                            ! Старайтесь не мыслить общими категориями, как можно мельче сегментируйте аудиторию, старайтесь
+                            ориентироваться на низкочастотные хештеги.<br />
+                            ! Анализируйте профили на которые подписываетесь. Лучше попадать точно в цель, чем стрелять из
+                            пушки по воробьям<br />
+                            ! Избегайте скриптов
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="left-container">
+        <div class="blog-form">
+            <h1 class="form-title">Получайте бесплатные советы по повышению  конверсии, среднего чека, охвата, узнаваемости и д.р</h1>
+            <div class="form-desc">Подпишитесь на рассылку прямо сейчас:</div>
+            <div class="mail-label">Введите e-mail</div>
+            <input type="email" class="input-text" id="blog-form-mail" placeholder="Введите e-mail" />
+
+            <button id="blog-form-submit" class="btn red">Подписаться сейчас</button>
+            <input id="blog-form-accept" type="checkbox" class="cb-checkbox" checked />
+            <label for="blog-form-accept" class="accept">Я даю согласие на обработку своих персональных данных</label>
+        </div>
+    </div>
+    <div class="thank-you-page">
+        <div class="divider-screen"></div>
+        <h2 class="sub-title">Читайте другие полезные статьи:</h2>
+        <div class="article-container">
+            <a class="article">
+                <img src="../../images/thank_you/article-1.png" class="image">
+                <h3 class="text">Нет времени объяснять.  Ты должен покупать!  Эффект срочности в маркетинге</h3>
+            </a>
+            <a class="article">
+                <img src="../../images/thank_you/article-2.png" class="image">
+                <h3 class="text">#тыжеssmщик. Стратегия  использования хештегов в Instagram</h3>
+            </a>
+            <a class="article">
+                <img src="../../images/thank_you/article-3.png" class="image">
+                <h3 class="text">Тренды SMM 2017-2018 Сам пришёл</h3>
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="main-block">
+            <div class="block">
+                <h4 class="title">О нас</h4>
+                <p class="about-info">ООО "ГМЛ Медиа"</p>
+                <p class="about-info">ОГРН 1167746256589</p>
+                <p class="about-info">ИНН 7709486993</p>
+            </div>
+            <div class="block">
+                <h4 class="title">Кейсы</h4>
+                <a class="link" href="#client-1">KIA Тула</a>
+                <a class="link" href="#client-2">AUDI Тула</a>
+                <a class="link" href="#client-7">Hyundai Калуга</a>
+                <a class="link" href="#client-8">Citroen Калуга</a>
+                <a class="link" href="#client-5">Nissan Тула</a>
+                <a class="link" href="#client-9">KIA Калуга</a>
+            </div>
+            <div class="block">
+                <h4 class="title">Услуги</h4>
+                <a class="link" target="_blank" href="/context/">Контекстная реклама</a>
+                <a class="link" target="_blank" href="/landingpage/">Landing page</a>
+                <a class="link" target="_blank" href="/seo/">Сео продвижение</a>
+                <a class="link" target="_blank" href="/target/">Таргетированная реклама</a>
+                <a class="link" target="_blank" href="/email/">Email рассылки</a>
+                <a class="link" target="_blank" href="/analytics/">Web-аналитика</a>
+                <a class="link" target="_blank" href="/smm/">СММ</a>
+            </div>
+            <div class="block">
+                <h4 class="title">Блог</h4>
+                <a class="link">Нет времени объяснять. Ты должен покупать! Эффект срочности в маркетинге</a>
+                <a class="link">#тыжеssmщик. Стратегия использования хештегов в Instagram</a>
+                <a class="link">Тренды SMM 2017-2018 Сам пришёл</a>
+                <a class="link">Поисковая оптимизация в Instagram</a>
+            </div>
+            <div class="block" style="margin: 0; width: 150px;">
+                <h4 class="title">Соц. сети</h4>
+                <div class="social-container">
+                    <a class="social vk" href="https://vk.com/getmoreleads_ru" target="blank"></a>
+                    <a class="social fb" href="https://www.facebook.com/getmoreleads.ru/" target="blank"></a>
+                    <a class="social ytb" href="https://www.youtube.com/channel/UC40orkZ_im9ulI_or8FmJNA" target="blank"></a>
+                </div>
+                <a class="link policy-link" onclick="(function() { $('#policy-modal').removeClass('hide'); })()">Политика конфиденциальности</a>
+            </div>
+        </div>
+        <div class="right-block">
+            <a href="tel:74991100451" class="phone">+7 (499) 110-04-51</a>
+            <a
+                    class="call-back"
+                    onclick="openModal({
+                        title: 'Заказать обратный звонок',
+                        btnText: 'Заказать звонок',
+                        formName: 'Заказать звонок (футер)'
+                    })">
+                Заказать обратный звонок
+            </a>
+            <a href="mailto:info@getmoreleads.ru" class="email">info@getmoreleads.ru</a>
+            <p class="address">109004, г. Москва, пер.&nbsp;Шелапутинский,&nbsp;д.1</p>
+        </div>
+    </div>
+</footer>
+<div id="policy-modal" class="cb-modal-window hide">
+    <div class="cb-modal-layer" onclick="(function() { $('#policy-modal').addClass('hide'); })()"></div>
+    <div class="cb-modal-container" style="overflow-y: auto; padding: 10px 20px;">
+        <div class="cb-close-modal close"></div>
+        <div class="form">
+            <div class="info">
+                <h2 class="title" style="text-align: left; margin-bottom: 10px;">Соглашение об обработке персональных данных.</h2>
+                <p class="desc" style="text-align: left; font-size: 13px ">Обработка персональных данных Пользователя осуществляется в соответствии с законодательством Российской Федерации. Администрация Сайта обрабатывает персональные данные Пользователя в целях предоставления Пользователю услуг. Пользователь заполняя форму «Имя» «Емейл» «Телефон» даёт согласие на обработку своих персональных данных – имени, адреса электронной почты и номера телефона. Под обработкой персональных данных понимается сбор, систематизация, накопление, уточнение (обновление, изменение). Обработка осуществляется с использованием средств автоматизации и/или без использования таких средств, в целях реализации мероприятий оповещения пользователя о новых услугах и акциях компании и для обратной связи с пользователями сайта.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal-form" class="cb-modal-window hide">
+    <div class="cb-modal-layer" onclick="closeModal()"></div>
+    <div class="cb-modal-container">
+        <div class="cb-close-modal close" onclick="closeModal()"></div>
+        <div class="form">
+            <div class="info">
+                <h2 class="title" style="margin-bottom: 30px">{title}</h2>
+                <p class="desc">Заполните форму и наш менеджер позвонит в течение 30 минут</p>
+                <input type="text" class="input-text" id="modal-name" placeholder="Введите имя" />
+                <input type="tel" class="input-text" id="modal-phone" placeholder="Введите телефон" />
+                <input type="email" class="input-text" id="modal-mail" placeholder="Введите e-mail" />
+
+                <button id="modal-submit" class="btn red">{btn-text}</button>
+                <input id="modal-accept" type="checkbox" class="cb-checkbox" checked />
+                <label for="modal-accept" class="accept">Я даю согласие на обработку своих персональных данных</label>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<link rel="stylesheet" href="../../bundle.css">
