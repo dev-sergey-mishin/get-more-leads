@@ -5,7 +5,9 @@ var Submit = require('./submit');
     $(document).ready(function(){
         var selector = document.getElementById("form-phone");
         var im = new Inputmask("+7 (999) 999-99-99");
-        im.mask(selector);
+        if (selector) {
+            im.mask(selector);
+        }
 
         var $detail = $('.detail');
         var $short = $detail.find('.short');
