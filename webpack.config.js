@@ -2,44 +2,68 @@ const webpack = require('webpack');
 const path = require('path');
 const NODE_ENV = process.env.NODE_ENV || 'dev';
 
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var extractLESS = new ExtractTextPlugin('bundle.css');
-
 module.exports = {
     entry: [
-        './frontend/entry.js'
+        'babel-polyfill', './frontend/entry.js'
     ],
     output: {
-        path: __dirname + '/public',
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        path: __dirname + '/public'
     },
     module: {
-        loaders: [
-            {test: /\.less$/i, loader: extractLESS.extract(['css','less'])},
+        rules: [
+            {
+                test: /\.less$/,
+                include: includeLocations(),
+                use: [
+                    { loader: "style-loader" },
+                    { loader: "css-loader"   },
+                    { loader: "less-loader"  }
+                ]
+            },
             {
                 test: /\.(png|jpg|gif|svg|otf)$/,
-                loader: 'url-loader',
-                include: includeLocations()
+                include: includeLocations(),
+                use: [{
+                    loader: "url-loader"
+                }]
+            },
+            {
+                test: [/\.jsx?$/, /\.js$/],
+                include: includeLocations(),
+                use: [{
+                    loader: 'babel-loader',
+                    options: {
+                        plugins: [
+                            'transform-runtime'
+                        ]
+                    }
+                }]
             }
         ]
     },
-    watch: NODE_ENV == 'dev',
+    watch: NODE_ENV === 'dev',
     plugins: [
-        extractLESS,
-        new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.optimize.DedupePlugin(),
-        new webpack.NoErrorsPlugin(),
-        new webpack.DefinePlugin({ NODE_ENV: JSON.stringify(NODE_ENV) })
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.NoEmitOnErrorsPlugin(),
+        new webpack.DefinePlugin({ NODE_ENV: JSON.stringify(NODE_ENV) }),
+        new webpack.ProvidePlugin({
+            $: 'jquery'
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            children: true,
+            async: true
+        })
     ],
 
     resolve: {
-        modulesDirectories: ['node_modules'],
-        extensions: ['', '.js', '.jsx']
+        modules: ['node_modules'],
+        extensions: ['.js', '.jsx']
     },
 
     resolveLoader: {
-        modulesDirectories: ['node_modules'],
-        extensions: ['', '.js', '.jsx']
+        modules: ['node_modules'],
+        extensions: ['.js', '.jsx']
     }
 };
 
@@ -49,7 +73,7 @@ function includeLocations() {
     ]
 }
 
-if (NODE_ENV == 'production') {
+if (NODE_ENV === 'production') {
     module.exports.plugins.push(
         new webpack.optimize.UglifyJsPlugin({
             beautify: false,
@@ -60,7 +84,6 @@ if (NODE_ENV == 'production') {
                 loops : true,
                 unused : true,
                 warnings : false,
-                drop_console : true,
                 unsafe : true
             }
         })

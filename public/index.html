@@ -7,747 +7,669 @@
 
     <title>GetMoreLeads - Агентство интернет-маркетинга</title>
     <link rel="shortcut icon" href="favicon.png" type="image/png">
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script defer src="bundle.js"></script>
+
+    <script async src="bundle.js"></script>
     <script defer src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
-    <div class="screen-1">
-        <img src="images/background.png" class="background-screen">
-        <header>
-            <div class="container">
-                <div class="logo-block">
-                    <div class="logo"></div>
-                    <div class="logo-desc">Агентство интернет-маркетинга</div>
-                </div>
-                <div class="phone-block">
-                    <a href="tel:74991100451" class="phone">+7 (499) 110-04-51</a>
-                    <div
-                        class="call-back"
-                        onclick="openModal({
-                            title: 'Заказать обратный звонок',
-                            btnText: 'Заказать звонок',
-                            formName: 'Заказать звонок (первый экран)'
-                        })"
-                    >
-                        Заказать обратный звонок
-                    </div>
-                </div>
-            </div>
-        </header>
-        <h1 class="title">Приводим клиентов в ваш бизнес</h1>
-        <p class="desc">Разработка и реализация маркетинговой стратегии, которая приведет вам <br/> новых клиентов. Результат через 21 день</p>
-        <div class="points-container">
-            <div class="point">Оплата за лиды</div>
-            <div class="point">Работаем с Audi, KIA, Nissan и др.</div>
-            <div class="point">Еженедельные отчеты</div>
-        </div>
-    </div>
-    <div class="btn-container">
-        <div class="divider top"></div>
-        <div class="btn-block">
-            <div class="btn-desc">Получите бесплатный аудит<br/>Ваших рекламных кампаний</div>
-            <input type="tel" class="btn-block-phone" placeholder="Введите телефон" />
-        </div>
-        <div class="btn-block">
-            <button class="btn red" data-form="Получить бесплатный аудит">Получить аудит</button>
-            <div class="btn-red-desc">Наш менеджер позвонит в течение<br/>30 минут и проконсультирует Ваc</div>
-        </div>
-        <div class="divider bottom"></div>
-    </div>
-    <div class="screen-2">
-        <div class="stat-block-container">
-            <div class="stat-block-aggregator">
-                <div class="stat-block"><div class="number">350</div>проектов</div>
-                <div class="stat-block"><div class="number">64</div>сферы&nbsp;бизнеса</div>
-            </div>
-            <div class="stat-block-aggregator">
-                <div class="stat-block"><div class="number">7</div>брендов</div>
-                <div class="stat-block"><div class="number">5</div>лет&nbsp;на&nbsp;рынке</div>
-            </div>
-        </div>
-        <div class="divider"></div>
-        <div class="inference" style='margin-top: 115px; margin-bottom: 100px;'>
-            <h2 class="title">Нужна ли вам стратегия?</h2>
-            <p class="desc">Коротко говоря&nbsp;—&nbsp;да</p>
-        </div>
-        <div class="action-container">
-            <div class="action">
-                <h3 class="title">Стимулируйте продажи</h3>
-                <p class="desc">Получайте больше продаж, показывая рекламу только той аудитории, которая уже хочет купить</p>
-            </div>
-            <div class="action">
-                <h3 class="title">Информируйте аудиторию</h3>
-                <p class="desc">Доносите актуальную информацию о компании (товарах, услугах, акциях) до потенциальных клиентов</p>
-            </div>
-            <div class="action">
-                <h3 class="title">Формируйте имидж</h3>
-                <p class="desc">Сформируйте определенное представление о компании в сознании потребителей</p>
-            </div>
-            <div class="inference" style='margin-top: 100px; margin-bottom: 60px;'>
-                <h2 class="title">Вам нужны тысячи клиентов</h2>
-                <p class="desc">Мы уже знаем, как их привести</p>
-            </div>
-        </div>
-    </div>
-    <div class="screen-3">
-        <div class="feedback-container grey">
-            <div class="container">
-                <div class="text">
-                    <h3 class="title">Настраиваем филигранную<br/>контекстную рекламу</h3>
-                    <p class="desc">
-                        Самый быстрый и эффективный инструмент для работы с горячими клиентами. Сегодня размещается ваше объявление, завтра вы получаете продажи.
-                        Зачем для этого посредник в лице агентства?
-                        Потому что иначе вам придется ежедневно мониторить рекламные кампании, анализировать результат, отслеживать активность конкурентов и корректировать запросы.
-                    </p>
-                    <p class="transcription">
-                        В услугу входит настройка кампании и дальнейшее ведение.
-                    </p>
-                    <a
-                            class="link short"
-                            onclick="openModal({
-                                title: 'Узнать подробнее об услуге «Контекстная реклама»',
-                                btnText: 'Узнать подробнее',
-                                formName: 'Узнать подробнее про контекстную рекламу'
-                            })"
-                    >
-                        Узнать подробнее про контекстную рекламу
-                    </a>
-                </div>
-                <div class="image">
-                    <div class="img-click" tabindex="1">
-                        <img src="images/work/work-1.png"/>
-                        <img class="big-img" src="images/work/work-1.png"/>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="feedback-container">
-            <div class="container">
-                <div class="text">
-                    <h3 class="title">Запускаем грамотное<br/>SEO-продвижение</h3>
-                    <p class="desc">
-                        Если сайта нет в поисковой выдаче, считайте, что его нет в интернете вообще.
-                        Мы предлагаем комплексную услугу SEO, в которой заключены копирайтинг, web-поддержка, аудит и улучшение юзабилити.
-                        Это значит, вам не нужно искать еще четырех специалистов, выделять на них бюджет и контролировать их работу.
-                    </p>
-                    <p class="transcription">
-                        В услугу входит тех. оптимизация, копирайтинг и доработки.
-                    </p>
-                    <a
-                            class="link short"
-                            onclick="openModal({
-                                title: 'Узнать подробнее об услуге «СЕО продвижение»',
-                                btnText: 'Узнать подробнее',
-                                formName: 'Узнать подробнее про СЕО продвижение'
-                            })"
-                    >
-                        Узнать подробнее про сео продвижение
-                    </a>
-                </div>
-                <div class="image">
-                    <div class="img-click" tabindex="1">
-                        <img src="images/work/work-2.png"/>
-                        <img class="big-img" src="images/work/work-2.png"/>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="feedback-container grey">
-            <div class="container">
-                <div class="text">
-                    <h3 class="title">Создаем продающий<br/>Landing&nbsp;page</h3>
-                    <p class="desc">
-                        Идеальный инструмент для донесения до аудитории своего УТП.
-                        логичная структура сводит к минимуму процент уходов и максимально повышает конверсию в обращение.
-                        Главная цель Landing&nbsp;page&nbsp;- захватить внимание пользователя, собрать контакты и перевести на страницу блога или в соц. сети
-                    </p>
-                    <p class="transcription">
-                        В услугу входит разработка прототипа, дизайн макетов и верстка.
-                    </p>
-                    <a
-                            class="link short"
-                            onclick="openModal({
-                                title: 'Узнать подробнее об услуге «Landing page»',
-                                btnText: 'Узнать подробнее',
-                                formName: 'Узнать подробнее про Landing page'
-                            })"
-                    >
-                        Узнать подробнее про Landing&nbsp;page
-                    </a>
-                </div>
-                <div class="image">
-                    <div class="img-click" tabindex="1">
-                        <img src="images/work/work-3.png"/>
-                        <img class="big-img" src="images/work/work-3.png"/>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="feedback-container">
-            <div class="container">
-                <div class="text">
-                    <h3 class="title">Ведем прицельную<br/>таргетированную рекламу</h3>
-                    <p class="desc">
-                        Попадаем в целевую аудиторию с точностью снайперской винтовки.
-                        С помощью узкого таргетинга можно найти ЦА по полу, возрасту, увлечениям, геолокации.
-                        Можно стратегироваться на вашего конкурента и увести его аудиторию.
-                    </p>
-                    <p class="transcription">
-                        В услугу входит парсинг аудиторий, настройка кампаний<br/>и дальнейшее ведение.
-                    </p>
-                    <a
-                            class="link short"
-                            data-val="Таргетированная реклама"
-                            onclick="openModal({
-                                title: 'Узнать подробнее об услуге «Таргетированная реклама»',
-                                btnText: 'Узнать подробнее',
-                                formName: 'Узнать подробнее про Таргетированную рекламу'
-                            })"
-                    >
-                        Узнать подробнее про таргетированную рекламу
-                    </a>
-                </div>
-                <div class="image">
-                    <div class="img-click" tabindex="1">
-                        <img src="images/work/work-4.png"/>
-                        <img class="big-img" src="images/work/work-4.png"/>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="feedback-container grey">
-            <div class="container">
-                <div class="text">
-                    <h3 class="title">Создаем роскошный<br/>Email-маркетинг</h3>
-                    <p class="desc">
-                        Пользователь сам подписывается на рассылку и ждет общения с вами.
-                        Главное - выбрать контент и подачу, которые будут балансировать между ожиданиями аудитории и вашими целями.
-                        И тогда клиент станет вашим адвокатом бренда.
-                    </p>
-                    <p class="transcription">
-                        В услугу входит копирайтинг, верстка и настройка цепочки писем.
-                    </p>
-                    <a
-                            class="link short"
-                            onclick="openModal({
-                                title: 'Узнать подробнее об услуге «Е-mail маркетинг»',
-                                btnText: 'Узнать подробнее',
-                                formName: 'Узнать подробнее про Е-mail маркетинг'
-                            })"
-                    >
-                        Узнать подробнее про e-mail маркетинг
-                    </a>
-                </div>
-                <div class="image">
-                    <div class="img-click" tabindex="1">
-                        <img src="images/work/work-5.png"/>
-                        <img class="big-img" src="images/work/work-5.png"/>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="feedback-container">
-            <div class="container">
-                <div class="text">
-                    <h3 class="title">Проводим беспощадную<br/>Web-аналитику</h3>
-                    <p class="desc">
-                        Вы уверены, что бюджет на рекламу работает эффективно?
-                        Почему не все посетители сайта оставляют заявки и не все звонки завершаются продажами?
-                        С помощью сквозной аналитики находим дыры во всей воронке продаж и собираем прозрачную статистику по всем каналам.
-                        Принимайте решения на основе данных.
-                    </p>
-                    <p class="transcription">
-                        В услугу входит настройка счетчиков, колтрекинга<br/>и дальнейшая оптимизация.
-                    </p>
-                    <a
-                            class="link short"
-                            data-val="Настройка веб аналитики"
-                            onclick="openModal({
-                                title: 'Узнать подробнее об услуге «Настройка веб аналитики»',
-                                btnText: 'Узнать подробнее',
-                                formName: 'Узнать подробнее про Настройку веб аналитики'
-                            })"
-                    >
-                        Узнать подробнее про настройку вебаналитики
-                    </a>
-                </div>
-                <div class="image">
-                    <div class="img-click" tabindex="1">
-                        <img src="images/work/work-6.png"/>
-                        <img class="big-img" src="images/work/work-6.png"/>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="screen-4">
-        <div class="inference" style='margin-bottom: 70px;'>
-            <h2 class="title">Уже получили своих клиентов</h2>
-            <p class="desc">Наша главная цель — загрузить Ваш отдел продаж работой</p>
-        </div>
-        <div class="client-container container">
-            <div class="client">
-                <img class="logo" src="images/clients/logos/kia.png" />
-                <a class="name" name="client-1">ДЦ "KIA Тула"</a>
-                <div class="image"><img src="images/clients/car/client-1.png" /></div>
-                <div class="target">Получили 272 лида за месяц  по цене 510.89 ₽</div>
-            </div>
-            <div class="client">
-                <img class="logo" src="images/clients/logos/audi.png" />
-                <a class="name" name="client-2">ДЦ "AUDI Тула"</a>
-                <div class="image"><img src="images/clients/car/client-2.png" /></div>
-                <div class="target">Снизили цену заявки  с 20,462.63 ₽ до 3,034.42 ₽</div>
-            </div>
-            <div class="client">
-                <img class="logo" src="images/clients/logos/kia.png" />
-                <a class="name" name="client-3">ДЦ "KIA Нмск"</a>
-                <div class="image"><img src="images/clients/car/client-3.png" /></div>
-                <div class="target">Получили 17 заявок и 44&nbsp;звонка за месяц</div>
-            </div>
-            <div class="client">
-                <img class="logo" src="images/clients/logos/auto-world.png" />
-                <a class="name" name="client-4">ДЦ "Автомир"</a>
-                <div class="image"><img src="images/clients/car/client-4.png" /></div>
-                <div class="target">Повысили кол-во обращений  с 15 до 46 в месяц</div>
-            </div>
-            <div class="client">
-                <img class="logo" src="images/clients/logos/nissan.png" />
-                <a class="name" name="client-5">ДЦ "Nissan Тула"</a>
-                <div class="image"><img src="images/clients/car/client-5.png" /></div>
-                <div class="target">Повысили кол-во обращений  с 4 до 61 в месяц</div>
-            </div>
-            <div class="client">
-                <img class="logo" src="images/clients/logos/mazda.png" />
-                <a class="name" name="client-6">ДЦ "Mitsubishi Калуга"</a>
-                <div class="image"><img src="images/clients/car/client-6.png" /></div>
-                <div class="target">Снизили цену клика с 19.77 ₽ до 9.26 ₽</div>
-            </div>
-            <div class="client">
-                <img class="logo" src="images/clients/logos/hyundai.png" />
-                <a class="name" name="client-7">ДЦ "Hyundai Калуга"</a>
-                <div class="image"><img src="images/clients/car/client-7.png" /></div>
-                <div class="target">Привели 3348 целевых посетителя за месяц</div>
-            </div>
-            <div class="client">
-                <img class="logo" src="images/clients/logos/citroen.png" />
-                <a class="name" name="client-8">ДЦ "Citroen Калуга"</a>
-                <div class="image"><img src="images/clients/car/client-8.png" /></div>
-                <div class="target">Снизили показатель отказов с 26.40% до 13.20%</div>
-            </div>
-            <div class="client">
-                <img class="logo" src="images/clients/logos/kia.png" />
-                <a class="name" name="client-9">ДЦ "KIA Калуга"</a>
-                <div class="image"><img src="images/clients/car/client-9.png" /></div>
-                <div class="target">Увеличили кол-во звонков  в 2,14 раз; внедрили колтрекинг</div>
-            </div>
-        </div>
+    <style>
+        .loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 10000;
+            text-align: center;
+        }
+        .loader {
+            border: 16px solid #f3f3f3; /* Light grey */
+            border-top: 16px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            margin: 40vh auto 0;
+        }
 
-        <div class="btn-container">
-            <div class="divider top"></div>
-            <div class="btn-block">
-                <div class="btn-desc">Узнайте, как наши клиенты<br/>получили такой результат</div>
-                <input type="tel" class="btn-block-phone" placeholder="Введите телефон" />
-            </div>
-            <div class="btn-block">
-                <button class="btn red" data-form="Узнайте, как наши клиенты получили такой результат">Узнать сейчас</button>
-                <div class="btn-red-desc">Наш менеджер позвонит в течение<br/>30 минут и проконсультирует Ваc</div>
-            </div>
-            <div class="divider bottom"></div>
-        </div>
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        main {
+            display: none;
+        }
+    </style>
+    <div class="loader-container">
+        <div class="loader"></div>
     </div>
-    <div class="screen-5">
-        <div class="inference" style='margin-top: 110px; margin-bottom: 150px;'>
-            <h2 class="title">Выберите подходящее решение</h2>
-            <p class="desc">Вы получите медиаплан с прогнозом результата, который будет нашим KPI</p>
-        </div>
-        <div class="tariff-container">
-            <div class="tariff">
-                <div class="strategy-name">Стратегия Light</div>
-                <div class="service-list">
-                    <div class="service">Контекстная реклама</div>
-                    <div class="service">Web-аналитика</div>
-                </div>
-                <div class="price">25 000 ₽</div>
-                <div class="in-month">в месяц</div>
-                <button
-                        class="btn"
-                        onclick="openModal({
-                            title: 'Заказать стратегию Light',
-                            btnText: 'Заказать стратегию',
-                            formName: 'Заказать стратегию Light'
-                        })"
-                >Заказать</button>
+    <main>
+        <div class="screen-1">
+            <img src="images/background.png" class="background-screen">
+            <div class="header-container"></div>
+            <h1 class="title">Приводим клиентов в ваш бизнес</h1>
+            <p class="desc">Разработка и реализация маркетинговой стратегии, которая приведет вам <br/> новых клиентов. Результат через 21 день</p>
+            <div class="points-container">
+                <div class="point">Оплата за лиды</div>
+                <div class="point">Работаем с Audi, KIA, Nissan и др.</div>
+                <div class="point">Еженедельные отчеты</div>
             </div>
-            <div class="tariff main">
-                <div class="strategy-name">Стратегия Medium</div>
-                <div class="service-list">
-                    <div class="service">Контекстная реклама</div>
-                    <div class="service">Web-аналитика</div>
-                    <div class="service">Сео продвижение</div>
-                    <div class="service">Web-поддержка</div>
-                </div>
-                <div class="price">75 000 ₽</div>
-                <div class="in-month">в месяц</div>
-                <button
-                        class="btn"
-                        onclick="openModal({
-                            title: 'Заказать стратегию Medium',
-                            btnText: 'Заказать стратегию',
-                            formName: 'Заказать стратегию Medium'
-                        })"
-                >Заказать</button>
-            </div>
-            <div class="tariff">
-                <div class="strategy-name">Стратегия Pro</div>
-                <div class="service-list">
-                    <div class="service">Контекстная реклама</div>
-                    <div class="service">Web-аналитика</div>
-                    <div class="service">Сео продвижение</div>
-                    <div class="service">Web-поддержка</div>
-                    <div class="service">Landing Page</div>
-                    <div class="service">Таргетированная<br/>реклама</div>
-                    <div class="service">Email рассылка</div>
-                </div>
-                <div class="price">135 000 ₽</div>
-                <div class="in-month">в месяц</div>
-                <button
-                        class="btn"
-                        onclick="openModal({
-                            title: 'Заказать стратегию Pro',
-                            btnText: 'Заказать стратегию',
-                            formName: 'Заказать стратегию Pro'
-                        })"
-                >Заказать</button>
-            </div>
-        </div>
-        <p class="allow-budget">* Минимальный рекламный бюджет на контекстную и таргетированную рекламу от 30 т.р. в месяц.</p>
-    </div>
-    <div class="divider-screen"></div>
-    <div class="screen-6">
-        <div class="inference" style='margin-bottom: 65px;'>
-            <h2 class="title">Мы в себе уверены</h2>
-            <p class="desc">И докажем, что на нас можно положиться</p>
-        </div>
-        <div class="action-container container">
-            <div class="action">
-                <h3 class="title">Повышение кол-ва заявок</h3>
-                <p class="desc">Предварительный бесплатный аудит сайта. Регулярное обсуждение и внедрение новых каналов и инструментов для повышения результата.</p>
-            </div>
-            <div class="action">
-                <h3 class="title">Ориентация на результат</h3>
-                <p class="desc">Прогноз результата до запуска рекламной кампании. Конечная цель - заявки, а не просто сданная работа. Возможность перехода на оплату за лиды с 3-го месяца работ.</p>
-            </div>
-            <div class="action">
-                <h3 class="title">Прозрачная отчетность</h3>
-                <p class="desc">Прозрачная еженедельная отчетность по динамике для полного контроля. Обсуждение вариантов повышения результата. Персональный менеджер в режиме 24/7</p>
-            </div>
-            <div class="action">
-                <h3 class="title">Отраслевые решения</h3>
-                <p class="desc">Эффективные отраслевые решения, сформированные на опыте работы более чем с 350 бизнесами разных тематик. Кейсы и отзывы по запущенным рекламным кампаниям.</p>
-            </div>
-            <div class="action">
-                <h3 class="title">Консультирование</h3>
-                <p class="desc">Обучение маркетологов основам и трендам digital-маркетинга. Детальная презентация новых каналов и инструментов рекламы для повышения результата.</p>
-            </div>
-            <div class="action">
-                <h3 class="title">Долгий срок сотрудничества</h3>
-                <p class="desc">Ориентация на продолжительное сотрудничество. Полное погружение в бизнес клиента для максимального и стабильного результата.</p>
-            </div>
-        </div>
-    </div>
-    <div class="divider-screen" style="border-width: 2px"></div>
-    <div class="screen-7 container">
-        <div class="inference" style='margin-bottom: 70px;'>
-            <h2 class="title">Отзывы наших клиентов</h2>
-            <p class="desc">На которые можно смотреть бесконечно</p>
-        </div>
-        <div class="slider">
-            <div class="arrow left"></div>
-            <div class="slide active">
-                <div class="image" tabindex="1">
-                    <img src="images/feedback/feedback-9.jpg">
-                    <img class="big-img" src="images/feedback/feedback-9.jpg">
-                </div>
-                <div class="text">
-                    «…Благодаря высокому профессионализму и усердию специалистов GML за короткий срок мы смогли достичь высоких результатов…»<br/><br/>
-                    <p>Директор ООО «КАСАМ Авто», Забеданский С. Н.</p>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="image" tabindex="1">
-                    <img src="images/feedback/feedback-3.jpg">
-                    <img class="big-img" src="images/feedback/feedback-3.jpg">
-                </div>
-                <div class="text">
-                    «…Очень приятно ощущать со стороны сотрудников компании «GetMoreLeads» грамотное отношение к работе, поддержку и помощь во всех возникающих вопросах…»<br/><br/>
-                    <p>Специалист по маркетингу ДЦ NISSAN в Туле «Восток Моторс», Цюма Е. Э.</p>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="image" tabindex="1">
-                    <img src="images/feedback/feedback-4.jpg">
-                    <img class="big-img" src="images/feedback/feedback-4.jpg">
-                </div>
-                <div class="text">
-                    «…Я очень надеюсь, что набранные нами темпы сохранятся, и мы будем столь же активно развиваться благодаря эффективности нашей digital-стратегии, обеспеченной командой настоящих профессионалов коллег из GetMoreLeads!...»<br/><br/>
-                    <p>Директор ООО «Автотехцентр-Калуга», Петров Д. В.</p>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="image" tabindex="1">
-                    <img src="images/feedback/feedback-6.jpg">
-                    <img class="big-img" src="images/feedback/feedback-6.jpg">
-                </div>
-                <div class="text">
-                    «…Отдельно хочется отметить оперативность и креативность сотрудников компании в решении наших задач…»<br/><br/>
-                    <p>Директор ООО «Калуга Авто», Князьков П. О.</p>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="image" tabindex="1">
-                    <img src="images/feedback/feedback-2.jpg">
-                    <img class="big-img" src="images/feedback/feedback-2.jpg">
-                </div>
-                <div class="text">
-                    «…Особенно хочется отметить прозрачность их работы и готовность отговаривать от неэффективных решений, даже если для вас – это потеря потенциальной дополнительной прибыли…»<br/><br/>
-                    <p>Директор ООО «Корейские автомобили», Куликов А. Б.</p>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="image" tabindex="1">
-                    <img src="images/feedback/feedback-1.jpg">
-                    <img class="big-img" src="images/feedback/feedback-1.jpg">
-                </div>
-                <div class="text">
-                    «…Выбрав Вашу компанию в качестве подрядчика, мы получили надежного и ответственного партнера. Мы твердо уверены, что продвижение нашего сайта в надежных руках…»<br/><br/>
-                    <p>Директор ООО «Автомир», Родин М. С.</p>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="image" tabindex="1">
-                    <img src="images/feedback/feedback-7.jpg">
-                    <img class="big-img" src="images/feedback/feedback-7.jpg">
-                </div>
-                <div class="text">
-                    «…Спасибо за профессиональную работу, личную вовлеченность и просто приятное человеческое общение…»<br/><br/>
-                    <p>Директор «ДЦ КИА», Терехов А. В.</p>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="image" tabindex="1">
-                    <img src="images/feedback/feedback-8.jpg">
-                    <img class="big-img" src="images/feedback/feedback-8.jpg">
-                </div>
-                <div class="text">
-                    «…Энергия, трудолюбие и настойчивость, присущие коллективу компании, всегда будут способствовать высокому уровню предоставляемых услуг…»<br/><br/>
-                    <p>Директор ООО «СеулАвто Тула», Золотов А. В.</p>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="image" tabindex="1">
-                    <img src="images/feedback/feedback-5.jpg">
-                    <img class="big-img" src="images/feedback/feedback-5.jpg">
-                </div>
-                <div class="text">
-                    «…Компания GetMoreLeads стала для нас хорошим примером взаимовыгодного сотрудничества…»<br/><br/>
-                    <p>Директор ООО «АЦ Тула», Воробьев И. Ю.</p>
-                </div>
-            </div>
-            <div class="arrow right"></div>
-        </div>
-    </div>
-    <div class="divider-screen" style="border-width: 2px"></div>
-    <div class="screen-8">
-        <div class="inference" style='margin-top: 85px; margin-bottom: 100px;'>
-            <h2 class="title">Наши клиенты</h2>
-            <p class="desc">Бизнес которых, мы знаем лучше чем свой</p>
-        </div>
-        <div class="clients-logo container">
-            <img class="logo" src="images/clients/big-logo/kia.png" />
-            <img class="logo" src="images/clients/big-logo/audi.png" />
-            <img class="logo" src="images/clients/big-logo/mazda.png" />
-            <img class="logo" src="images/clients/big-logo/nissan.png" />
-            <img class="logo" src="images/clients/big-logo/hyundai.png" />
-            <img class="logo" src="images/clients/big-logo/citroen.png" />
-            <img class="logo" src="images/clients/big-logo/auto-world.png" />
         </div>
         <div class="btn-container">
             <div class="divider top"></div>
             <div class="btn-block">
-                <div class="btn-desc">Остались вопросы? Оставьте<br/>заявку и мы Вам позвоним</div>
+                <div class="btn-desc">Получите бесплатный аудит<br/>Ваших рекламных кампаний</div>
                 <input type="tel" class="btn-block-phone" placeholder="Введите телефон" />
             </div>
             <div class="btn-block">
-                <button class="btn red" data-form="Остались вопросы? Оставьте заявку и мы Вам позвоним">Позвоните сейчас</button>
+                <button class="btn red" data-form="Получить бесплатный аудит">Получить аудит</button>
                 <div class="btn-red-desc">Наш менеджер позвонит в течение<br/>30 минут и проконсультирует Ваc</div>
             </div>
             <div class="divider bottom"></div>
         </div>
-        <div class="inference" style='margin-top: 70px; margin-bottom: 70px;'>
-            <h2 class="title">Обещаем, что все будет честно</h2>
-            <p class="desc">В любой момент мы можем созвониться, встретиться и откровенно обсудить все вопросы</p>
-        </div>
-        <div class="video-container container">
-            <div class="block right">
-                <div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/YBLcWyeoeRE" frameborder="0" allowfullscreen></iframe></div>
+        <div class="screen-2">
+            <div class="stat-block-container">
+                <div class="stat-block-aggregator">
+                    <div class="stat-block"><div class="number">350</div>проектов</div>
+                    <div class="stat-block"><div class="number">64</div>сферы&nbsp;бизнеса</div>
+                </div>
+                <div class="stat-block-aggregator">
+                    <div class="stat-block"><div class="number">7</div>брендов</div>
+                    <div class="stat-block"><div class="number">5</div>лет&nbsp;на&nbsp;рынке</div>
+                </div>
             </div>
-            <div class="block">
-                <div class="text">
-                    Мы работаем с ведущими производителями и дилерами автомобилей и помогаем им привлекать на 30% больше качественных заявок на покупку и ремонт машин.
-                    В отличие от других компаний, которые делают то же самое, мы берем оплату за лиды, а не за перечень работ.
-                    <div class="red">Выбирайте профессионалов!</div>
-                    Руководитель компании GetMoreLeads,<br/>
-                    <a class="blue">Андрей Старк</a>
-                    <img src="images/signature.png" class="signature">
+            <div class="divider"></div>
+            <div class="inference" style='margin-top: 115px; margin-bottom: 100px;'>
+                <h2 class="title">Нужна ли вам стратегия?</h2>
+                <p class="desc">Коротко говоря&nbsp;—&nbsp;да</p>
+            </div>
+            <div class="action-container">
+                <div class="action">
+                    <h3 class="title">Стимулируйте продажи</h3>
+                    <p class="desc">Получайте больше продаж, показывая рекламу только той аудитории, которая уже хочет купить</p>
+                </div>
+                <div class="action">
+                    <h3 class="title">Информируйте аудиторию</h3>
+                    <p class="desc">Доносите актуальную информацию о компании (товарах, услугах, акциях) до потенциальных клиентов</p>
+                </div>
+                <div class="action">
+                    <h3 class="title">Формируйте имидж</h3>
+                    <p class="desc">Сформируйте определенное представление о компании в сознании потребителей</p>
+                </div>
+                <div class="inference" style='margin-top: 100px; margin-bottom: 60px;'>
+                    <h2 class="title">Вам нужны тысячи клиентов</h2>
+                    <p class="desc">Мы уже знаем, как их привести</p>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="divider-screen"></div>
-    <div class="screen-9">
-        <div class="inference" style='margin-top: 90px; margin-bottom: 80px;'>
-            <h2 class="title">Как стать нашим клиентом</h2>
-            <p class="desc">Предупреждаем: мы будем с Вами дружить</p>
-        </div>
-        <div class="action-container" style="margin-bottom: 55px;">
-            <div class="action">
-                <h3 class="title">1. Оставьте заявку на сайте</h3>
-                <p class="desc">Наш менеджер позвонит Вам в течение 30 минут и проконсультирует Вас</p>
-            </div>
-            <div class="action">
-                <h3 class="title">2. Заключите договор</h3>
-                <p class="desc">Вместе подберем инструменты для запуска, согласуем договор и начнем работу</p>
-            </div>
-            <div class="action">
-                <h3 class="title">3. Получите результат</h3>
-                <p class="desc">Первые результаты уже через 3 дня после запуска рекламных кампаний. Дальше&nbsp;&mdash;&nbsp;больше</p>
-            </div>
-        </div>
-        <h3 class="run">Начните с простого шага. Это Вас ни к чему не обязывает.</h3>
-        <div class="container">
-            <div class="form" name="form" id="form">
-                <h2 class="title">Заполните форму и получите коммерческое предложение в течение 3-х дней</h2>
-                <input type="text" class="input-text" id="form-name" placeholder="Введите имя" />
-                <input type="tel" class="input-text" id="form-phone" placeholder="Введите телефон" />
-                <input type="email" class="input-text" id="form-mail" placeholder="Введите e-mail" />
-
-                <div class="detail">
-                    <a class="short">Кратко</a> <div class="detail-switcher"><div class="pup right"></div></div> <a class="long active">Подробно</a>
-                </div>
-                <div class="detail-inner">
-                    <input type="text" class="input-text" id="form-brand" placeholder="Укажите ваш бренд" />
-                    <input type="text" class="input-text" id="form-site" placeholder="Укажите ваш сайт" />
-                    <input type="text" class="input-text" id="form-region" placeholder="Укажите ваш регион" />
-                    <div class="range">
-                        <div class="range-title">Ваш рекламный бюджет</div>
-                        <input id="range" type="range" class="cb-input-range" min="30000" max="1000000" value="300000" style="width: 100%" />
-                        <div id="budget" class="range-budget">300 000 ₽</div>
+        <div class="screen-3">
+            <div class="feedback-container grey">
+                <div class="container">
+                    <div class="text">
+                        <h3 class="title">Настраиваем филигранную<br/>контекстную рекламу</h3>
+                        <p class="desc">
+                            Самый быстрый и эффективный инструмент для работы с горячими клиентами. Сегодня размещается ваше объявление, завтра вы получаете продажи.
+                            Зачем для этого посредник в лице агентства?
+                            Потому что иначе вам придется ежедневно мониторить рекламные кампании, анализировать результат, отслеживать активность конкурентов и корректировать запросы.
+                        </p>
+                        <p class="transcription">
+                            В услугу входит настройка кампании и дальнейшее ведение.
+                        </p>
+                        <a
+                                class="link short"
+                                onclick="openModal({
+                                    title: 'Узнать подробнее об услуге «Контекстная реклама»',
+                                    btnText: 'Узнать подробнее',
+                                    formName: 'Узнать подробнее про контекстную рекламу'
+                                })"
+                        >
+                            Узнать подробнее про контекстную рекламу
+                        </a>
+                    </div>
+                    <div class="image">
+                        <div class="img-click" tabindex="1">
+                            <img src="images/work/work-1.png"/>
+                            <img class="big-img" src="images/work/work-1.png"/>
+                        </div>
                     </div>
                 </div>
-                <button class="btn red conversion" data-modal="#conversion-modal">Получить предложение</button>
-                <input id="accept" type="checkbox" class="cb-checkbox" checked />
-                <label for="accept" class="accept">Я даю согласие на обработку своих персональных данных</label>
             </div>
-            <div class="after-form">
-                Для подготовки предложения потребуются доступы к аналитике и рекламе, а также информация о звонках и продажах.
-            </div>
-        </div>
-
-    </div>
-    <footer>
-        <div class="container">
-            <div class="main-block">
-                <div class="block">
-                    <h4 class="title">О нас</h4>
-                    <p class="about-info">ООО "ГМЛ Медиа"</p>
-                    <p class="about-info">ОГРН 1167746256589</p>
-                    <p class="about-info">ИНН 7709486993</p>
-                </div>
-                <div class="block">
-                    <h4 class="title">Кейсы</h4>
-                    <a class="link" href="#client-1">KIA Тула</a>
-                    <a class="link" href="#client-2">AUDI Тула</a>
-                    <a class="link" href="#client-7">Hyundai Калуга</a>
-                    <a class="link" href="#client-8">Citroen Калуга</a>
-                    <a class="link" href="#client-5">Nissan Тула</a>
-                    <a class="link" href="#client-9">KIA Калуга</a>
-                </div>
-                <div class="block">
-                    <h4 class="title">Услуги</h4>
-                    <a class="link" target="_blank" href="/context/">Контекстная реклама</a>
-                    <a class="link" target="_blank" href="/landingpage/">Landing page</a>
-                    <a class="link" target="_blank" href="/seo/">Сео продвижение</a>
-                    <a class="link" target="_blank" href="/target/">Таргетированная реклама</a>
-                    <a class="link" target="_blank" href="/email/">Email рассылки</a>
-                    <a class="link" target="_blank" href="/analytics/">Web-аналитика</a>
-                    <a class="link" target="_blank" href="/smm/">СММ</a>
-                </div>
-                <div class="block">
-                    <h4 class="title">Блог</h4>
-                    <a class="link" href="/blog/post/urgency-effect.html">Нет времени объяснять. Ты должен покупать! Эффект срочности в маркетинге</a>
-                    <a class="link" href="/blog/post/hashtags.html">#тыжеssmщик. Стратегия использования хештегов в Instagram</a>
-                    <a class="link" href="/blog/post/smm-trends.html">Тренды SMM 2017-2018 Сам пришёл</a>
-                    <a class="link" href="/blog/post/optimization.html">Поисковая оптимизация в Instagram</a>
-                </div>
-                <div class="block" style="margin: 0; width: 150px;">
-                    <h4 class="title">Соц. сети</h4>
-                    <div class="social-container">
-                        <a class="social vk" href="https://vk.com/getmoreleads_ru" target="blank"></a>
-                        <a class="social fb" href="https://www.facebook.com/getmoreleads.ru/" target="blank"></a>
-                        <a class="social ytb" href="https://www.youtube.com/channel/UC40orkZ_im9ulI_or8FmJNA" target="blank"></a>
+            <div class="feedback-container">
+                <div class="container">
+                    <div class="text">
+                        <h3 class="title">Запускаем грамотное<br/>SEO-продвижение</h3>
+                        <p class="desc">
+                            Если сайта нет в поисковой выдаче, считайте, что его нет в интернете вообще.
+                            Мы предлагаем комплексную услугу SEO, в которой заключены копирайтинг, web-поддержка, аудит и улучшение юзабилити.
+                            Это значит, вам не нужно искать еще четырех специалистов, выделять на них бюджет и контролировать их работу.
+                        </p>
+                        <p class="transcription">
+                            В услугу входит тех. оптимизация, копирайтинг и доработки.
+                        </p>
+                        <a
+                                class="link short"
+                                onclick="openModal({
+                                    title: 'Узнать подробнее об услуге «СЕО продвижение»',
+                                    btnText: 'Узнать подробнее',
+                                    formName: 'Узнать подробнее про СЕО продвижение'
+                                })"
+                        >
+                            Узнать подробнее про сео продвижение
+                        </a>
                     </div>
-                    <a class="link policy-link" onclick="(function() { $('#policy-modal').removeClass('hide'); })()">Политика конфиденциальности</a>
+                    <div class="image">
+                        <div class="img-click" tabindex="1">
+                            <img src="images/work/work-2.png"/>
+                            <img class="big-img" src="images/work/work-2.png"/>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="right-block">
-                <a href="tel:74991100451" class="phone">+7 (499) 110-04-51</a>
-                <a
-                    class="call-back"
-                    onclick="openModal({
-                        title: 'Заказать обратный звонок',
-                        btnText: 'Заказать звонок',
-                        formName: 'Заказать звонок (футер)'
-                    })">
-                    Заказать обратный звонок
-                </a>
-                <a href="mailto:info@getmoreleads.ru" class="email">info@getmoreleads.ru</a>
-                <p class="address">109004, г. Москва, пер.&nbsp;Шелапутинский,&nbsp;д.1</p>
+            <div class="feedback-container grey">
+                <div class="container">
+                    <div class="text">
+                        <h3 class="title">Создаем продающий<br/>Landing&nbsp;page</h3>
+                        <p class="desc">
+                            Идеальный инструмент для донесения до аудитории своего УТП.
+                            логичная структура сводит к минимуму процент уходов и максимально повышает конверсию в обращение.
+                            Главная цель Landing&nbsp;page&nbsp;- захватить внимание пользователя, собрать контакты и перевести на страницу блога или в соц. сети
+                        </p>
+                        <p class="transcription">
+                            В услугу входит разработка прототипа, дизайн макетов и верстка.
+                        </p>
+                        <a
+                                class="link short"
+                                onclick="openModal({
+                                    title: 'Узнать подробнее об услуге «Landing page»',
+                                    btnText: 'Узнать подробнее',
+                                    formName: 'Узнать подробнее про Landing page'
+                                })"
+                        >
+                            Узнать подробнее про Landing&nbsp;page
+                        </a>
+                    </div>
+                    <div class="image">
+                        <div class="img-click" tabindex="1">
+                            <img src="images/work/work-3.png"/>
+                            <img class="big-img" src="images/work/work-3.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="feedback-container">
+                <div class="container">
+                    <div class="text">
+                        <h3 class="title">Ведем прицельную<br/>таргетированную рекламу</h3>
+                        <p class="desc">
+                            Попадаем в целевую аудиторию с точностью снайперской винтовки.
+                            С помощью узкого таргетинга можно найти ЦА по полу, возрасту, увлечениям, геолокации.
+                            Можно стратегироваться на вашего конкурента и увести его аудиторию.
+                        </p>
+                        <p class="transcription">
+                            В услугу входит парсинг аудиторий, настройка кампаний<br/>и дальнейшее ведение.
+                        </p>
+                        <a
+                                class="link short"
+                                data-val="Таргетированная реклама"
+                                onclick="openModal({
+                                    title: 'Узнать подробнее об услуге «Таргетированная реклама»',
+                                    btnText: 'Узнать подробнее',
+                                    formName: 'Узнать подробнее про Таргетированную рекламу'
+                                })"
+                        >
+                            Узнать подробнее про таргетированную рекламу
+                        </a>
+                    </div>
+                    <div class="image">
+                        <div class="img-click" tabindex="1">
+                            <img src="images/work/work-4.png"/>
+                            <img class="big-img" src="images/work/work-4.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="feedback-container grey">
+                <div class="container">
+                    <div class="text">
+                        <h3 class="title">Создаем роскошный<br/>Email-маркетинг</h3>
+                        <p class="desc">
+                            Пользователь сам подписывается на рассылку и ждет общения с вами.
+                            Главное - выбрать контент и подачу, которые будут балансировать между ожиданиями аудитории и вашими целями.
+                            И тогда клиент станет вашим адвокатом бренда.
+                        </p>
+                        <p class="transcription">
+                            В услугу входит копирайтинг, верстка и настройка цепочки писем.
+                        </p>
+                        <a
+                                class="link short"
+                                onclick="openModal({
+                                    title: 'Узнать подробнее об услуге «Е-mail маркетинг»',
+                                    btnText: 'Узнать подробнее',
+                                    formName: 'Узнать подробнее про Е-mail маркетинг'
+                                })"
+                        >
+                            Узнать подробнее про e-mail маркетинг
+                        </a>
+                    </div>
+                    <div class="image">
+                        <div class="img-click" tabindex="1">
+                            <img src="images/work/work-5.png"/>
+                            <img class="big-img" src="images/work/work-5.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="feedback-container">
+                <div class="container">
+                    <div class="text">
+                        <h3 class="title">Проводим беспощадную<br/>Web-аналитику</h3>
+                        <p class="desc">
+                            Вы уверены, что бюджет на рекламу работает эффективно?
+                            Почему не все посетители сайта оставляют заявки и не все звонки завершаются продажами?
+                            С помощью сквозной аналитики находим дыры во всей воронке продаж и собираем прозрачную статистику по всем каналам.
+                            Принимайте решения на основе данных.
+                        </p>
+                        <p class="transcription">
+                            В услугу входит настройка счетчиков, колтрекинга<br/>и дальнейшая оптимизация.
+                        </p>
+                        <a
+                                class="link short"
+                                data-val="Настройка веб аналитики"
+                                onclick="openModal({
+                                    title: 'Узнать подробнее об услуге «Настройка веб аналитики»',
+                                    btnText: 'Узнать подробнее',
+                                    formName: 'Узнать подробнее про Настройку веб аналитики'
+                                })"
+                        >
+                            Узнать подробнее про настройку вебаналитики
+                        </a>
+                    </div>
+                    <div class="image">
+                        <div class="img-click" tabindex="1">
+                            <img src="images/work/work-6.png"/>
+                            <img class="big-img" src="images/work/work-6.png"/>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
+        <div class="screen-4">
+            <div class="inference" style='margin-bottom: 70px;'>
+                <h2 class="title">Уже получили своих клиентов</h2>
+                <p class="desc">Наша главная цель — загрузить Ваш отдел продаж работой</p>
+            </div>
+            <div class="client-container container">
+                <div class="client">
+                    <img class="logo" src="images/clients/logos/kia.png" />
+                    <a class="name" name="client-1">ДЦ "KIA Тула"</a>
+                    <div class="image"><img src="images/clients/car/client-1.png" /></div>
+                    <div class="target">Получили 272 лида за месяц  по цене 510.89 ₽</div>
+                </div>
+                <div class="client">
+                    <img class="logo" src="images/clients/logos/audi.png" />
+                    <a class="name" name="client-2">ДЦ "AUDI Тула"</a>
+                    <div class="image"><img src="images/clients/car/client-2.png" /></div>
+                    <div class="target">Снизили цену заявки  с 20,462.63 ₽ до 3,034.42 ₽</div>
+                </div>
+                <div class="client">
+                    <img class="logo" src="images/clients/logos/kia.png" />
+                    <a class="name" name="client-3">ДЦ "KIA Нмск"</a>
+                    <div class="image"><img src="images/clients/car/client-3.png" /></div>
+                    <div class="target">Получили 17 заявок и 44&nbsp;звонка за месяц</div>
+                </div>
+                <div class="client">
+                    <img class="logo" src="images/clients/logos/auto-world.png" />
+                    <a class="name" name="client-4">ДЦ "Автомир"</a>
+                    <div class="image"><img src="images/clients/car/client-4.png" /></div>
+                    <div class="target">Повысили кол-во обращений  с 15 до 46 в месяц</div>
+                </div>
+                <div class="client">
+                    <img class="logo" src="images/clients/logos/nissan.png" />
+                    <a class="name" name="client-5">ДЦ "Nissan Тула"</a>
+                    <div class="image"><img src="images/clients/car/client-5.png" /></div>
+                    <div class="target">Повысили кол-во обращений  с 4 до 61 в месяц</div>
+                </div>
+                <div class="client">
+                    <img class="logo" src="images/clients/logos/mazda.png" />
+                    <a class="name" name="client-6">ДЦ "Mitsubishi Калуга"</a>
+                    <div class="image"><img src="images/clients/car/client-6.png" /></div>
+                    <div class="target">Снизили цену клика с 19.77 ₽ до 9.26 ₽</div>
+                </div>
+                <div class="client">
+                    <img class="logo" src="images/clients/logos/hyundai.png" />
+                    <a class="name" name="client-7">ДЦ "Hyundai Калуга"</a>
+                    <div class="image"><img src="images/clients/car/client-7.png" /></div>
+                    <div class="target">Привели 3348 целевых посетителя за месяц</div>
+                </div>
+                <div class="client">
+                    <img class="logo" src="images/clients/logos/citroen.png" />
+                    <a class="name" name="client-8">ДЦ "Citroen Калуга"</a>
+                    <div class="image"><img src="images/clients/car/client-8.png" /></div>
+                    <div class="target">Снизили показатель отказов с 26.40% до 13.20%</div>
+                </div>
+                <div class="client">
+                    <img class="logo" src="images/clients/logos/kia.png" />
+                    <a class="name" name="client-9">ДЦ "KIA Калуга"</a>
+                    <div class="image"><img src="images/clients/car/client-9.png" /></div>
+                    <div class="target">Увеличили кол-во звонков  в 2,14 раз; внедрили колтрекинг</div>
+                </div>
+            </div>
 
-    <div id="modal-form" class="cb-modal-window hide">
-        <div class="cb-modal-layer" onclick="closeModal()"></div>
-        <div class="cb-modal-container">
-            <div class="cb-close-modal close" onclick="closeModal()"></div>
-            <div class="form">
-                <div class="info">
-                    <h2 class="title" style="margin-bottom: 30px">{title}</h2>
-                    <p class="desc">Заполните форму и наш менеджер позвонит в течение 30 минут</p>
-                    <input type="text" class="input-text" id="modal-name" placeholder="Введите имя" />
-                    <input type="tel" class="input-text" id="modal-phone" placeholder="Введите телефон" />
-                    <input type="email" class="input-text" id="modal-mail" placeholder="Введите e-mail" />
+            <div class="btn-container">
+                <div class="divider top"></div>
+                <div class="btn-block">
+                    <div class="btn-desc">Узнайте, как наши клиенты<br/>получили такой результат</div>
+                    <input type="tel" class="btn-block-phone" placeholder="Введите телефон" />
+                </div>
+                <div class="btn-block">
+                    <button class="btn red" data-form="Узнайте, как наши клиенты получили такой результат">Узнать сейчас</button>
+                    <div class="btn-red-desc">Наш менеджер позвонит в течение<br/>30 минут и проконсультирует Ваc</div>
+                </div>
+                <div class="divider bottom"></div>
+            </div>
+        </div>
+        <div class="screen-5">
+            <div class="inference" style='margin-top: 110px; margin-bottom: 150px;'>
+                <h2 class="title">Выберите подходящее решение</h2>
+                <p class="desc">Вы получите медиаплан с прогнозом результата, который будет нашим KPI</p>
+            </div>
+            <div class="tariff-container">
+                <div class="tariff">
+                    <div class="strategy-name">Стратегия Light</div>
+                    <div class="service-list">
+                        <div class="service">Контекстная реклама</div>
+                        <div class="service">Web-аналитика</div>
+                    </div>
+                    <div class="price">25 000 ₽</div>
+                    <div class="in-month">в месяц</div>
+                    <button
+                            class="btn"
+                            onclick="openModal({
+                                title: 'Заказать стратегию Light',
+                                btnText: 'Заказать стратегию',
+                                formName: 'Заказать стратегию Light'
+                            })"
+                    >Заказать</button>
+                </div>
+                <div class="tariff main">
+                    <div class="strategy-name">Стратегия Medium</div>
+                    <div class="service-list">
+                        <div class="service">Контекстная реклама</div>
+                        <div class="service">Web-аналитика</div>
+                        <div class="service">Сео продвижение</div>
+                        <div class="service">Web-поддержка</div>
+                    </div>
+                    <div class="price">75 000 ₽</div>
+                    <div class="in-month">в месяц</div>
+                    <button
+                            class="btn"
+                            onclick="openModal({
+                                title: 'Заказать стратегию Medium',
+                                btnText: 'Заказать стратегию',
+                                formName: 'Заказать стратегию Medium'
+                            })"
+                    >Заказать</button>
+                </div>
+                <div class="tariff">
+                    <div class="strategy-name">Стратегия Pro</div>
+                    <div class="service-list">
+                        <div class="service">Контекстная реклама</div>
+                        <div class="service">Web-аналитика</div>
+                        <div class="service">Сео продвижение</div>
+                        <div class="service">Web-поддержка</div>
+                        <div class="service">Landing Page</div>
+                        <div class="service">Таргетированная<br/>реклама</div>
+                        <div class="service">Email рассылка</div>
+                    </div>
+                    <div class="price">135 000 ₽</div>
+                    <div class="in-month">в месяц</div>
+                    <button
+                            class="btn"
+                            onclick="openModal({
+                                title: 'Заказать стратегию Pro',
+                                btnText: 'Заказать стратегию',
+                                formName: 'Заказать стратегию Pro'
+                            })"
+                    >Заказать</button>
+                </div>
+            </div>
+            <p class="allow-budget">* Минимальный рекламный бюджет на контекстную и таргетированную рекламу от 30 т.р. в месяц.</p>
+        </div>
+        <div class="divider-screen"></div>
+        <div class="screen-6">
+            <div class="inference" style='margin-bottom: 65px;'>
+                <h2 class="title">Мы в себе уверены</h2>
+                <p class="desc">И докажем, что на нас можно положиться</p>
+            </div>
+            <div class="action-container container">
+                <div class="action">
+                    <h3 class="title">Повышение кол-ва заявок</h3>
+                    <p class="desc">Предварительный бесплатный аудит сайта. Регулярное обсуждение и внедрение новых каналов и инструментов для повышения результата.</p>
+                </div>
+                <div class="action">
+                    <h3 class="title">Ориентация на результат</h3>
+                    <p class="desc">Прогноз результата до запуска рекламной кампании. Конечная цель - заявки, а не просто сданная работа. Возможность перехода на оплату за лиды с 3-го месяца работ.</p>
+                </div>
+                <div class="action">
+                    <h3 class="title">Прозрачная отчетность</h3>
+                    <p class="desc">Прозрачная еженедельная отчетность по динамике для полного контроля. Обсуждение вариантов повышения результата. Персональный менеджер в режиме 24/7</p>
+                </div>
+                <div class="action">
+                    <h3 class="title">Отраслевые решения</h3>
+                    <p class="desc">Эффективные отраслевые решения, сформированные на опыте работы более чем с 350 бизнесами разных тематик. Кейсы и отзывы по запущенным рекламным кампаниям.</p>
+                </div>
+                <div class="action">
+                    <h3 class="title">Консультирование</h3>
+                    <p class="desc">Обучение маркетологов основам и трендам digital-маркетинга. Детальная презентация новых каналов и инструментов рекламы для повышения результата.</p>
+                </div>
+                <div class="action">
+                    <h3 class="title">Долгий срок сотрудничества</h3>
+                    <p class="desc">Ориентация на продолжительное сотрудничество. Полное погружение в бизнес клиента для максимального и стабильного результата.</p>
+                </div>
+            </div>
+        </div>
+        <div class="divider-screen" style="border-width: 2px"></div>
+        <div class="screen-7 container">
+            <div class="inference" style='margin-bottom: 70px;'>
+                <h2 class="title">Отзывы наших клиентов</h2>
+                <p class="desc">На которые можно смотреть бесконечно</p>
+            </div>
+            <div class="slider">
+                <div class="arrow left"></div>
+                <div class="slide active">
+                    <div class="image" tabindex="1">
+                        <img src="images/feedback/feedback-9.jpg">
+                        <img class="big-img" src="images/feedback/feedback-9.jpg">
+                    </div>
+                    <div class="text">
+                        «…Благодаря высокому профессионализму и усердию специалистов GML за короткий срок мы смогли достичь высоких результатов…»<br/><br/>
+                        <p>Директор ООО «КАСАМ Авто», Забеданский С. Н.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image" tabindex="1">
+                        <img src="images/feedback/feedback-3.jpg">
+                        <img class="big-img" src="images/feedback/feedback-3.jpg">
+                    </div>
+                    <div class="text">
+                        «…Очень приятно ощущать со стороны сотрудников компании «GetMoreLeads» грамотное отношение к работе, поддержку и помощь во всех возникающих вопросах…»<br/><br/>
+                        <p>Специалист по маркетингу ДЦ NISSAN в Туле «Восток Моторс», Цюма Е. Э.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image" tabindex="1">
+                        <img src="images/feedback/feedback-4.jpg">
+                        <img class="big-img" src="images/feedback/feedback-4.jpg">
+                    </div>
+                    <div class="text">
+                        «…Я очень надеюсь, что набранные нами темпы сохранятся, и мы будем столь же активно развиваться благодаря эффективности нашей digital-стратегии, обеспеченной командой настоящих профессионалов коллег из GetMoreLeads!...»<br/><br/>
+                        <p>Директор ООО «Автотехцентр-Калуга», Петров Д. В.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image" tabindex="1">
+                        <img src="images/feedback/feedback-6.jpg">
+                        <img class="big-img" src="images/feedback/feedback-6.jpg">
+                    </div>
+                    <div class="text">
+                        «…Отдельно хочется отметить оперативность и креативность сотрудников компании в решении наших задач…»<br/><br/>
+                        <p>Директор ООО «Калуга Авто», Князьков П. О.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image" tabindex="1">
+                        <img src="images/feedback/feedback-2.jpg">
+                        <img class="big-img" src="images/feedback/feedback-2.jpg">
+                    </div>
+                    <div class="text">
+                        «…Особенно хочется отметить прозрачность их работы и готовность отговаривать от неэффективных решений, даже если для вас – это потеря потенциальной дополнительной прибыли…»<br/><br/>
+                        <p>Директор ООО «Корейские автомобили», Куликов А. Б.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image" tabindex="1">
+                        <img src="images/feedback/feedback-1.jpg">
+                        <img class="big-img" src="images/feedback/feedback-1.jpg">
+                    </div>
+                    <div class="text">
+                        «…Выбрав Вашу компанию в качестве подрядчика, мы получили надежного и ответственного партнера. Мы твердо уверены, что продвижение нашего сайта в надежных руках…»<br/><br/>
+                        <p>Директор ООО «Автомир», Родин М. С.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image" tabindex="1">
+                        <img src="images/feedback/feedback-7.jpg">
+                        <img class="big-img" src="images/feedback/feedback-7.jpg">
+                    </div>
+                    <div class="text">
+                        «…Спасибо за профессиональную работу, личную вовлеченность и просто приятное человеческое общение…»<br/><br/>
+                        <p>Директор «ДЦ КИА», Терехов А. В.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image" tabindex="1">
+                        <img src="images/feedback/feedback-8.jpg">
+                        <img class="big-img" src="images/feedback/feedback-8.jpg">
+                    </div>
+                    <div class="text">
+                        «…Энергия, трудолюбие и настойчивость, присущие коллективу компании, всегда будут способствовать высокому уровню предоставляемых услуг…»<br/><br/>
+                        <p>Директор ООО «СеулАвто Тула», Золотов А. В.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image" tabindex="1">
+                        <img src="images/feedback/feedback-5.jpg">
+                        <img class="big-img" src="images/feedback/feedback-5.jpg">
+                    </div>
+                    <div class="text">
+                        «…Компания GetMoreLeads стала для нас хорошим примером взаимовыгодного сотрудничества…»<br/><br/>
+                        <p>Директор ООО «АЦ Тула», Воробьев И. Ю.</p>
+                    </div>
+                </div>
+                <div class="arrow right"></div>
+            </div>
+        </div>
+        <div class="divider-screen" style="border-width: 2px"></div>
+        <div class="screen-8">
+            <div class="inference" style='margin-top: 85px; margin-bottom: 100px;'>
+                <h2 class="title">Наши клиенты</h2>
+                <p class="desc">Бизнес которых, мы знаем лучше чем свой</p>
+            </div>
+            <div class="clients-logo container">
+                <img class="logo" src="images/clients/big-logo/kia.png" />
+                <img class="logo" src="images/clients/big-logo/audi.png" />
+                <img class="logo" src="images/clients/big-logo/mazda.png" />
+                <img class="logo" src="images/clients/big-logo/nissan.png" />
+                <img class="logo" src="images/clients/big-logo/hyundai.png" />
+                <img class="logo" src="images/clients/big-logo/citroen.png" />
+                <img class="logo" src="images/clients/big-logo/auto-world.png" />
+            </div>
+            <div class="btn-container">
+                <div class="divider top"></div>
+                <div class="btn-block">
+                    <div class="btn-desc">Остались вопросы? Оставьте<br/>заявку и мы Вам позвоним</div>
+                    <input type="tel" class="btn-block-phone" placeholder="Введите телефон" />
+                </div>
+                <div class="btn-block">
+                    <button class="btn red" data-form="Остались вопросы? Оставьте заявку и мы Вам позвоним">Позвоните сейчас</button>
+                    <div class="btn-red-desc">Наш менеджер позвонит в течение<br/>30 минут и проконсультирует Ваc</div>
+                </div>
+                <div class="divider bottom"></div>
+            </div>
+            <div class="inference" style='margin-top: 70px; margin-bottom: 70px;'>
+                <h2 class="title">Обещаем, что все будет честно</h2>
+                <p class="desc">В любой момент мы можем созвониться, встретиться и откровенно обсудить все вопросы</p>
+            </div>
+            <div class="video-container container">
+                <div class="block right">
+                    <div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/YBLcWyeoeRE" frameborder="0" allowfullscreen></iframe></div>
+                </div>
+                <div class="block">
+                    <div class="text">
+                        Мы работаем с ведущими производителями и дилерами автомобилей и помогаем им привлекать на 30% больше качественных заявок на покупку и ремонт машин.
+                        В отличие от других компаний, которые делают то же самое, мы берем оплату за лиды, а не за перечень работ.
+                        <div class="red">Выбирайте профессионалов!</div>
+                        Руководитель компании GetMoreLeads,<br/>
+                        <a class="blue">Андрей Старк</a>
+                        <img src="images/signature.png" class="signature">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider-screen"></div>
+        <div class="screen-9">
+            <div class="inference" style='margin-top: 90px; margin-bottom: 80px;'>
+                <h2 class="title">Как стать нашим клиентом</h2>
+                <p class="desc">Предупреждаем: мы будем с Вами дружить</p>
+            </div>
+            <div class="action-container" style="margin-bottom: 55px;">
+                <div class="action">
+                    <h3 class="title">1. Оставьте заявку на сайте</h3>
+                    <p class="desc">Наш менеджер позвонит Вам в течение 30 минут и проконсультирует Вас</p>
+                </div>
+                <div class="action">
+                    <h3 class="title">2. Заключите договор</h3>
+                    <p class="desc">Вместе подберем инструменты для запуска, согласуем договор и начнем работу</p>
+                </div>
+                <div class="action">
+                    <h3 class="title">3. Получите результат</h3>
+                    <p class="desc">Первые результаты уже через 3 дня после запуска рекламных кампаний. Дальше&nbsp;&mdash;&nbsp;больше</p>
+                </div>
+            </div>
+            <h3 class="run">Начните с простого шага. Это Вас ни к чему не обязывает.</h3>
+            <div class="container">
+                <div class="form" name="form" id="form">
+                    <h2 class="title">Заполните форму и получите коммерческое предложение в течение 3-х дней</h2>
+                    <input type="text" class="input-text" id="form-name" placeholder="Введите имя" />
+                    <input type="tel" class="input-text" id="form-phone" placeholder="Введите телефон" />
+                    <input type="email" class="input-text" id="form-mail" placeholder="Введите e-mail" />
 
-                    <button id="modal-submit" class="btn red">{btn-text}</button>
-                    <input id="modal-accept" type="checkbox" class="cb-checkbox" checked />
-                    <label for="modal-accept" class="accept">Я даю согласие на обработку своих персональных данных</label>
+                    <div class="detail">
+                        <a class="short">Кратко</a> <div class="detail-switcher"><div class="pup right"></div></div> <a class="long active">Подробно</a>
+                    </div>
+                    <div class="detail-inner">
+                        <input type="text" class="input-text" id="form-brand" placeholder="Укажите ваш бренд" />
+                        <input type="text" class="input-text" id="form-site" placeholder="Укажите ваш сайт" />
+                        <input type="text" class="input-text" id="form-region" placeholder="Укажите ваш регион" />
+                        <div class="range">
+                            <div class="range-title">Ваш рекламный бюджет</div>
+                            <input id="range" type="range" class="cb-input-range" min="30000" max="1000000" value="300000" style="width: 100%" />
+                            <div id="budget" class="range-budget">300 000 ₽</div>
+                        </div>
+                    </div>
+                    <button class="btn red conversion" data-modal="#conversion-modal">Получить предложение</button>
+                    <input id="accept" type="checkbox" class="cb-checkbox" checked />
+                    <label for="accept" class="accept">Я даю согласие на обработку своих персональных данных</label>
+                </div>
+                <div class="after-form">
+                    Для подготовки предложения потребуются доступы к аналитике и рекламе, а также информация о звонках и продажах.
                 </div>
             </div>
+
         </div>
-    </div>
-    <div id="policy-modal" class="cb-modal-window hide">
-        <div class="cb-modal-layer" onclick="(function() { $('#policy-modal').addClass('hide'); })()"></div>
-        <div class="cb-modal-container" style="overflow-y: auto; padding: 10px 20px;">
-            <div class="cb-close-modal close"></div>
-            <div class="form">
-                <div class="info">
-                    <h2 class="title" style="text-align: left; margin-bottom: 10px;">Соглашение об обработке персональных данных.</h2>
-                    <p class="desc" style="text-align: left; font-size: 13px ">Обработка персональных данных Пользователя осуществляется в соответствии с законодательством Российской Федерации. Администрация Сайта обрабатывает персональные данные Пользователя в целях предоставления Пользователю услуг. Пользователь заполняя форму «Имя» «Емейл» «Телефон» даёт согласие на обработку своих персональных данных – имени, адреса электронной почты и номера телефона. Под обработкой персональных данных понимается сбор, систематизация, накопление, уточнение (обновление, изменение). Обработка осуществляется с использованием средств автоматизации и/или без использования таких средств, в целях реализации мероприятий оповещения пользователя о новых услугах и акциях компании и для обратной связи с пользователями сайта.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+        <div class="footer-container"></div>
+        <div class="modals"></div>
+    </main>
 </body>
 </html>
-<link rel="stylesheet" href="bundle.css">
