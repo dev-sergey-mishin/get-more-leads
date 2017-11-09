@@ -1,58 +1,74 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>http://getmoreleads.ru/</loc>
-        <lastmod>2017-06-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>http://getmoreleads.ru/thankyoupage/index.html</loc>
-        <lastmod>2017-06-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>http://getmoreleads.ru/analytic/index.html</loc>
-        <lastmod>2017-06-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>http://getmoreleads.ru/context/index.html</loc>
-        <lastmod>2017-06-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>http://getmoreleads.ru/email/index.html</loc>
-        <lastmod>2017-06-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>http://getmoreleads.ru/landing/index.html</loc>
-        <lastmod>2017-06-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>http://getmoreleads.ru/seo/index.html</loc>
-        <lastmod>2017-06-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>http://getmoreleads.ru/smm/index.html</loc>
-        <lastmod>2017-06-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>http://getmoreleads.ru/target/index.html</loc>
-        <lastmod>2017-06-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
+<?xml version="1.0" encoding="utf-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://getmoreleads.ru/</loc>
+<lastmod>2017-10-22</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>http://getmoreleads.ru/analytics/</loc>
+<lastmod>2017-06-21</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>http://getmoreleads.ru/blog/post/hashtags.html</loc>
+<lastmod>2017-09-03</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>http://getmoreleads.ru/blog/post/optimization.html</loc>
+<lastmod>2017-09-03</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>http://getmoreleads.ru/blog/post/smm-trends.html</loc>
+<lastmod>2017-09-03</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>http://getmoreleads.ru/blog/post/urgency-effect.html</loc>
+<lastmod>2017-09-03</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>http://getmoreleads.ru/context/</loc>
+<lastmod>2017-09-03</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>http://getmoreleads.ru/email/</loc>
+<lastmod>2017-09-03</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>http://getmoreleads.ru/landingpage/</loc>
+<lastmod>2017-09-03</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>http://getmoreleads.ru/seo/</loc>
+<lastmod>2017-09-03</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>http://getmoreleads.ru/smm/</loc>
+<lastmod>2017-09-03</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>http://getmoreleads.ru/target/</loc>
+<lastmod>2017-09-03</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
 </urlset>
