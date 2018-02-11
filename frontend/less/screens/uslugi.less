@@ -16,12 +16,14 @@
 
   .action {
     height: 320px;
+    overflow: hidden;
   }
   .block:hover {
     border: 1px solid @red;
   }
 
   .service {
+    height: 50px;
     display: block;
     font-size: 20px;
     margin-bottom: 20px;
@@ -29,6 +31,10 @@
   }
   .service:hover {
     color: red;
+  }
+  .description {
+    max-width: 100%;
+    height: 40px;
   }
   .price {
     font-size: 24px;
@@ -87,6 +93,12 @@
           width: 60px;
         }
       }
+    }
+  }
+
+  .scr-2 {
+    .action-container .action {
+      height: 430px;
     }
   }
 }
