@@ -18,4 +18,13 @@ $(document).ready(() => {
     );
 });
 
+window.onload = function () {
+    let allImages = document.querySelectorAll('img');
+    Array.from(allImages).map((image) => {
+        if (image.dataset.src) {
+            image.src = image.dataset.src;
+        }
+    });
+};
+
 
