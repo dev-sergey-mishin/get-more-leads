@@ -40,7 +40,12 @@
                     <a class="social fb" href="https://www.facebook.com/getmoreleads.ru/" target="blank"></a>
                     <a class="social ytb" href="https://www.youtube.com/channel/UC40orkZ_im9ulI_or8FmJNA" target="blank"></a>
                 </div>
-                <a class="link policy-link" onclick="(function() { $('#policy-modal').removeClass('hide'); })()">Политика конфиденциальности</a>
+                <a
+                    class="link policy-link"
+                    onclick="(function() { document.getElementById('policy-modal').classList.remove('hide') })()"
+                >
+                    Политика конфиденциальности
+                </a>
             </div>
         </div>
         <div class="right-block">
