@@ -35,6 +35,10 @@ function openModal(options) {
     var $submit = $modal.find('#modal-submit');
     var $checkbox = $modal.find('#modal-accept');
 
+    options.page = window.location.pathname;
+
+    yaCounter36370080.reachGoal('OPEN_MODAL', options);
+
     $title.text(options.title);
     $submit.text(options.btnText);
 
@@ -42,6 +46,7 @@ function openModal(options) {
 
     $submit.click(function() {
         submit($modal, $submit, options.formName);
+        yaCounter36370080.reachGoal('SEND_MAIL', options);
     });
     $checkbox.click(function(e) {
         $submit.attr('disabled', !document.getElementById('modal-accept').checked);
