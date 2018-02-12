@@ -46,7 +46,6 @@ function openModal(options) {
 
     $submit.click(function() {
         submit($modal, $submit, options.formName);
-        yaCounter36370080.reachGoal('SEND_MAIL', options);
     });
     $checkbox.click(function(e) {
         $submit.attr('disabled', !document.getElementById('modal-accept').checked);
